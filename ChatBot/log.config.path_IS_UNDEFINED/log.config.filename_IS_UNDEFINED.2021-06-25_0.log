@@ -1,0 +1,159 @@
+INFO  21-06-25 07:08:54[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 11608 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-25 07:08:54[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-25 07:08:55[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-25 07:08:56[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-25 07:08:56[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-25 07:08:56[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-25 07:08:56[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-25 07:08:56[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-25 07:08:56[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1657 ms
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-25 07:08:57[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@361abd01, org.springframework.security.web.context.SecurityContextPersistenceFilter@329548d0, org.springframework.security.web.header.HeaderWriterFilter@3dc95b8b, org.springframework.security.web.authentication.logout.LogoutFilter@2a334bac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59c70ceb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29b40b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@119b0892, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@575b5f7d, org.springframework.security.web.session.SessionManagementFilter@4d1ff6b1, org.springframework.security.web.access.ExceptionTranslationFilter@5626d18c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22f4f8f2]
+INFO  21-06-25 07:08:57[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-25 07:08:57[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-25 07:08:57[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-25 07:08:57[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-25 07:08:57[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-25 07:08:57[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-25 07:08:57[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-25 07:08:57[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-25 07:08:58[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.595 seconds (JVM running for 5.743)
+INFO  21-06-25 07:10:06[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-25 07:10:06[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-25 07:10:06[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 5 ms
+INFO  21-06-25 07:14:08[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-25 07:14:10[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [selectOrmCryn:143] - ==>  Preparing: SELECT ISNULL(TOO.ORM_CRYN, 'N') AS DATA1, TOO.ORM_CDT AS DATA2 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [selectOrmCryn:143] - ==> Parameters: I20210614046000(String)
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.ORM_CRYN, 'N') AS DATA1,
+		TOO.ORM_CDT AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210614046000' /*key_no*/
+ {executed in 15 msec}
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [selectOrmCryn:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [insertApicallHist:143] - ==>  Preparing: INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT ) VALUES ('Y25001' , ? /*call_function*/ , ? /*function_name*/ , ? /*client_ip*/ , 'CHATBOT',GETDATE(), '' ) 
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [insertApicallHist:143] - ==> Parameters: erp_orderChangeDtAvailableYn(String), 챗봇 날짜변경 가능여부 체크(String), 0:0:0:0:0:0:0:1(String)
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT )
+						     VALUES ('Y25001'    , 'erp_orderChangeDtAvailableYn' /*call_function*/ , '챗봇 날짜변경 가능여부 체크' /*function_name*/ , '0:0:0:0:0:0:0:1' /*client_ip*/ , 'CHATBOT',GETDATE(), '' )
+ {executed in 45 msec}
+DEBUG 21-06-25 07:14:10[http-nio-8082-exec-1] [insertApicallHist:143] - <==    Updates: 1
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectOrmCryn:143] - ==>  Preparing: SELECT ISNULL(TOO.ORM_CRYN, 'N') AS DATA1, TOO.ORM_CDT AS DATA2 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectOrmCryn:143] - ==> Parameters: I20210614046000(String)
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.ORM_CRYN, 'N') AS DATA1,
+		TOO.ORM_CDT AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210614046000' /*key_no*/
+ {executed in 3 msec}
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectOrmCryn:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectOrmGpost:143] - ==>  Preparing: SELECT ISNULL(TOO.ORM_GPOST, 'N') AS DATA1, TOO.BDONG AS DATA2 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectOrmGpost:143] - ==> Parameters: I20210614046000(String)
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.ORM_GPOST, 'N') AS DATA1,
+		TOO.BDONG AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210614046000' /*key_no*/
+ {executed in 5 msec}
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectOrmGpost:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectIloompreenposymd:143] - ==>  Preparing: EXEC pro_ren_preenposymd_chatbot ? /*key_no*/ , ? /*com_cmp*/ , ? /*orm_gpost*/ , ? /*req_dt*/ , ? /*com_brand*/ , 'OUTPUT' 
+DEBUG 21-06-25 07:14:41[http-nio-8082-exec-2] [selectIloompreenposymd:143] - ==> Parameters: I20210614046000(String), T01I(String), 04387(String), 20210625(String), T60I01(String)
+DEBUG 21-06-25 07:14:42[http-nio-8082-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. EXEC pro_ren_preenposymd_chatbot 'I20210614046000' /*key_no*/ , 'T01I' /*com_cmp*/ , '04387' /*orm_gpost*/ , '20210625' /*req_dt*/ , 'T60I01' /*com_brand*/ , 'OUTPUT'
+ {executed in 1451 msec}
+DEBUG 21-06-25 07:14:42[http-nio-8082-exec-2] [selectIloompreenposymd:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:42[http-nio-8082-exec-2] [insertApicallHist:143] - ==>  Preparing: INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT ) VALUES ('Y25001' , ? /*call_function*/ , ? /*function_name*/ , ? /*client_ip*/ , 'CHATBOT',GETDATE(), '' ) 
+DEBUG 21-06-25 07:14:42[http-nio-8082-exec-2] [insertApicallHist:143] - ==> Parameters: erp_orderChangeDtAvailableYn(String), 챗봇 날짜변경 가능여부 체크(String), 0:0:0:0:0:0:0:1(String)
+DEBUG 21-06-25 07:14:42[http-nio-8082-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT )
+						     VALUES ('Y25001'    , 'erp_orderChangeDtAvailableYn' /*call_function*/ , '챗봇 날짜변경 가능여부 체크' /*function_name*/ , '0:0:0:0:0:0:0:1' /*client_ip*/ , 'CHATBOT',GETDATE(), '' )
+ {executed in 4 msec}
+DEBUG 21-06-25 07:14:42[http-nio-8082-exec-2] [insertApicallHist:143] - <==    Updates: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectOrmCryn:143] - ==>  Preparing: SELECT ISNULL(TOO.ORM_CRYN, 'N') AS DATA1, TOO.ORM_CDT AS DATA2 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectOrmCryn:143] - ==> Parameters: I20210614046000(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.ORM_CRYN, 'N') AS DATA1,
+		TOO.ORM_CDT AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210614046000' /*key_no*/
+ {executed in 4 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectOrmCryn:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectOrmGpost:143] - ==>  Preparing: SELECT ISNULL(TOO.ORM_GPOST, 'N') AS DATA1, TOO.BDONG AS DATA2 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectOrmGpost:143] - ==> Parameters: I20210614046000(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.ORM_GPOST, 'N') AS DATA1,
+		TOO.BDONG AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210614046000' /*key_no*/
+ {executed in 2 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectOrmGpost:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectIloompreenposymd:143] - ==>  Preparing: EXEC pro_ren_preenposymd_chatbot ? /*key_no*/ , ? /*com_cmp*/ , ? /*orm_gpost*/ , ? /*req_dt*/ , ? /*com_brand*/ , 'OUTPUT' 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectIloompreenposymd:143] - ==> Parameters: I20210614046000(String), T01I(String), 04387(String), 20210630(String), T60I01(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. EXEC pro_ren_preenposymd_chatbot 'I20210614046000' /*key_no*/ , 'T01I' /*com_cmp*/ , '04387' /*orm_gpost*/ , '20210630' /*req_dt*/ , 'T60I01' /*com_brand*/ , 'OUTPUT'
+ {executed in 102 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectIloompreenposymd:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectSigongReserveYn:143] - ==>  Preparing: SELECT ISNULL((CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END), 'N') AS DATA1 FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectSigongReserveYn:143] - ==> Parameters: I20210614046000(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL((CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END), 'N') AS DATA1
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = 'I20210614046000' /*key_no*/
+ {executed in 9 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectSigongReserveYn:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectSigongReserveInfo:143] - ==>  Preparing: SELECT TCR.COM_SCD AS DATA1, TCR.STI_CD AS DATA2, TCR.TOWN_CD AS DATA3 FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = ? /*key_no*/ AND TCR.REM_DT = ( SELECT TOO.ORM_CDT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ ) 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectSigongReserveInfo:143] - ==> Parameters: I20210614046000(String), I20210614046000(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		TCR.COM_SCD AS DATA1,
+		TCR.STI_CD AS DATA2,
+		TCR.TOWN_CD AS DATA3
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = 'I20210614046000' /*key_no*/ 
+	   AND TCR.REM_DT = ( SELECT TOO.ORM_CDT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = 'I20210614046000' /*key_no*/  )
+ {executed in 41 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectSigongReserveInfo:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - ==>  Preparing: EXEC PRC_DAYINF_CHATBOT ? /*com_agsec*/ , ? /*com_brand*/ , ? /*bdong_cd*/ , ? /*req_dt*/ , ? /*com_scd*/ , ? /*sti_cd*/ , '1' 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - ==> Parameters: C02I(String), T60I01(String), 1117012500(String), 20210630(String), C16YA(String), YA225(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. EXEC PRC_DAYINF_CHATBOT 'C02I' /*com_agsec*/ , 'T60I01' /*com_brand*/ , '1117012500' /*bdong_cd*/ , '20210630' /*req_dt*/ , 'C16YA' /*com_scd*/ , 'YA225' /*sti_cd*/ , '1'
+ {executed in 385 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - <==    Updates: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - <==    Updates: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - <==    Updates: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - <==    Updates: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - <==    Updates: 0
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [selectProcDayinf:143] - <==      Total: 1
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [insertApicallHist:143] - ==>  Preparing: INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT ) VALUES ('Y25001' , ? /*call_function*/ , ? /*function_name*/ , ? /*client_ip*/ , 'CHATBOT',GETDATE(), '' ) 
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [insertApicallHist:143] - ==> Parameters: erp_orderChangeDtAvailableYn(String), 챗봇 날짜변경 가능여부 체크(String), 0:0:0:0:0:0:0:1(String)
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT )
+						     VALUES ('Y25001'    , 'erp_orderChangeDtAvailableYn' /*call_function*/ , '챗봇 날짜변경 가능여부 체크' /*function_name*/ , '0:0:0:0:0:0:0:1' /*client_ip*/ , 'CHATBOT',GETDATE(), '' )
+ {executed in 3 msec}
+DEBUG 21-06-25 07:14:55[http-nio-8082-exec-3] [insertApicallHist:143] - <==    Updates: 1
+INFO  21-06-25 16:03:52[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-25 16:03:53[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-25 16:03:53[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-25 16:03:53[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.

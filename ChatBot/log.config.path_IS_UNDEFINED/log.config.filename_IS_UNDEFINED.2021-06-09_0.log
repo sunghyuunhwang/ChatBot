@@ -1,0 +1,430 @@
+INFO  21-06-09 14:54:46[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 27420 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-09 14:54:46[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-09 14:54:47[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-09 14:54:48[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-09 14:54:48[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 14:54:48[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-09 14:54:48[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-09 14:54:48[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-09 14:54:48[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 2018 ms
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-09 14:54:49[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29b40b3, org.springframework.security.web.context.SecurityContextPersistenceFilter@403c3a01, org.springframework.security.web.header.HeaderWriterFilter@6f798482, org.springframework.security.web.authentication.logout.LogoutFilter@7dffda8b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4d1ff6b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28237492, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c3e4b1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d247660, org.springframework.security.web.session.SessionManagementFilter@633cc6b5, org.springframework.security.web.access.ExceptionTranslationFilter@16a35bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cca01a8]
+INFO  21-06-09 14:54:49[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-09 14:54:49[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-09 14:54:49[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-09 14:54:49[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 14:54:49[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-09 14:54:49[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-09 14:54:49[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-09 14:54:50[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-09 14:54:50[main] [ChatBotApplication:61] - Started ChatBotApplication in 4.906 seconds (JVM running for 7.648)
+INFO  21-06-09 14:55:05[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-09 14:55:05[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-09 14:55:05[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 16 ms
+INFO  21-06-09 14:55:30[http-nio-8082-exec-9] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-09 14:55:33[http-nio-8082-exec-9] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-09 14:55:33[http-nio-8082-exec-9] [selectOrderSearchList:143] - ==>  Preparing: SELECT DISTINCT ,,,,, AA.KEY_NO AS KEY_NO, AA.ORM_NM AS ORM_NM, AA.ORM_ORDDT AS ORM_ORDDT, AA.ORM_CDT AS ORM_CDT, AA.ORM_GADDR AS ORM_GADDR, AA.ORDER_TYPE AS ORDER_TYPE, AA.AGT_NM AS AGT_NM FROM ( SELECT TOO.ORM_NO AS KEY_NO, DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT, TOO.ORM_CDT AS ORM_CDT, TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR, 'ORDER' AS ORDER_TYPE, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.VND_CD = ? /*vnd_cd*/ AND TOO.COM_BRD = ? /*com_brand*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/ AND ? /*tdt*/ AND TOO.ORM_STAT <> 'O08003' AND ( TOO.ORM_HDPHONE = REPLACE(? /*orm_hdphone*/ , '-', '') or TOO.ORM_HDPHONE = ? /*orm_hdphone*/ ) AND TOO.AGT_CD <> '202060' UNION ALL SELECT TOO.ORM_NO AS KEY_NO, DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT, TOO.ORM_CDT AS ORM_CDT, TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR, 'ORDER' AS ORDER_TYPE, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customl8) WHERE TOO.VND_CD = ? /*vnd_cd*/ AND TOO.COM_BRD = ? /*com_brand*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/ AND ? /*tdt*/ AND TOO.ORM_STAT <> 'O08003' AND ( TTC.CTM_CELNO = REPLACE(? /*orm_hdphone*/ , '-', '') or TTC.CTM_CELNO = ? /*orm_hdphone*/ ) AND TTC.CTM_TELNO > '' AND TOO.AGT_CD <> '202060' AND TOO.ORM_PURCST = TTC.CTM_CD UNION ALL SELECT TOO.ORM_NO AS KEY_NO, DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT, TOO.ORM_CDT AS ORM_CDT, TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR, 'ORDER' AS ORDER_TYPE, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customI9) WHERE TOO.VND_CD = ? /*vnd_cd*/ AND TOO.COM_BRD = ? /*com_brand*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/ AND ? /*tdt*/ AND TOO.ORM_STAT <> 'O08003' AND TTC.CTM_CI = ? /*ctm_ci*/ AND TOO.AGT_CD <> '202060' AND TOO.ORM_PURCST = TTC.CTM_CD ) AA ORDER BY AA.ORM_ORDDT DESC 
+DEBUG 21-06-09 14:55:33[http-nio-8082-exec-9] [selectOrderSearchList:143] - ==> Parameters: T01I(String), T60I01(String), 20210501(String), 20210503(String), 010-1111-2222(String), 010-1111-2222(String), T01I(String), T60I01(String), 20210501(String), 20210503(String), 010-1111-2222(String), 010-1111-2222(String), T01I(String), T60I01(String), 20210501(String), 20210503(String), XXXX(String)
+ERROR 21-06-09 14:55:33[http-nio-8082-exec-9] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: 
+### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: ',' 근처의 구문이 잘못되었습니다.
+### The error may exist in file [D:\development\workspace\ChatBot\bin\main\mapper\ChatbotOrderSearchInfo.xml]
+### The error may involve com.fursys.chatbot.mapper.ChatBotMapper.selectOrderSearchList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT   DISTINCT ,,,,,   AA.KEY_NO AS KEY_NO,   AA.ORM_NM AS ORM_NM,   AA.ORM_ORDDT AS ORM_ORDDT,   AA.ORM_CDT AS ORM_CDT,   AA.ORM_GADDR AS ORM_GADDR,   AA.ORDER_TYPE AS ORDER_TYPE,   AA.AGT_NM AS AGT_NM     FROM    (   SELECT    TOO.ORM_NO AS KEY_NO,    DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,    CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,    TOO.ORM_CDT AS ORM_CDT,    TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,    'ORDER' AS ORDER_TYPE,    (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM     FROM TO_ORDMAS TOO WITH (NOLOCK)    WHERE TOO.VND_CD = ? /*vnd_cd*/      AND TOO.COM_BRD = ? /*com_brand*/      AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/  AND ? /*tdt*/      AND TOO.ORM_STAT <> 'O08003'     AND ( TOO.ORM_HDPHONE = REPLACE(? /*orm_hdphone*/ , '-', '') or TOO.ORM_HDPHONE = ? /*orm_hdphone*/  )     AND TOO.AGT_CD <> '202060'           UNION ALL        SELECT    TOO.ORM_NO AS KEY_NO,    DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,    CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,    TOO.ORM_CDT AS ORM_CDT,    TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,    'ORDER' AS ORDER_TYPE,    (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM     FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customl8)    WHERE TOO.VND_CD = ? /*vnd_cd*/      AND TOO.COM_BRD = ? /*com_brand*/      AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/  AND ? /*tdt*/      AND TOO.ORM_STAT <> 'O08003'     AND ( TTC.CTM_CELNO = REPLACE(? /*orm_hdphone*/ , '-', '') or TTC.CTM_CELNO = ? /*orm_hdphone*/  )     AND TTC.CTM_TELNO > ''     AND TOO.AGT_CD <> '202060'     AND TOO.ORM_PURCST = TTC.CTM_CD       UNION ALL        SELECT    TOO.ORM_NO AS KEY_NO,    DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,    CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,    TOO.ORM_CDT AS ORM_CDT,    TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,    'ORDER' AS ORDER_TYPE,    (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM     FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customI9)    WHERE TOO.VND_CD = ? /*vnd_cd*/      AND TOO.COM_BRD = ? /*com_brand*/      AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/  AND ? /*tdt*/      AND TOO.ORM_STAT <> 'O08003'     AND TTC.CTM_CI = ? /*ctm_ci*/      AND TOO.AGT_CD <> '202060'     AND TOO.ORM_PURCST = TTC.CTM_CD        ) AA    ORDER BY AA.ORM_ORDDT DESC
+### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: ',' 근처의 구문이 잘못되었습니다.
+; uncategorized SQLException; SQL state [S0001]; error code [102]; ',' 근처의 구문이 잘못되었습니다.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: ',' 근처의 구문이 잘못되었습니다.] with root cause
+com.microsoft.sqlserver.jdbc.SQLServerException: ',' 근처의 구문이 잘못되었습니다.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:262)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1624)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:594)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:524)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7194)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2979)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:248)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:223)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.execute(SQLServerPreparedStatement.java:505)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy117.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy72.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy81.selectOrderSearchList(Unknown Source)
+	at com.fursys.chatbot.controllers.AppController.erp_searchOrderInfo(AppController.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-06-09 15:03:20[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-09 15:03:22[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-09 15:03:22[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-09 15:03:22[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-09 15:35:31[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 26724 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-09 15:35:31[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-09 15:35:32[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-09 15:35:32[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-09 15:35:32[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:35:32[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-09 15:35:32[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-09 15:35:32[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-09 15:35:32[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1026 ms
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-09 15:35:33[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ae73c80, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ff19c33, org.springframework.security.web.header.HeaderWriterFilter@48eb001a, org.springframework.security.web.authentication.logout.LogoutFilter@1a3e8e24, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6749fe50, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7cca01a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45f756e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22f4f8f2, org.springframework.security.web.session.SessionManagementFilter@724b939e, org.springframework.security.web.access.ExceptionTranslationFilter@33feb805, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6bccd036]
+INFO  21-06-09 15:35:33[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-09 15:35:33[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-09 15:35:33[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-09 15:35:33[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:35:33[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-09 15:35:33[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-09 15:35:33[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-09 15:35:33[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-09 15:35:33[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.478 seconds (JVM running for 4.077)
+INFO  21-06-09 15:35:42[http-nio-8082-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-09 15:35:42[http-nio-8082-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-09 15:35:42[http-nio-8082-exec-2] [DispatcherServlet:547] - Completed initialization in 5 ms
+ERROR 21-06-09 15:36:00[http-nio-8082-exec-5] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "//"
+	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlacklistedUrls(StrictHttpFirewall.java:369)
+	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:194)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-06-09 15:39:50[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-09 15:39:51[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-09 15:46:31[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 25976 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-09 15:46:31[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-09 15:46:31[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-09 15:46:32[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-09 15:46:32[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:46:32[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-09 15:46:32[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-09 15:46:32[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-09 15:46:32[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1046 ms
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-09 15:46:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5562c2c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@50448409, org.springframework.security.web.header.HeaderWriterFilter@4ed4a7e4, org.springframework.security.web.authentication.logout.LogoutFilter@7c781c42, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9b76b60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b0dc227, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e7b65d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@673c4f6e, org.springframework.security.web.session.SessionManagementFilter@55651434, org.springframework.security.web.access.ExceptionTranslationFilter@119b0892, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b2df3aa]
+INFO  21-06-09 15:46:32[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-09 15:46:32[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-09 15:46:32[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-09 15:46:33[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:46:33[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-09 15:46:33[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-09 15:46:33[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-09 15:46:33[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-09 15:46:33[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.407 seconds (JVM running for 3.775)
+INFO  21-06-09 15:46:39[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-09 15:46:39[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-09 15:46:39[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 6 ms
+INFO  21-06-09 15:47:20[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-09 15:47:21[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-09 15:47:29[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 25672 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-09 15:47:29[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-09 15:47:30[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-09 15:47:31[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-09 15:47:31[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:47:31[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-09 15:47:31[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-09 15:47:31[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-09 15:47:31[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1443 ms
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-09 15:47:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7beae796, org.springframework.security.web.context.SecurityContextPersistenceFilter@48eb001a, org.springframework.security.web.header.HeaderWriterFilter@71f1cc02, org.springframework.security.web.authentication.logout.LogoutFilter@513b52af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1f3b992, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@724b939e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45e9b12d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6749fe50, org.springframework.security.web.session.SessionManagementFilter@33feb805, org.springframework.security.web.access.ExceptionTranslationFilter@341b13a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2806d6da]
+INFO  21-06-09 15:47:32[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-09 15:47:32[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-09 15:47:32[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-09 15:47:32[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:47:32[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-09 15:47:32[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-09 15:47:32[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-09 15:47:32[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-09 15:47:32[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.583 seconds (JVM running for 5.895)
+INFO  21-06-09 15:47:37[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-09 15:47:37[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-09 15:47:37[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 4 ms
+INFO  21-06-09 15:47:58[http-nio-8082-exec-9] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-09 15:47:59[http-nio-8082-exec-9] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-09 15:47:59[http-nio-8082-exec-9] [selectOrderSearchList:143] - ==>  Preparing: SELECT DISTINCT AA.KEY_NO AS KEY_NO, AA.ORM_NM AS ORM_NM, AA.ORM_ORDDT AS ORM_ORDDT, AA.ORM_CDT AS ORM_CDT, AA.ORM_GADDR AS ORM_GADDR, AA.ORDER_TYPE AS ORDER_TYPE, AA.AGT_NM AS AGT_NM FROM ( SELECT TOO.ORM_NO AS KEY_NO, DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT, TOO.ORM_CDT AS ORM_CDT, TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR, 'ORDER' AS ORDER_TYPE, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.VND_CD = ? /*vnd_cd*/ AND TOO.COM_BRD = ? /*com_brand*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/ AND ? /*tdt*/ AND TOO.ORM_STAT <> 'O08003' AND ( TOO.ORM_HDPHONE = REPLACE(? /*orm_hdphone*/ , '-', '') or TOO.ORM_HDPHONE = ? /*orm_hdphone*/ ) AND TOO.AGT_CD <> '202060' UNION ALL SELECT TOO.ORM_NO AS KEY_NO, DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT, TOO.ORM_CDT AS ORM_CDT, TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR, 'ORDER' AS ORDER_TYPE, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customl8) WHERE TOO.VND_CD = ? /*vnd_cd*/ AND TOO.COM_BRD = ? /*com_brand*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/ AND ? /*tdt*/ AND TOO.ORM_STAT <> 'O08003' AND ( TTC.CTM_CELNO = REPLACE(? /*orm_hdphone*/ , '-', '') or TTC.CTM_CELNO = ? /*orm_hdphone*/ ) AND TTC.CTM_TELNO > '' AND TOO.AGT_CD <> '202060' AND TOO.ORM_PURCST = TTC.CTM_CD UNION ALL SELECT TOO.ORM_NO AS KEY_NO, DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT, TOO.ORM_CDT AS ORM_CDT, TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR, 'ORDER' AS ORDER_TYPE, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customI9) WHERE TOO.VND_CD = ? /*vnd_cd*/ AND TOO.COM_BRD = ? /*com_brand*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN ? /*fdt*/ AND ? /*tdt*/ AND TOO.ORM_STAT <> 'O08003' AND TTC.CTM_CI = ? /*ctm_ci*/ AND TOO.AGT_CD <> '202060' AND TOO.ORM_PURCST = TTC.CTM_CD ) AA ORDER BY AA.ORM_ORDDT DESC 
+DEBUG 21-06-09 15:47:59[http-nio-8082-exec-9] [selectOrderSearchList:143] - ==> Parameters: T01I(String), T60I01(String), 20210501(String), 20210503(String), 010-1111-1111(String), 010-1111-1111(String), T01I(String), T60I01(String), 20210501(String), 20210503(String), 010-1111-1111(String), 010-1111-1111(String), T01I(String), T60I01(String), 20210501(String), 20210503(String), XXXX(String)
+DEBUG 21-06-09 15:48:02[http-nio-8082-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		DISTINCT 
+		AA.KEY_NO AS KEY_NO,
+		AA.ORM_NM AS ORM_NM,
+		AA.ORM_ORDDT AS ORM_ORDDT,
+		AA.ORM_CDT AS ORM_CDT,
+		AA.ORM_GADDR AS ORM_GADDR,
+		AA.ORDER_TYPE AS ORDER_TYPE,
+		AA.AGT_NM AS AGT_NM	
+	  FROM 
+		(
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK)
+		 WHERE TOO.VND_CD = 'T01I' /*vnd_cd*/ 
+		  AND TOO.COM_BRD = 'T60I01' /*com_brand*/ 
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN '20210501' /*fdt*/  AND '20210503' /*tdt*/ 
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND ( TOO.ORM_HDPHONE = REPLACE('010-1111-1111' /*orm_hdphone*/ , '-', '') or TOO.ORM_HDPHONE = '010-1111-1111' /*orm_hdphone*/  )
+		  AND TOO.AGT_CD <> '202060'
+
+	    UNION ALL
+
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customl8)
+		 WHERE TOO.VND_CD = 'T01I' /*vnd_cd*/ 
+		  AND TOO.COM_BRD = 'T60I01' /*com_brand*/ 
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN '20210501' /*fdt*/  AND '20210503' /*tdt*/ 
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND ( TTC.CTM_CELNO = REPLACE('010-1111-1111' /*orm_hdphone*/ , '-', '') or TTC.CTM_CELNO = '010-1111-1111' /*orm_hdphone*/  )
+		  AND TTC.CTM_TELNO > ''
+		  AND TOO.AGT_CD <> '202060'
+		  AND TOO.ORM_PURCST = TTC.CTM_CD
+
+	    UNION ALL
+
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customI9)
+		 WHERE TOO.VND_CD = 'T01I' /*vnd_cd*/ 
+		  AND TOO.COM_BRD = 'T60I01' /*com_brand*/ 
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN '20210501' /*fdt*/  AND '20210503' /*tdt*/ 
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND TTC.CTM_CI = 'XXXX' /*ctm_ci*/ 
+		  AND TOO.AGT_CD <> '202060'
+		  AND TOO.ORM_PURCST = TTC.CTM_CD
+
+		) AA
+	  ORDER BY AA.ORM_ORDDT DESC
+ {executed in 2460 msec}
+DEBUG 21-06-09 15:48:02[http-nio-8082-exec-9] [selectOrderSearchList:143] - <==      Total: 0
+INFO  21-06-09 15:49:32[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-09 15:49:33[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-09 15:49:33[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-09 15:49:33[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-09 15:49:40[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 1612 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-09 15:49:40[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-09 15:49:41[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-09 15:49:41[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-09 15:49:41[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:49:41[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-09 15:49:41[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-09 15:49:41[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-09 15:49:41[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1670 ms
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-09 15:49:43[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@361abd01, org.springframework.security.web.context.SecurityContextPersistenceFilter@329548d0, org.springframework.security.web.header.HeaderWriterFilter@3dc95b8b, org.springframework.security.web.authentication.logout.LogoutFilter@2a334bac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59c70ceb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29b40b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@119b0892, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@575b5f7d, org.springframework.security.web.session.SessionManagementFilter@4d1ff6b1, org.springframework.security.web.access.ExceptionTranslationFilter@5626d18c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22f4f8f2]
+INFO  21-06-09 15:49:43[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-09 15:49:43[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-09 15:49:43[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-09 15:49:43[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-09 15:49:43[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-09 15:49:43[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-09 15:49:43[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-09 15:49:43[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-09 15:49:43[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.725 seconds (JVM running for 5.594)

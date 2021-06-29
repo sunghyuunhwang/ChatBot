@@ -1,0 +1,1960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fursys.chatbot.mapper.ChatBotChangeMapper">
+
+<select id="executePraFaChgreqdt" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	DECLARE @RTN_STR NVARCHAR(10)
+	execute dbo.PRA_FA_CHGREQDT;1 @P_COM_AGSEC = #{com_agsec}, @P_RPT_NO = #{rpt_no}, @P_RPT_SEQ = #{rpt_seq}, @P_REQ_DT = #{req_dt}, @P_USER_ID = 'chatbot', @RET_CODE = @RTN_STR OUTPUT
+	SELECT @RTN_STR DATA1
+	
+]]>
+</select>
+
+<update id="updateAsHpChange" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TA_RPTREQ SET CTM_HP = #{ctm_hp}
+	WHERE RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	  AND RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+
+]]>
+</update>  
+
+<select id="selectAsDateConfirmYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+    SELECT ISNULL(COM_RFG, 'C141') AS DATA1
+	  FROM TC_RESMST with (nolock)
+	 WHERE ORM_NO = CAST(#{key_no} AS VARCHAR)
+	   AND COM_SSEC = 'C18A' 
+	
+]]>
+</select>
+
+<select id="selectAsChulgoYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+    SELECT ISNULL(COM_SPROG, '') AS DATA1
+	  FROM TA_RPTREQ with (nolock)
+	 WHERE RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	   AND RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	
+]]>
+</select>
+
+<update id="updateOrderHpChange" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TO_ORDMAS SET ORM_HDPHONE = #{ctm_hp}
+	WHERE ORM_NO = #{key_no}
+	
+]]>
+</update> 
+
+<select id="selectSigongYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT ISNULL(ORM_CRYN, 'N') AS DATA1,
+		   TOO.ORM_CDT AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectSchDivYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT ( case when count(*) > 0 then ISNULL(max(TCR.SCHDIV_YN), 'N') else 'N' end ) AS DATA1
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectSigongConfirmYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT ( case when count(*) > 0 then ISNULL(max(TCR.COM_RFG), 'C141') else 'C141' end ) AS DATA1
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectFinishYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		( CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END ) AS DATA1
+	  FROM TO_ORDMAS TOOM WITH (NOLOCK), TO_ORDDET TOOD WITH (NOLOCK)
+	 WHERE TOOM.ORM_NO = TOOD.ORM_NO
+	   AND TOOD.ORD_ENDYN = 'Y'
+	   AND TOOM.ORM_NO = #{key_no}
+ 
+]]>
+</select>
+
+<select id="selectChgstatusYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		( CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END ) AS DATA1
+	  FROM TO_CHGMAS TOC WITH (NOLOCK)
+	 WHERE TOC.ORM_NO = #{key_no}
+	   AND ( TOC.ING_STT= 'O46001' OR TOC.ING_STT= 'O46005' OR TOC.ING_STT= 'O46006' OR TOC.ING_STT= 'O46007' OR TOC.ING_STT= 'O46008' OR TOC.ING_STT= 'O46010' )
+
+ 
+]]>
+</select>
+
+<select id="selectToChgmasMaxSeqNo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		ISNULL(MAX(RQT_SEQ), '01') AS DATA1
+	  FROM TO_CHGMAS TOC WITH(NOLOCK)
+	 WHERE ORM_NO = #{key_no}
+	   AND RQT_TYP = 'O45002'
+       AND ING_STT = 'O46001'
+
+]]>
+</select>
+
+
+<insert id="insertOrmCdtChangeReq" parameterType="HashMap">
+<![CDATA[
+ 
+	INSERT INTO TO_CHGMAS (
+			      ORM_NO
+			      ,RQT_SEQ
+			      ,VND_CD
+			      ,CMP_CD
+			      ,AGT_CD
+			      ,RQT_DT
+			      ,RQT_TYP
+			      ,ETC_TYP
+			      ,ING_STT
+			      ,RQT_USR
+			      ,EMC_YN
+			      ,OUT_TYP
+			      ,ORM_CDT
+			      ,CHG_CDT
+			      ,ORM_NM
+			      ,CHG_NM
+			      ,ORM_GPOST
+			      ,CHG_ZIPCD
+			      ,ORM_GADDR
+			      ,CHG_ADDR
+			      ,ORM_CTM
+			      ,CHG_CTM
+			      ,CHG_RMK
+			      ,RQT_RSN
+			      ,ETC_RMK
+			      ,USR_CD
+			      ,SYS_DT
+			      ,ORM_GOOD
+			      ,CHG_GOOD
+			      ,ORM_GEMP
+			      ,CHG_GEMP
+			      ,DET_CD
+			      ,CHG_DET_CD
+			      ,ORM_GEMPHP
+			      ,CHG_GEMPHP
+			      ,ORM_HDPHONE
+			      ,CHG_HDPHONE
+			      ,ORM_SPC
+			      ,CHG_SPC
+			      ,AUTO_BLOCK_KND
+			      ,MULTI_CHGKND
+			      ,CHGRQT_REASON
+			      ,FST_USR
+			      ,FST_SYS_DT
+			      ,ADDR_DTL
+			      ,CHG_ADDR_DTL
+			      ,BDONG
+			      ,CHG_BDONG
+	      )
+	SELECT
+		TOO.ORM_NO,
+		(SELECT (SELECT RIGHT('00' + CONVERT(VARCHAR(3), isnull(MAX(TOC.RQT_SEQ), 0) + 1) , 2) )
+	      FROM TO_CHGMAS TOC WITH (NOLOCK)
+	     WHERE TOC.ORM_NO = TOO.ORM_NO ),
+		TOO.VND_CD,
+		TOO.CMP_CD,
+		TOO.AGT_CD,
+		GETDATE(),
+		'O45002',
+		NULL,
+		'O46001',
+		'CHATBOT',
+		'N',
+		'',
+		TOO.ORM_CDT,
+		#{req_dt},
+		TOO.ORM_NM,
+		NULL,
+		TOO.ORM_GPOST,
+		NULL,
+		TOO.ORM_GADDR,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		'CHATBOT',
+		GETDATE(),
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL, 
+		NULL,
+		NULL,
+		NULL,
+	   '사유',
+	   'CHATBOT',
+	   GETDATE(),
+		TOO.ADDR_DTL,
+		NULL,
+		TOO.BDONG,
+		NULL
+	FROM TO_ORDMAS TOO WITH (NOLOCK)
+	WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</insert> 
+
+<select id="executePraMindateZipChatbot" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderFinalAvailableDate">
+<![CDATA[
+	DECLARE @RET_CODE NVARCHAR(300)
+	EXEC PRO_MINDATE_ZIP_CHATBOT #{vnd_cd}, #{orm_gpost},  @RET_CODE = @RET_CODE OUTPUT
+	SELECT @RET_CODE AVAILABLE_DATE
+]]>
+</select>
+
+<select id="executeProRenAutoBlock" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderCdtChangeAutoYn">
+<![CDATA[
+	DECLARE @RET_CODE NVARCHAR(300)
+	EXEC PRO_REN_AUTOBLOCK_CHATBOT #{key_no}, #{req_seq}, #{com_cmp},  @RET_CODE = @RET_CODE OUTPUT
+	SELECT ISNULL(@RET_CODE, 'Y') BLOCK_YN
+]]>
+</select>
+
+<select id="selectOrmZipCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT TOO.ORM_GPOST AS DATA1
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectOrmVndCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT TOO.VND_CD AS DATA1
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectOrmComScd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		( SELECT MAX(TCS.COM_SCD) FROM TC_STINF TCS WITH (NOLOCK) WHERE TCS.STI_CD = TCT.STI_CD ) AS DATA1
+	  FROM TO_ORDMAS TOO WITH (NOLOCK), TC_TOWND TCT WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	   AND TOO.BDONG = TCT.TOWN_CD
+	   AND TOO.COM_BRAND = TCT.COM_BRAND
+	 
+]]>
+</select>
+
+<select id="selectOrmStiCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+    SELECT TOP 1 D.STI_CD AS DATA1
+	  FROM TO_ORDDET A WITH (NOLOCK)
+	 INNER JOIN TT_ITMMST B WITH (NOLOCK) 
+	    ON A.ITM_CD = B.ITM_CD
+	   AND A.COL_CD = B.COL_CD
+	 INNER JOIN TC_ITMSE C WITH (NOLOCK)
+	    ON B.COM_SERIES = C.COM_EX_SE
+	 INNER JOIN TC_ITMASS D WITH (NOLOCK)
+	    ON C.COM_EX_CD = D.COM_EX_CD
+	 INNER JOIN TC_STINF E WITH (NOLOCK)
+	    ON D.STI_CD = E.STI_CD
+	 WHERE A.ORM_NO   = #{key_no}
+	   AND E.COM_SCD  = #{com_scd}
+	   AND E.STI_RANK = 'Y'	
+	 
+]]>
+</select>
+
+<select id="executePraDayInfChatbot" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderFinalAvailableDate">
+<![CDATA[
+	DECLARE @RET_CODE NVARCHAR(300)
+	EXEC PRC_DAYINF #{com_agsec}, #{com_brand}, #{bdong_cd}, #{available_date}, #{com_scd}, #{sti_cd}, '1',  @RET_CODE = @RET_CODE OUTPUT
+	SELECT @RET_CODE AVAILABLE_DATE
+]]>
+</select>
+
+<select id="executeProGetNo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	DECLARE @RTN_NO NVARCHAR(20)
+	EXEC PRO_GETNO_CHATBOT 'orm', #{key_no}, 'div', '', '',  @PSOUTPUT = @RTN_NO OUTPUT
+	SELECT @RTN_NO DATA1
+]]>
+</select>
+
+
+
+<select id="selectOrmBdongCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT TOO.BDONG AS DATA1
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectBdongCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPBdongCdVo">
+<![CDATA[
+
+	SELECT
+		MAX(TCR.BDONG_CD) AS BDONG_CD
+	  FROM TC_ROADZIP TCR WITH (NOLOCK)
+	 WHERE TCR.ZIP_CD = #{zip_cd}
+
+]]>
+</select>
+
+<select id="selectToChgmasChgdt" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		TOC.CHG_CDT AS DATA1
+	  FROM TO_CHGMAS TOC WITH(NOLOCK)
+	 WHERE ORM_NO = #{key_no}
+	   AND RQT_TYP = 'O45002'
+       AND ING_STT = 'O46001'
+
+]]>
+</select>
+
+<insert id="insertNewOrdMaster" parameterType="HashMap">
+<![CDATA[
+ 
+	INSERT INTO TO_ORDMAS (
+		  ORM_NO               
+          ,ORM_NM
+          ,COM_ORD
+          ,ORM_SSEC
+          ,VND_CD
+          ,AGT_CD
+          ,CMP_CD
+          ,ORM_ORDDT   
+          ,ORM_STAT                
+          ,ORM_RDT
+          ,ORM_ADT
+          ,ORM_CDT             
+          ,ORM_AGTCST
+          ,ORM_PURCST
+          ,ORM_VISIT   
+          ,ORM_PURRSN
+          ,ORM_GGUBUN
+          ,ORM_GOOD
+          ,ORM_GPOST
+          ,ORM_GADDR
+          ,ORM_GEMP
+          ,DET_CD   
+          ,ORM_GEMPHP
+          ,ORM_HDPHONE
+          ,ORM_GSPC
+          ,ORM_DOWNST
+          ,ORM_GRTTON
+          ,ORM_DOWNNM
+          ,ORM_DPOST   
+          ,ORM_DADDR
+          ,ORM_CONSP
+          ,ORM_SALEMP
+          ,ORM_AGTEMP
+          ,PRJ_CD
+          ,ORM_REBAGT
+          ,ORM_CMPCD   
+          ,ORM_SPC
+          ,ORM_PART
+          ,EPI_PINO
+          ,ORM_CRYN
+          ,ORM_CSTYN
+          ,ORM_CSTRATE
+          ,ORM_COMRATE
+          ,USR_CD
+          ,SYS_DT
+          ,ORM_WMSSEC
+          ,WMS_YN
+          ,PLM_PTM
+          ,PLM_EVT
+          ,PLM_ITR
+          ,FRM_NO
+          ,ORM_PSTS
+  		  ,ADDR_DTL
+  		  ,BDONG
+  		  ,ORM_ATTR
+  		  ,DLV_KIND
+  		  ,PLM_MERG_NO
+  		  ,COM_BRD
+  		  ,LDDR_YN
+  		  ,CNT_CDT
+  		  ,CNT_ATTR 
+  		  ,SHP_NO 
+  		 ,FST_USR       
+		 ,FST_SYS_DT 
+		 ,PAY_DUE_DT
+		 ,APT_SEQ
+		 ,PROMO_SERIAL
+		 ,LDDR_FREE
+		 ,ADDR_GUBUN
+ 	      )
+	SELECT
+		  #{new_orm_no}           
+          ,TOO.ORM_NM
+          ,TOO.COM_ORD
+          ,TOO.ORM_SSEC
+          ,TOO.VND_CD
+          ,TOO.AGT_CD
+          ,TOO.CMP_CD
+          ,TOO.ORM_ORDDT   
+          ,TOO.ORM_STAT                
+          ,TOO.ORM_RDT
+          ,TOO.ORM_ADT
+          ,#{chg_orm_cdt}         
+          ,TOO.ORM_AGTCST
+          ,TOO.ORM_PURCST
+          ,TOO.ORM_VISIT   
+          ,TOO.ORM_PURRSN
+          ,TOO.ORM_GGUBUN
+          ,TOO.ORM_GOOD
+          ,TOO.ORM_GPOST
+          ,TOO.ORM_GADDR
+          ,TOO.ORM_GEMP
+          ,TOO.DET_CD   
+          ,TOO.ORM_GEMPHP
+          ,TOO.ORM_HDPHONE
+          ,TOO.ORM_GSPC
+          ,TOO.ORM_DOWNST
+          ,TOO.ORM_GRTTON
+          ,TOO.ORM_DOWNNM
+          ,TOO.ORM_DPOST   
+          ,TOO.ORM_DADDR
+          ,TOO.ORM_CONSP
+          ,TOO.ORM_SALEMP
+          ,TOO.ORM_AGTEMP
+          ,TOO.PRJ_CD
+          ,TOO.ORM_REBAGT
+          ,TOO.ORM_CMPCD   
+          ,TOO.ORM_SPC
+          ,TOO.ORM_PART
+          ,TOO.EPI_PINO
+          ,TOO.ORM_CRYN
+          ,TOO.ORM_CSTYN
+          ,TOO.ORM_CSTRATE
+          ,TOO.ORM_COMRATE
+          ,TOO.USR_CD
+          ,GETDATE()
+          ,TOO.ORM_WMSSEC
+          ,TOO.WMS_YN
+          ,TOO.PLM_PTM
+          ,TOO.PLM_EVT
+          ,TOO.PLM_ITR
+          ,TOO.FRM_NO
+          ,TOO.ORM_PSTS
+  		  ,TOO.ADDR_DTL
+  		  ,TOO.BDONG
+  		  ,TOO.ORM_ATTR
+  		  ,TOO.DLV_KIND
+  		  ,TOO.PLM_MERG_NO
+  		  ,TOO.COM_BRD
+  		  ,TOO.LDDR_YN
+  		  ,TOO.CNT_CDT
+  		  ,TOO.CNT_ATTR 
+  		  ,TOO.SHP_NO 
+  		  ,TOO.FST_USR       
+		  ,GETDATE() 
+		  ,(SELECT CASE WHEN ISNULL(TOO.ORM_CDT,'') != '' AND ISNULL(#{chg_orm_cdt},'') != '' THEN 
+		  		CONVERT(DATETIME,CONCAT(CONVERT(CHAR(10),CONVERT(DATE, DBO.FN_GET_PAY_DUE_DT('T01I',#{chg_orm_cdt},TOO.COM_BRD) ),120),' 23:59:59.990'))   
+		   END)
+		  ,TOO.APT_SEQ
+		  ,TOO.PROMO_SERIAL
+		  ,TOO.LDDR_FREE
+		  ,TOO.ADDR_GUBUN	
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+]]>
+</insert> 
+
+<insert id="insertNewOrdDetail" parameterType="HashMap">
+<![CDATA[
+ 
+	INSERT INTO TO_ORDDET (
+		  ORM_NO
+	      ,ORD_SSEQ
+	      ,ORD_ISEQ
+	      ,SET_CD
+	      ,COL_SCD
+	      ,ITM_CD
+	      ,COL_CD
+	      ,ORD_QTY
+	      ,ORD_CST
+	      ,TAX_AMT
+	      ,STK_CD
+	      ,ORD_PURCD
+	      ,ORD_GOODSEC
+	      ,ORD_UPCD
+	      ,ORD_WHSCD
+	      ,ORD_TWHSCD
+	      ,ORD_CURCD
+	      ,ORD_FCST
+	      ,ORD_QSTAT
+	      ,ORD_RMK
+	      ,ORD_UNFOLDING
+	      ,ORD_ENDYN
+	      ,USR_CD
+	      ,SYS_DT
+	      ,ORD_PIDSEQ
+	      ,ORM_PLANDT
+	      ,COM_ARESEC
+	      ,CAR_NO
+	      ,PMS_NO
+	      ,COM_TONSEC
+	      ,DOK_NO
+	      ,ORM_PMSYN
+	      ,ORM_PMSND
+	      ,COM_SCD
+	      ,STI_CD
+	      ,COM_CTSEC
+	      ,COM_RFG
+	      ,WMS_YN
+	      ,PID_SEQ
+	      ,ORD_ITMCOL
+	      ,A.SET_QTY
+          ,A.SDT_QTY
+          ,A.BSET_CD
+          ,A.BCOL_CD
+          ,A.MNF_ADT
+          ,A.WH_ADT
+		  ,FST_USR       
+		  ,FST_SYS_DT
+		  ,DC_AMT
+    	  ,DC_CST
+    	  ,PROMO_DC_AMT
+    	  ,PROMO_DC_CST
+    	  ,GIFT_YN
+    	  ,ORG_PROMO_CST
+    	  ,JEJU_CST
+    	  ,IOP_SALCST               
+ 	      )
+	SELECT
+		  #{new_orm_no}
+	      ,TOD.ORD_SSEQ
+	      ,TOD.ORD_ISEQ
+	      ,TOD.SET_CD
+	      ,TOD.COL_SCD
+	      ,TOD.ITM_CD
+	      ,TOD.COL_CD
+	      ,TOD.ORD_QTY
+	      ,TOD.ORD_CST
+	      ,TOD.TAX_AMT
+	      ,TOD.STK_CD
+	      ,TOD.ORD_PURCD
+	      ,TOD.ORD_GOODSEC
+	      ,TOD.ORD_UPCD
+	      ,TOD.ORD_WHSCD
+	      ,TOD.ORD_TWHSCD
+	      ,TOD.ORD_CURCD
+	      ,TOD.ORD_FCST
+	      ,TOD.ORD_QSTAT
+	      ,TOD.ORD_RMK
+	      ,TOD.ORD_UNFOLDING
+	      ,TOD.ORD_ENDYN
+	      ,TOD.USR_CD
+	      ,GETDATE()
+	      ,TOD.ORD_PIDSEQ
+	      ,ORM_PLANDT
+	      ,TOD.COM_ARESEC
+	      ,TOD.CAR_NO
+	      ,TOD.PMS_NO
+	      ,TOD.COM_TONSEC
+	      ,TOD.DOK_NO
+	      ,TOD.ORM_PMSYN
+	      ,TOD.ORM_PMSND
+	      ,TOD.COM_SCD
+	      ,TOD.STI_CD
+	      ,TOD.COM_CTSEC
+	      ,TOD.COM_RFG
+	      ,TOD.WMS_YN
+	      ,TOD.PID_SEQ
+	      ,TOD.ORD_ITMCOL
+	      ,TOD.SET_QTY
+          ,TOD.SDT_QTY
+          ,TOD.BSET_CD
+          ,TOD.BCOL_CD
+          ,(    SELECT T.CAL_YMD
+				  FROM (
+						SELECT ROW_NUMBER() OVER(ORDER BY CAL_YMD DESC) AS RNUM
+							  ,CAL_YMD
+						  FROM TT_CALENDAR
+						 WHERE COM_CMP  = CAST(#{com_cmp} AS VARCHAR)
+						   AND COM_CSEC = 'T32001'
+						   AND CAL_SEC  = 'T33N'
+						   AND CAL_YMD   <  CAST(#{chg_orm_cdt} AS VARCHAR)
+						) T
+				 WHERE RNUM = ABS((SELECT ISNULL(PRDCTNDAYS, 0) 
+												  FROM TO_DELIVEDT_ITM
+												 WHERE CMP_CD = CAST(#{com_cmp} AS VARCHAR)
+												   AND ITM_CD = CAST(TOD.ITM_CD AS VARCHAR)
+												   AND COL_CD = CAST(TOD.COL_CD AS VARCHAR) ))
+			)
+          ,(    SELECT T.CAL_YMD
+				  FROM (
+						SELECT ROW_NUMBER() OVER(ORDER BY CAL_YMD DESC) AS RNUM
+							  ,CAL_YMD
+						  FROM TT_CALENDAR
+						 WHERE COM_CMP  = CAST(#{com_cmp} AS VARCHAR)
+						   AND COM_CSEC = 'T32001'
+						   AND CAL_SEC  = 'T33N'
+						   AND CAL_YMD   <  CAST(#{chg_orm_cdt} AS VARCHAR)
+						) T
+				 WHERE RNUM = ABS((SELECT ISNULL(LGISTDAYS , 0)
+												  FROM TO_DELIVEDT_ITM
+												 WHERE CMP_CD = CAST(#{com_cmp} AS VARCHAR)
+												   AND ITM_CD = CAST(TOD.ITM_CD AS VARCHAR)
+												   AND COL_CD = CAST(TOD.COL_CD AS VARCHAR) ))
+			)
+		  ,FST_USR       
+		  ,GETDATE()
+		  ,DC_AMT
+    	  ,DC_CST
+    	  ,PROMO_DC_AMT
+    	  ,PROMO_DC_CST
+    	  ,GIFT_YN
+    	  ,ORG_PROMO_CST
+    	  ,JEJU_CST
+    	  ,IOP_SALCST               
+	  FROM TO_ORDDET TOD WITH (NOLOCK)
+	 WHERE TOD.ORM_NO = #{key_no}
+]]>
+</insert> 
+
+<delete id="deleteRecdRenD" parameterType="HashMap">
+<![CDATA[    
+    DELETE FROM TO_RECE_REN
+     WHERE REC_NO = CAST(#{key_no} AS VARCHAR)
+]]>
+</delete>
+
+<insert id="insertRecdRenD" parameterType="HashMap">
+<![CDATA[
+ 
+    INSERT 
+	  INTO TO_RECE_REN 
+	            (REC_NO
+	             , ITM_CD
+	             ,COL_CD
+	             ,REC_QTY
+	             ,ORM_RDT
+	             ,ORM_RDT_2
+	             ,ORM_RDT_2_YN
+	             ,REC_DT_1
+	             ,REC_DT_2
+                ,COM_CMP
+                ,IOP_FINEST
+                ,COM_GOODCD
+                ,VND_CD
+                ,COM_STKSEC
+                ,COM_STDSEC
+                ,IOP_MNFCST
+                )
+	SELECT D.ORM_NO 
+	           ,D.ITM_CD 
+	           ,D.COL_CD 
+	           ,SUM(D.ORD_QTY) 
+	           ,M.ORM_RDT 
+	           ,NULL
+	           ,NULL 
+	           ,NULL 
+	           ,NULL 
+			   ,CAST('T01I' AS VARCHAR) 
+			   ,C.IOP_FINEST 
+			   ,C.COM_GOODCD 
+			   ,C.VND_CD 
+			   ,S.COM_STKSEC 
+			   ,S.COM_STDSEC 
+			   ,C.IOP_MNFCST	   
+	FROM TO_ORDMAS M WITH (NOLOCK)
+	         ,TO_ORDDET D WITH (NOLOCK)
+	         ,TT_ITMCOP C WITH (NOLOCK)
+	         ,TT_ITMMST S WITH (NOLOCK)
+	WHERE M.ORM_NO = D.ORM_NO
+	AND D.ITM_CD = C.ITM_CD 
+	AND D.COL_CD = C.COL_CD
+	AND C.ITM_CD = S.ITM_CD 
+	AND C.COL_CD = S.COL_CD
+	AND D.ORM_NO = CAST(#{key_no} AS VARCHAR)
+	AND C.COM_CMP = CAST('T01I' AS VARCHAR) 
+	GROUP BY D.ORM_NO, D.ITM_CD, D.COL_CD, M.ORM_RDT, 
+				    C.IOP_FINEST, C.COM_GOODCD, C.VND_CD, S.COM_STKSEC, S.COM_STDSEC, C.IOP_MNFCST
+
+]]>
+</insert> 
+
+<update id="updateToOrdChgmasStat" parameterType="HashMap">
+<![CDATA[
+
+	   UPDATE TO_CHGMAS               									
+       SET ING_STT = 'O46002' 
+            ,CHG_RMK = 'CHATBOT으로 AUTO 변경처리 됨(날짜변경)'
+            ,USR_CD = 'CHATBOT' 
+            ,SYS_DT = GETDATE()
+            ,EMC_YN = 'N'
+            ,OUT_TYP = '      ' 
+            ,MULTI_CHGKND = ''
+            ,NEW_ORMNO = #{new_orm_no}
+       WHERE ORM_NO = #{key_no}
+       AND RQT_SEQ = #{req_seq}
+
+	
+]]>
+</update> 
+
+<update id="updateToOrdmasStat" parameterType="HashMap">
+<![CDATA[
+
+	   UPDATE TO_ORDMAS              									
+       SET ORM_STAT = 'O08003' 
+            ,USR_CD = 'CHATBOT' 
+            ,SYS_DT = GETDATE()
+       WHERE ORM_NO = #{key_no}
+	
+]]>
+</update> 
+
+<insert id="insertToChgmasAdded" parameterType="HashMap">
+<![CDATA[
+ 
+    INSERT INTO TO_CHGMAS_ADDED  
+		   (ORM_NO             
+		   ,RQT_SEQ         
+		   ,ORD_PENDING1      
+		   ,CHG_ENDDT      
+		   ,FST_USR       
+		   ,FST_SYS_DT   
+		   )  
+	(SELECT
+		TCA.ORM_NO,
+		STR(TCA.RQT_SEQ+1),
+		TCA.ORD_PENDING1,
+		GETDATE(),
+		'CHATBOT',
+		GETDATE()
+	   FROM TO_CHGMAS_ADDED TCA WITH (NOLOCK)
+	  WHERE TCA.ORM_NO = #{key_no}   
+	    AND TCA.RQT_SEQ = #{req_seq}
+	)
+    
+]]>
+</insert> 
+
+<select id="selectOrmCryn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		ISNULL(TOO.ORM_CRYN, 'N') AS DATA1,
+		TOO.ORM_CDT AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</select>
+
+<select id="selectOrmGpost" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		ISNULL(TOO.ORM_GPOST, 'N') AS DATA1,
+		TOO.BDONG AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</select>
+
+<select id="selectSigongReserveYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		ISNULL((CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END), 'N') AS DATA1
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = #{key_no}
+	
+
+	
+]]>
+</select>
+
+<select id="selectRemdtRemseq" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		TCR.REM_DT AS DATA1,
+		TCR.REM_SEQ AS DATA2,
+		ISNULL(TCR.PLM_NO, 'XXXX') AS DATA3
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = #{key_no}
+	   AND TCR.REM_DT = #{rem_dt}
+	
+]]>
+</select>
+
+<select id="selectTcMaxSeqNo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+    	SELECT ISNULL(MAX(SEQ_NO), 0) + 1 AS VALUE1
+		  FROM TC_SEQNOINF 
+		 WHERE COM_AGSEC = #{com_agsec}	
+		   AND COM_NOSEC = 'C08CRS' 
+		   AND SEQ_SETDT = #{req_dt}
+	
+]]>
+</select>
+
+<insert id="insertTcSeqnoinf" parameterType="HashMap">
+<![CDATA[
+ 
+    MERGE INTO TC_SEQNOINF SI
+    	 USING (SELECT #{com_agsec} AS COM_AGSEC
+    	              ,#{req_dt} AS SEQ_SETDT) A
+       		ON SI.COM_AGSEC = A.COM_AGSEC
+       	   AND SI.SEQ_SETDT = A.SEQ_SETDT
+       	   AND SI.COM_NOSEC = 'C08CRS'
+          WHEN MATCHED THEN
+            UPDATE 
+               SET SEQ_NO = #{max_seq_no}
+          WHEN NOT MATCHED THEN
+		    INSERT
+		      	  (COM_AGSEC
+		      	  ,COM_NOSEC
+		      	  ,SEQ_SETDT
+		      	  ,SEQ_NO
+		      	  ,USR_CD
+		      	  ,SYS_DT
+		          )    
+			VALUES(#{com_agsec}
+			      ,'C08CRS'
+			      ,#{req_dt}
+			      ,#{max_seq_no}
+			      ,'CHATBOT'
+			      ,GETDATE()
+			      );
+ 
+
+]]>
+</insert> 
+
+<update id="updateTcresdtl" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TC_RESDTL SET REM_DT = #{req_dt}, REM_SEQ = #{new_rem_seq}
+	 WHERE REM_DT = #{rem_dt}
+	   AND REM_SEQ = #{rem_seq}
+	
+]]>
+</update> 
+
+<update id="updateTcresmst" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TC_RESMST SET REM_DT = #{req_dt}, REM_SEQ = #{new_rem_seq}, ORM_NO = #{new_ormno}
+	 WHERE REM_DT = #{rem_dt}
+	   AND REM_SEQ = #{rem_seq}
+
+]]>
+</update> 
+
+<update id="updateTcplanmst" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TC_PLANMST SET plm_cdt = #{req_dt}, ORM_NO = #{key_no}
+	 WHERE PLM_NO = #{plm_no}
+
+]]>
+</update>
+
+<update id="updateToOrdmasSigongStat" parameterType="HashMap">
+<![CDATA[
+
+    UPDATE TO_ORDMAS
+       SET ORM_PSTS = 'E'    /* 예약상태 */		
+          ,ORM_CDT  = #{req_dt}     /* 확정납기일 */		
+          ,USR_CD   = 'CHATBOT'   /* 최종변경자 */
+          ,SYS_DT   = GETDATE()     /* 최종변경일시 */
+		  ,PAY_DUE_DT = (SELECT CASE WHEN ISNULL(PAY_DUE_DT,'') != '' AND ISNULL(#{chg_orm_cdt},'') != '' THEN
+							  		CONVERT(DATETIME,CONCAT(CONVERT(CHAR(10),CONVERT(DATE, DBO.FN_GET_PAY_DUE_DT(VND_CD,#{chg_orm_cdt},COM_BRD) ),120),' 23:59:59.990'))
+							   END)
+     WHERE ORM_NO = #{new_ormno}
+
+]]>
+</update>
+
+<select id="selectOnlineYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		ISNULL(TOO.SHP_NO, '') AS DATA1,
+		ISNULL(TOO.BDONG, 'XXXX') AS DATA2,
+		ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3,
+		CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4,
+		TOO.ORM_REBAGT AS DATA5,
+		ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6,
+		ISNULL(TOO.ORM_PURCST, '') AS DATA7
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	 
+]]>
+</select>
+
+<select id="selectOnlineSameOrderYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPSameOrderYn">
+<![CDATA[
+
+	SELECT
+		 ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_STAT <> 'O08003'
+	   AND TOO.SHP_NO = #{shp_no}
+       AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,#{orm_orddt}),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,#{orm_orddt}),112)
+	 
+]]>
+</select>
+
+<select id="selectOfflineSameOrderYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPSameOrderYn">
+<![CDATA[
+
+	SELECT
+		 ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_STAT <> 'O08003'
+	   AND TOO.ORM_GPOST = #{zip_cd}
+	   AND TOO.BDONG = #{bdong}
+	   AND TOO.ORM_PURCST = #{orm_purcst}
+       AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,#{orm_orddt}),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,#{orm_orddt}),112)
+]]>
+</select>
+
+<insert id="insertChgAddrReq" parameterType="HashMap">
+<![CDATA[
+ 
+	INSERT INTO TO_CHGMAS (
+			      ORM_NO
+			      ,RQT_SEQ
+			      ,VND_CD
+			      ,CMP_CD
+			      ,AGT_CD
+			      ,RQT_DT
+			      ,RQT_TYP
+			      ,ETC_TYP
+			      ,ING_STT
+			      ,RQT_USR
+			      ,EMC_YN
+			      ,OUT_TYP
+			      ,ORM_CDT
+			      ,CHG_CDT
+			      ,ORM_NM
+			      ,CHG_NM
+			      ,ORM_GPOST
+			      ,CHG_ZIPCD
+			      ,ORM_GADDR
+			      ,CHG_ADDR
+			      ,ORM_CTM
+			      ,CHG_CTM
+			      ,CHG_RMK
+			      ,RQT_RSN
+			      ,ETC_RMK
+			      ,USR_CD
+			      ,SYS_DT
+			      ,ORM_GOOD
+			      ,CHG_GOOD
+			      ,ORM_GEMP
+			      ,CHG_GEMP
+			      ,DET_CD
+			      ,CHG_DET_CD
+			      ,ORM_GEMPHP
+			      ,CHG_GEMPHP
+			      ,ORM_HDPHONE
+			      ,CHG_HDPHONE
+			      ,ORM_SPC
+			      ,CHG_SPC
+			      ,AUTO_BLOCK_KND
+			      ,MULTI_CHGKND
+			      ,CHGRQT_REASON
+			      ,FST_USR
+			      ,FST_SYS_DT
+			      ,ADDR_DTL
+			      ,CHG_ADDR_DTL
+			      ,BDONG
+			      ,CHG_BDONG
+	      )
+	SELECT
+		TOO.ORM_NO,
+		(SELECT (SELECT RIGHT('00' + CONVERT(VARCHAR(3), isnull(MAX(TOC.RQT_SEQ), 0) + 1) , 2) )
+	      FROM TO_CHGMAS TOC WITH (NOLOCK)
+	     WHERE TOC.ORM_NO = TOO.ORM_NO ),
+		TOO.VND_CD,
+		TOO.CMP_CD,
+		TOO.AGT_CD,
+		GETDATE(),
+		'O45005',
+		'O47002',
+		'O46001',
+		'CHATBOT',
+		'N',
+		'',
+		TOO.ORM_CDT,
+		'',
+		TOO.ORM_NM,
+		NULL,
+		TOO.ORM_GPOST,
+		#{chg_orm_gpost},
+		TOO.ORM_GADDR,
+		#{chg_addr},
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		'CHATBOT',
+		GETDATE(),
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL, 
+		NULL,
+		NULL,
+		NULL,
+	   '사유',
+	   'CHATBOT',
+	   GETDATE(),
+		TOO.ADDR_DTL,
+		#{chg_addr_dtl},
+		TOO.BDONG,
+		#{chg_bdongcd}
+	FROM TO_ORDMAS TOO WITH (NOLOCK)
+	WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</insert>
+
+<update id="updateToOrdmasAddr" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TO_ORDMAS SET ORM_GPOST = #{orm_gpost}, ORM_GADDR = #{chg_addr}, ADDR_DTL = ISNULL(#{chg_addr_dtl}, ''), BDONG = #{bdongcd}
+	WHERE ORM_NO = #{key_no}
+]]>
+</update>  
+
+<update id="updateTcResmstAddr" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TC_RESMST 
+	   SET TOWN_CD = #{chg_bdongcd}, USR_CD = 'CHATBOT', SYS_DT = GETDATE()
+	 WHERE COM_SSEC = 'C18C'
+	   AND ORM_NO = #{key_no}
+	   AND REM_DT = ( SELECT TOO.ORM_CDT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no} )
+
+]]>
+</update>  
+
+<select id="selectTcplanmstYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		(CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END ) AS DATA1
+	  FROM TC_PLANMST TCP WITH (NOLOCK)
+	 WHERE TCP.ORM_NO = #{key_no}
+	   AND TCP.PLM_CDT = ( SELECT TOO.ORM_CDT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no} )
+	
+]]>
+</select>
+
+<update id="updateTcPlanmstAddr" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TC_PLANMST 
+	   SET TOWN_CD = #{chg_bdongcd}, ORM_GPOST = #{chg_orm_gpost}, ORM_GADDR = #{chg_addr} + ' ' + #{chg_addr_dtl}, _USR_CD = 'CHATBOT', SYS_DT = GETDATE()
+	 WHERE ORM_NO = #{key_no}
+	   AND TCP.PLM_CDT = ( SELECT TOO.ORM_CDT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no} )
+
+]]>
+</update>  
+
+<update id="updateToChgmasChgAddrStat" parameterType="HashMap">
+<![CDATA[
+
+	   UPDATE TO_CHGMAS               									
+       SET ING_STT = 'O46002' 
+            ,CHG_RMK = 'CHATBOT으로 AUTO 변경처리 됨(날짜변경)'
+            ,USR_CD = 'CHATBOT' 
+            ,SYS_DT = GETDATE()
+       WHERE ORM_NO = #{key_no}
+       AND RQT_SEQ = #{req_seq}
+]]>
+</update>
+
+<select id="selectVndTelNo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		ISNULL(TTV.VND_TELNO, '미등록된 대리점 전화번호 입니다.') AS DATA1
+	  FROM TT_VENDOR TTV WITH (NOLOCK)
+	 WHERE TTV.VND_CD = ( SELECT TOO.ORM_REBAGT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no} )
+	
+]]>
+</select>
+
+<update id="updateAsTarptreqChgAddr" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TA_RPTREQ 
+	   SET USR_ID = 'CHATBOT'
+	     , SYS_DT = GETDATE()
+	     , CTM_ZIP = #{chg_orm_gpost}
+	     , CTM_ADDR = #{chg_addr}
+	     , CTM_ADDR2 = #{chg_addr_dtl}
+	     , TOWN_CD = #{chg_bdongcd}
+	 WHERE RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	   AND RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	   
+]]>
+</update>
+
+<update id="updateAsTcresmstChgAddr" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TC_RESMST 
+	   SET TOWN_CD = #{chg_bdongcd}, USR_CD = 'CHATBOT', SYS_DT = GETDATE()
+	 WHERE COM_SSEC = 'C18A'
+	   AND ORM_NO = #{key_no}
+	   AND REM_DT = ( SELECT TOO.RPT_ENDDT 
+	                    FROM TA_RPTREQ TOO WITH (NOLOCK) 
+	                   WHERE TOO.RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	                     AND TOO.RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	                )
+	   
+]]>
+</update>
+
+<update id="updateAsTaplanmstChgAddr" parameterType="HashMap">
+<![CDATA[
+
+	UPDATE TA_PLANMST 
+	   SET TOWN_CD = #{chg_bdongcd}, ORM_GPOST = #{chg_orm_gpost}, ORM_GADDR = #{chg_addr} + ' ' + #{chg_addr_dtl}, _USR_CD = 'CHATBOT', SYS_DT = GETDATE()
+	 WHERE RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	   AND RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	   AND PLM_CDT = ( SELECT TOO.RPT_ENDDT 
+	                    FROM TA_RPTREQ TOO WITH (NOLOCK) 
+	                   WHERE TOO.RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	                     AND TOO.RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	                 )
+
+]]>
+</update>
+
+<select id="selectTaplanmstYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		(CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END ) AS DATA1
+	  FROM TA_PLANMST TCP WITH (NOLOCK)
+	 WHERE TCP.RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	   AND TCP.RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	   AND TCP.PLM_CDT = ( SELECT TOO.RPT_ENDDT 
+	                    	 FROM TA_RPTREQ TOO WITH (NOLOCK) 
+	                   	    WHERE TOO.RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	                     	  AND TOO.RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+	                	 )
+	
+]]>
+</select>
+
+<select id="selectIloompreenposymd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	EXEC pro_ren_preenposymd_chatbot #{key_no}, #{com_cmp}, #{orm_gpost}, #{req_dt}, #{com_brand}, 'OUTPUT'
+	
+]]>
+</select>
+
+<select id="selectSigongReserveInfo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		TCR.COM_SCD AS DATA1,
+		TCR.STI_CD AS DATA2,
+		TCR.TOWN_CD AS DATA3
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18C'
+	   AND TCR.ORM_NO = #{key_no}
+	   AND TCR.REM_DT = ( SELECT TOO.ORM_CDT FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no} )
+
+	
+]]>
+</select>
+
+<select id="selectProcDayinf" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	EXEC PRC_DAYINF_CHATBOT #{com_agsec}, #{com_brand}, #{bdong_cd}, #{req_dt}, #{com_scd}, #{sti_cd}, '1'
+	
+]]>
+</select>
+
+<select id="selectGetComScd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+		SELECT 
+			   (SELECT TOP 1 (CASE WHEN CAST('C06L' AS VARCHAR) = 'C06F' THEN (SELECT TOP 1 SCD_MCD FROM TC_SCDINF WITH (NOLOCK) WHERE COM_SCD = TC_STINF.COM_SCD ) 
+			                       ELSE COM_SCD
+			                   END
+			                  )
+		          FROM TC_STINF WITH (NOLOCK)
+				 WHERE STI_RANK = 'Y'
+				   AND STI_CD = (SELECT TOP 1 STI_CD 
+		                           FROM TC_TOWND WITH (NOLOCK)
+		                          WHERE COM_AGSEC = 'C02' + LEFT(A.ORM_NO, 1)
+		                            AND COM_BRAND = A.COM_BRD
+								    AND TOWN_CD   = (SELECT TOP 1 BDONG_CD
+		                                               FROM TC_ROADZIP
+		                                              WHERE ZIP_CD = A.ORM_GPOST
+		                                            )
+		                         ) 
+			    ) AS DATA1                               /* 서비스센터코드 */
+		  FROM TO_ORDMAS A WITH (NOLOCK)      
+		 WHERE A.ORM_CRYN = 'Y'
+		   AND A.ORM_CDT IS NOT NULL
+		
+		   /* 수주번호를 이용하여 수주정보 조회 */
+		   AND A.ORM_NO  = #{key_no}
+
+]]>
+</select>
+
+<select id="selectJundamYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+    SELECT ( CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END ) AS DATA1
+	  FROM TO_ORDDET A WITH (NOLOCK)
+	 INNER JOIN TT_ITMMST B WITH (NOLOCK)  
+	    ON A.ITM_CD = B.ITM_CD
+	   AND A.COL_CD = B.COL_CD
+	 INNER JOIN TC_ITMSE C WITH (NOLOCK)
+	    ON B.COM_SERIES = C.COM_EX_SE
+	 INNER JOIN TC_ITMASS D WITH (NOLOCK)
+	    ON C.COM_EX_CD = D.COM_EX_CD
+	 INNER JOIN TC_STINF E WITH (NOLOCK)
+	    ON D.STI_CD = E.STI_CD
+	 WHERE A.ORM_NO   = #{key_no}
+	   AND E.COM_SCD  = #{new_com_scd}
+	   AND E.STI_RANK = 'Y'	 
+
+]]>
+</select>
+
+<select id="selectGetNormalStiCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+    SELECT TOP 1 TS.STI_CD AS DATA1
+	  FROM TC_TOWND TD WITH (NOLOCK)
+	 INNER JOIN TC_STINF TS WITH (NOLOCK)
+	    ON TD.STI_CD = TS.STI_CD
+	 WHERE TD.COM_AGSEC = #{com_agsec}
+	   AND TD.COM_BRAND = #{com_brand} 
+	   AND TD.TOWN_CD   = #{new_bdong_cd}
+	   AND TS.COM_SCD   = #{new_com_scd}
+	   AND TS.STI_RANK = 'Y'   
+
+]]>
+</select>
+
+<select id="selectJundamStiCd" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+     SELECT TOP 1 D.STI_CD AS DATA1
+	  FROM TO_ORDDET A WITH (NOLOCK)
+	 INNER JOIN TT_ITMMST B WITH (NOLOCK)  
+	    ON A.ITM_CD = B.ITM_CD
+	   AND A.COL_CD = B.COL_CD
+	 INNER JOIN TC_ITMSE C WITH (NOLOCK)
+	    ON B.COM_SERIES = C.COM_EX_SE
+	 INNER JOIN TC_ITMASS D WITH (NOLOCK)
+	    ON C.COM_EX_CD = D.COM_EX_CD
+	 INNER JOIN TC_STINF E WITH (NOLOCK)
+	    ON D.STI_CD = E.STI_CD
+	 WHERE A.ORM_NO   = #{key_no}
+	   AND E.COM_SCD  = #{new_com_scd}
+	   AND E.STI_RANK = 'Y'	  
+	   	
+]]>
+</select>
+
+<select id="selectOrmAdtCheck" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT CONVERT(CHAR(8), DATEADD(dd, #{i}+1, CONVERT (DATETIME, #{req_dt}) ), 112) AS DATA1
+
+]]>
+</select>
+ 
+<select id="selectWorkingYnCheck" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT ( CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END ) AS DATA1
+	  FROM TT_CALENDAR WITH (NOLOCK)
+	 WHERE COM_CMP  = #{com_cmp}
+	   AND CAL_YMD  = #{req_dt}
+	   AND COM_CSEC = 'T32003'
+	   AND CAL_SEC  = 'T33N'
+]]>
+</select>
+
+<select id="selectAsCdtChangeYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrmAvailableYn">
+<![CDATA[
+	
+	SELECT
+		( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn
+	FROM (
+	
+		SELECT A.STW_DT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT
+		  FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN (
+				SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT
+				  FROM TC_RESMST A with (nolock),
+					   TA_RPTREQ R with (nolock)
+				 WHERE A.REM_DT    LIKE left(#{req_dt}, 6) +'%'
+				   AND A.STI_CD    = #{sti_cd}
+				   AND A.COM_SCD   = #{com_scd}
+				   AND A.COM_AGSEC = #{com_agsec}
+				   AND A.COM_SSEC = 'C18A'	/*AS*/
+				   AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO
+				   AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ
+				 GROUP BY A.REM_DT, A.REM_FTM_2
+			   ) C ON A.STW_DT = C.REM_DT
+		      ,(
+				SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA
+					FROM
+						( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO
+								,X.PLM_TM
+								,X.STI_QTYCAPA
+							FROM
+									( SELECT PLM_TM
+											,STI_QTYCAPA
+										FROM TC_TIMECAPA with (nolock)
+										WHERE COM_SCD = #{com_scd}
+										AND STI_CD = #{sti_cd}
+									) X
+						)Y
+		       ) B,
+			   (SELECT 'X' AS YN
+				FROM TC_BRANDITM with (nolock)
+				WHERE COM_SCD = #{com_scd}
+				AND   STI_CD = #{sti_cd}
+				AND   COM_AGSEC = #{com_agsec}
+				AND   COM_BRAND =  CAST(#{com_brand} AS VARCHAR) ) D
+		 WHERE A.COM_SCD = #{com_scd}
+		   AND A.STI_CD = #{sti_cd}
+		   AND A.STW_MM = left(#{req_dt}, 6)
+		   AND A.COM_AGSEC = #{com_agsec}
+		   AND A.STW_DT = #{req_dt}
+	     GROUP BY A.STW_DT
+	) AA    
+
+]]>
+</select>
+
+<select id="selectAsCdtChangeYn2" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrmAvailableYn">
+<![CDATA[
+
+	SELECT 'N' AS available_yn FROM DUAL
+
+]]>
+</select>
+
+<select id="selectAsInfo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		TAP.STI_CD AS DATA1,
+		TAP.COM_SCD AS DATA2,
+		TAP.RPT_ENDDT AS DATA3
+	  FROM TA_RPTREQ TAP WITH (NOLOCK)
+	 WHERE TAP.RPT_NO = SUBSTRING(#{key_no},1,13)
+	   AND TAP.RPT_SEQ = SUBSTRING(#{key_no},14,15)
+]]>
+</select>
+
+<select id="selectAsAvailableCdtList" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderChangeAvailableDt">        
+<![CDATA[ 
+	SELECT
+			TOP 5 AA.STW_DT AS orm_cdt
+		FROM (
+	
+			SELECT A.STW_DT
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+						CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+						CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+						CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA
+				  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+						CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT
+			  FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN (
+					SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT
+					  FROM TC_RESMST A with (nolock),
+						   TA_RPTREQ R with (nolock)
+					 WHERE A.REM_DT    LIKE left(#{req_dt}, 6) +'%'
+					   AND A.STI_CD    = #{sti_cd}
+					   AND A.COM_SCD   = #{com_scd}
+					   AND A.COM_AGSEC = #{com_agsec}
+					   AND A.COM_SSEC = 'C18A'	/*AS*/
+					   AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO
+					   AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ
+					 GROUP BY A.REM_DT, A.REM_FTM_2
+				   ) C ON A.STW_DT = C.REM_DT
+			      ,(
+					SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA
+							,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA
+							,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA
+							,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA
+						FROM
+							( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO
+									,X.PLM_TM
+									,X.STI_QTYCAPA
+								FROM
+										( SELECT PLM_TM
+												,STI_QTYCAPA
+											FROM TC_TIMECAPA with (nolock)
+											WHERE COM_SCD = #{com_scd}
+											AND STI_CD = #{sti_cd} 
+										) X
+							)Y
+			       ) B,
+				   (SELECT 'X' AS YN
+					FROM TC_BRANDITM with (nolock)
+					WHERE COM_SCD = #{com_scd}
+					AND   STI_CD = #{sti_cd}
+					AND   COM_AGSEC = #{com_agsec}
+					AND   COM_BRAND =  #{com_brand} ) D
+			 WHERE A.COM_SCD = #{com_scd}
+			   AND A.STI_CD = #{sti_cd}
+			   AND A.COM_AGSEC = #{com_agsec}
+			   AND A.STW_DT > #{req_dt}
+		     GROUP BY A.STW_DT
+		) AA
+	WHERE ( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) = 'Y'
+
+]]>
+</select>
+
+<select id="selectOriginOrderInfoSelect" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		TOO.VND_CD AS DATA1,
+		TOO.CMP_CD AS DATA2,
+		TOO.AGT_CD AS DATA3,
+		TOO.ORM_CDT AS DATA4,
+		TOO.ORM_NM AS DATA5,
+		TOO.ORM_GPOST AS DATA6,
+		TOO.ORM_GADDR AS DATA7,
+		TOO.BDONG AS DATA8
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</select>
+
+<select id="selectChgReqSeq" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	SELECT
+		(SELECT RIGHT('00' + CONVERT(VARCHAR(3), isnull(MAX(TOC.RQT_SEQ), 0) + 1) , 2) ) AS DATA1
+	  FROM TO_CHGMAS TOC WITH (NOLOCK)
+	 WHERE TOC.ORM_NO = #{key_no}
+
+]]>
+</select>
+
+
+<insert id="insertOrderCancelMasterInsert" parameterType="HashMap">
+<![CDATA[
+ 
+	INSERT INTO TO_CHGMAS (
+		      ORM_NO
+		      ,RQT_SEQ
+		      ,VND_CD
+		      ,CMP_CD
+		      ,AGT_CD
+		      ,RQT_DT
+		      ,RQT_TYP
+		      ,ETC_TYP
+		      ,ING_STT
+		      ,RQT_USR
+		      ,EMC_YN
+		      ,OUT_TYP
+		      ,ORM_CDT
+		      ,CHG_CDT
+		      ,ORM_NM
+		      ,CHG_NM
+		      ,ORM_GPOST
+		      ,CHG_ZIPCD
+		      ,ORM_GADDR
+		      ,CHG_ADDR
+		      ,ORM_CTM
+		      ,CHG_CTM
+		      ,CHG_RMK
+		      ,RQT_RSN
+		      ,ETC_RMK
+		      ,USR_CD
+		      ,SYS_DT
+		      ,ORM_GOOD
+		      ,CHG_GOOD
+		      ,ORM_GEMP
+		      ,CHG_GEMP
+		      ,DET_CD
+		      ,CHG_DET_CD
+		      ,ORM_GEMPHP
+		      ,CHG_GEMPHP
+		      ,ORM_HDPHONE
+		      ,CHG_HDPHONE
+		      ,ORM_SPC
+		      ,CHG_SPC
+		      ,AUTO_BLOCK_KND
+		      ,MULTI_CHGKND
+		      ,CHGRQT_REASON
+		      ,FST_USR
+		      ,FST_SYS_DT
+		      ,ADDR_DTL
+		      ,CHG_ADDR_DTL
+		      ,BDONG
+		      ,CHG_BDONG
+	      )
+	VALUES
+	(
+		      #{key_no}
+		      ,#{req_seq}
+		      ,#{vnd_cd}
+		      ,#{cmp_cd}
+		      ,#{agt_cd}
+		      ,GETDATE()
+		      ,'O45001'
+		      ,NULL
+		      ,'O46001'
+		      ,'CHATBOT'
+		      ,'N'
+		      ,NULL
+		      ,#{orm_cdt}
+		      ,NULL
+		      ,#{orm_nm}
+		      ,NULL
+		      ,#{orm_gpost}
+		      ,NULL
+		      ,#{orm_gaddr}
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,'CHATBOT'
+		      ,GETDATE()
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,NULL
+		      ,'Chatbot을 통한 수주 취소 요청건입니다. '
+		      ,'CHATBOT'
+		      ,GETDATE()
+		      ,'.'
+		      ,NULL
+		      ,#{bdong}
+		      ,NULL	
+	)
+	
+]]>
+</insert> 
+
+
+<insert id="insertOrderCancelDetailInsert" parameterType="HashMap">
+<![CDATA[
+	    INSERT INTO TO_CHGDET /* OOR0013.modifyChgDtlAll_I : 수주 취소시 전체품목 등록 */
+			(ORM_NO
+			,RQT_SEQ
+			,ORD_SSEQ
+			,ORD_ISEQ
+			,SET_CD
+			,SET_COL
+			,SET_QTY
+			,ITM_CD
+			,COL_CD
+			,ITM_ADD
+			,ORD_QTY
+			,CHG_QTY
+			,ORM_CDT
+			,CHG_CDT
+			,USR_CD
+			,SYS_DT
+			,FST_USR
+			,FST_SYS_DT
+			,SDT_QTY
+			,BSET_CD
+			,BCOL_CD
+			,MNF_ADT
+			,WH_ADT)
+	  SELECT 
+			TOD.ORM_NO
+			,#{req_seq}
+			,TOD.ORD_SSEQ
+			,TOD.ORD_ISEQ
+			,TOD.SET_CD
+			,TOD.COL_SCD
+			,ISNULL(TOD.SET_QTY,0)
+			,TOD.ITM_CD
+			,TOD.COL_CD
+			,'N'
+			,ISNULL(TOD.ORD_QTY,0)
+			,0
+			,#{orm_cdt}
+			,#{orm_cdt}
+		    ,'CHATBOT'
+		    ,GETDATE()
+		    ,'CHATBOT'
+		    ,GETDATE()
+			,TOD.SDT_QTY
+			,TOD.BSET_CD
+			,TOD.BCOL_CD
+			,TOD.MNF_ADT
+			,TOD.WH_ADT
+		FROM TO_ORDDET TOD WITH (NOLOCK)
+		WHERE TOD.ORM_NO = #{key_no}
+	
+]]>
+</insert> 
+
+<update id="updateToOrdmasCancelStatus" parameterType="HashMap">
+<![CDATA[
+
+	    UPDATE TO_ORDMAS /* OOR0060.modifyOrdMasOrmStat8003_U : 수주마스터정보 수정 */   	                									
+		       SET  ORM_STAT = 'O08003'                
+	                 ,USR_CD = 'CHATBOT'             
+		             ,SYS_DT  = GETDATE()              
+		 WHERE ORM_NO = #{key_no}     
+
+]]>
+</update>  
+
+<select id="selectSigongReserveData" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT REM_DT AS DATA1
+	      ,REM_SEQ AS DATA2
+	      ,ISNULL(PLM_NO, 'XXXX') AS DATA3
+	      ,COM_RFG AS DATA4
+    FROM  TC_RESMST WITH (NOLOCK)
+    WHERE ORM_NO = #{key_no}
+    AND COM_SSEC = 'C18C'
+	
+]]>
+</select>
+
+<delete id="deleteTcresmst" parameterType="HashMap">
+<![CDATA[    
+    DELETE /* OOR0060.modifyResMst_D : 서비스계획정보 마스터 삭제 */ 
+      FROM TC_RESMST
+     WHERE REM_DT = #{rem_dt}
+     AND REM_SEQ = #{rem_seq}
+]]>
+</delete>
+
+<delete id="deleteTcresdtl" parameterType="HashMap">
+<![CDATA[    
+    DELETE /* OOR0060.modifyResDtl_D : 서비스계획정보 디테일 삭제 */ 
+      FROM TC_RESDTL
+     WHERE REM_DT = #{rem_dt}
+     AND REM_SEQ = #{rem_seq}
+]]>
+</delete>
+
+<delete id="deleteTcplandtl" parameterType="HashMap">
+<![CDATA[    
+    DELETE FROM TC_PLANDTL
+     WHERE PLM_NO = #{plm_no}
+]]>
+</delete>
+
+<delete id="deleteTcplanmst" parameterType="HashMap">
+<![CDATA[    
+    DELETE FROM TC_PLANMST
+     WHERE PLM_NO = #{plm_no}
+]]>
+</delete>
+
+<update id="updateToChgmasCancelStatus" parameterType="HashMap">
+<![CDATA[
+
+	    UPDATE TO_CHGMAS /* OOR0060.modifyChgMasIngStat46002_U : 수주변경요청 마스터정보 수정 */   	                									
+		       SET  ING_STT = 'O46002'                
+		             ,CHG_RMK = 'CHATBOT으로 수주 취소 처리 되었습니다.'
+	                 ,USR_CD = 'CHATBOT'             
+		             ,SYS_DT  = GETDATE()      
+		             ,MULTI_CHGKND = ''        
+		 WHERE ORM_NO = #{key_no}
+		 AND RQT_SEQ = ( SELECT
+							 MAX(TOC.RQT_SEQ)
+						   FROM TO_CHGMAS TOC WITH (NOLOCK)
+					      WHERE TOC.RQT_TYP = 'O45001'
+							AND TOC.ORM_NO = #{key_no}
+							AND TOC.ING_STT = 'O46001' )     	    
+
+]]>
+</update>  
+
+
+<insert id="insertOrderAsChgReqInformation" parameterType="HashMap">
+<![CDATA[
+ 
+INSERT INTO TO_CHGREQ_CHATBOT 
+	(VND_CD,    COM_BRAND,    ORDER_TYPE,    CHGREQ_STD,    REQORM_NO,      CHGREQ_DT,   CHGREQ_ADDR,  REQPRC_STAT, FST_USR_CD, FST_SYS_DT, USR_CD, SYS_DT, CHGREQ_HP, SMS_SEND_YN )
+VALUES						  
+	(#{vnd_cd}, #{com_brand}, #{order_type}, #{chgreq_std}, #{reqorm_no}, #{chgreq_dt}, #{chgreq_addr}, '1',        'CHATBOT', GETDATE() , 'CHATBOT', GETDATE(), #{chgreq_hp}, 'N' )
+	
+]]>
+</insert> 
+
+<select id="selectOrgOrderInfo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	SELECT
+		ISNULL(TOO.ORM_CRYN, 'N') AS DATA1,
+		(
+			SELECT
+				MAX(TCM.COM_SCD)
+			  FROM TC_TOWNM TCT WITH (NOLOCK), TC_MNGZIP TCM WITH (NOLOCK)
+			 WHERE TCT.TOWN_CD = TOO.BDONG
+			   AND TCT.MNG_CD = TCM.MNG_CD
+		) AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+]]>
+</select>
+
+<select id="selectChgOrderInfo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		MAX(TCM.COM_SCD) AS DATA1
+	  FROM TC_TOWNM TCT WITH (NOLOCK), TC_MNGZIP TCM WITH (NOLOCK)
+	 WHERE TCT.TOWN_CD = #{chg_bdongcd}
+	   AND TCT.MNG_CD = TCM.MNG_CD
+
+]]>
+</select>
+
+<select id="selectOrgAsInfo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	SELECT
+		(
+			SELECT
+				MAX(TCM.COM_SCD)
+			  FROM TC_TOWNM TCT WITH (NOLOCK), TC_MNGZIP TCM WITH (NOLOCK)
+			 WHERE TCT.TOWN_CD = TOO.TOWN_CD
+			   AND TCT.MNG_CD = TCM.MNG_CD
+		) AS DATA1
+	  FROM TA_RPTREQ TOO WITH (NOLOCK)
+	 WHERE TOO.RPT_NO = SUBSTRING(#{key_no}, 1, 13)
+	   AND TOO.RPT_SEQ = SUBSTRING(#{key_no}, 14, 15)
+]]>
+</select>
+
+<select id="selectPreviousChgreqYn" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+
+	SELECT
+		CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1
+	  FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK)
+	 WHERE TCC.VND_CD = #{vnd_cd}
+	   AND TCC.COM_BRAND = #{com_brand}
+	   AND TCC.ORDER_TYPE = #{order_type}
+	   AND TCC.CHGREQ_STD = #{chgreq_std}
+	   AND TCC.REQORM_NO = #{key_no}
+	   AND TCC.REQPRC_STAT = 1
+
+]]>
+</select>
+
+<insert id="insertAsAutoChgReqInformation" parameterType="HashMap">
+<![CDATA[
+ 
+INSERT INTO TO_CHGREQ_CHATBOT 
+	(VND_CD,    
+	COM_BRAND,    
+	ORDER_TYPE,    CHGREQ_STD,    REQORM_NO,      CHGREQ_DT,   CHGREQ_ADDR,  REQPRC_STAT, FST_USR_CD, FST_SYS_DT, USR_CD, SYS_DT, CHGREQ_HP, SMS_SEND_YN )
+VALUES						  
+	((SELECT TAR.COM_AGSEC FROM TA_RPTREQ TAR WITH (NOLOCK) WHERE RPT_NO = SUBSTRING(#{reqorm_no}, 1, 13) AND  RPT_SEQ = SUBSTRING(#{reqorm_no}, 14, 15)), 
+	(SELECT TAR.COM_BRAND FROM TA_RPTREQ TAR WITH (NOLOCK) WHERE RPT_NO = SUBSTRING(#{reqorm_no}, 1, 13) AND  RPT_SEQ = SUBSTRING(#{reqorm_no}, 14, 15)),
+	'AS', #{chgreq_std}, #{reqorm_no}, #{chgreq_dt}, #{chgreq_addr}, '2',        'CHATBOT', GETDATE() , 'CHATBOT', GETDATE(), #{chgreq_hp}, 'N' )
+	
+]]>
+</insert> 
+
+<select id="selectOnlineynCheck" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	 
+	SELECT	
+		(CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') WHEN '4' THEN 'Y' ELSE 'N' END ) AS DATA1,
+		TOO.ORM_NM AS DATA2
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+
+]]>
+</select>
+
+<insert id="insertAgtChangeAlarm" parameterType="HashMap">
+<![CDATA[
+ 
+ 
+INSERT INTO TZ_ALARM 
+			 ( 
+			   SEND_DT, 
+			   SEND_NM, 
+			   COM_CMP, 
+			   VND_CD, 
+			   RECV_ID, 
+			   ALARM_CNTN, 
+			   MENU_ID, 
+			   CNFN_DT,
+			   DEL_YN, 
+			   DEL_DT, 
+			   FST_USR, 
+			   FST_SYS_DT, 
+			   USR_CD, 
+			   SYS_DT 
+			 )
+		     VALUES 
+		     (
+		     	GETDATE(),
+		     	'CHATBOT',
+		     	(SELECT TOO.VND_CD FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no}),
+		     	(SELECT TOO.AGT_CD FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no}),
+		        (SELECT TOO.FST_USR FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = #{key_no}),
+		        #{message},
+		        NULL,
+		        NULL,
+		        'N',
+		        NULL,
+		        'CHATBOT',
+		        GETDATE(),
+		        'CHATBOT',
+		        GETDATE()
+		     )  
+
+]]>
+</insert> 
+
+<select id="selectChginformData" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		TOO.COM_BRD as DATA1,
+		TOO.ORM_NM AS DATA2,
+		ISNULL((SELECT TSC.CEP_MP FROM TS_CEMPLOYEE TSC WITH (NOLOCK) WHERE TSC.CEP_CD = TOO.ORM_AGTEMP ), '') AS DATA3,
+		( CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') WHEN  '1' THEN'Y' ELSE 'N' END ) AS DATA4,
+		ISNULL(( SELECT TOP 1 A.CEP_MP
+		  FROM	TS_CEMPLOYEE	A	WITH (NOLOCK)
+		  		, TS_CEMPDETAIL	B	WITH (NOLOCK)
+		  		, (
+			  			SELECT	O.VND_CD
+			  					, P.VND_NM
+			  					, O.COM_CMP
+			  					, O.COM_MNGEST	CMP_CD
+			  					, O.USR_CD1		PIC_CD
+						  FROM	TT_VNDCOP	O	WITH (NOLOCK)
+						  		, TT_VENDOR	P	WITH (NOLOCK)
+						 WHERE	O.VND_CD	= P.VND_CD						   
+						   AND	P.VND_DLVCD	IN ('T4101')		/*내수*/
+						   AND	O.COM_CMP	= TOO.VND_CD
+						   AND	O.COM_MNGEST= TOO.CMP_CD
+						   AND	P.VND_CD	= TOO.AGT_CD
+		  		)	C
+		 WHERE	A.CEP_CD	= B.CEP_CD
+		   AND	B.COM_CD	= C.COM_CMP
+		   AND	B.CED_CCD	= C.VND_CD
+		
+		   AND	B.CED_YN	IN ('Y', 'R')
+		   AND  B.CED_POS IN ('S1119', 'S1140' ) ), '') AS DATA5		
+	FROM TO_ORDMAS TOO WITH (NOLOCK)
+	WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</select>
+
+
+
+</mapper>

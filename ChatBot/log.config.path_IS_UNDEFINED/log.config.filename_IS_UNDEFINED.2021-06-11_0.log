@@ -1,0 +1,349 @@
+INFO  21-06-11 15:33:26[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 32324 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-11 15:33:26[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-11 15:33:27[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-11 15:33:28[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-11 15:33:28[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-11 15:33:28[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-11 15:33:28[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-11 15:33:28[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-11 15:33:28[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 2554 ms
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-11 15:33:30[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@119b0892, org.springframework.security.web.context.SecurityContextPersistenceFilter@4462efe1, org.springframework.security.web.header.HeaderWriterFilter@1b5a1d85, org.springframework.security.web.authentication.logout.LogoutFilter@6801b414, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@513b52af, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2db4ad1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42a0501e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a3e8e24, org.springframework.security.web.session.SessionManagementFilter@54755dd9, org.springframework.security.web.access.ExceptionTranslationFilter@7da31a40, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@329548d0]
+INFO  21-06-11 15:33:30[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-11 15:33:31[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-11 15:33:31[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-11 15:33:31[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-11 15:33:31[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-11 15:33:31[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-11 15:33:31[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-11 15:33:31[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-11 15:33:31[main] [ChatBotApplication:61] - Started ChatBotApplication in 6.592 seconds (JVM running for 10.585)
+INFO  21-06-11 15:33:40[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-11 15:33:40[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-11 15:33:40[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 12 ms
+INFO  21-06-11 15:34:31[http-nio-8082-exec-9] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-11 15:34:34[http-nio-8082-exec-9] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [selectAsInfo:143] - ==>  Preparing: SELECT TAP.STI_CD AS DATA1, TAP.COM_SCD AS DATA2, TAP.RPT_ENDDT AS DATA3 FROM TA_RPTREQ TAP WITH (NOLOCK) WHERE TAP.RPT_NO = SUBSTRING(? /*key_no*/ ,1,13) AND TAP.RPT_SEQ = SUBSTRING(? /*key_no*/ ,14,15) 
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [selectAsInfo:143] - ==> Parameters: I20210525029701(String), I20210525029701(String)
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		TAP.STI_CD AS DATA1,
+		TAP.COM_SCD AS DATA2,
+		TAP.RPT_ENDDT AS DATA3
+	  FROM TA_RPTREQ TAP WITH (NOLOCK)
+	 WHERE TAP.RPT_NO = SUBSTRING('I20210525029701' /*key_no*/ ,1,13)
+	   AND TAP.RPT_SEQ = SUBSTRING('I20210525029701' /*key_no*/ ,14,15)
+ {executed in 12 msec}
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [selectAsInfo:143] - <==      Total: 1
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [selectAsCdtChangeYn:143] - ==>  Preparing: SELECT ( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn FROM ( SELECT A.STW_DT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN ( SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT FROM TC_RESMST A with (nolock), TA_RPTREQ R with (nolock) WHERE A.REM_DT LIKE left(? /*req_dt*/ , 6) +'%' AND A.STI_CD = ? /*sti_cd*/ AND A.COM_SCD = ? /*com_scd*/ AND A.COM_AGSEC = ? /*com_agsec*/ AND A.COM_SSEC = 'C18A' /*AS*/ AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ GROUP BY A.REM_DT, A.REM_FTM_2 ) C ON A.STW_DT = C.REM_DT ,( SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA FROM ( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO ,X.PLM_TM ,X.STI_QTYCAPA FROM ( SELECT PLM_TM ,STI_QTYCAPA FROM TC_TIMECAPA with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ ) X )Y ) B, (SELECT 'X' AS YN FROM TC_BRANDITM with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ AND COM_AGSEC = ? /*com_agsec*/ AND COM_BRAND = CAST(? /*com_brand*/ AS VARCHAR) ) D WHERE A.COM_SCD = ? /*com_scd*/ AND A.STI_CD = ? /*sti_cd*/ AND A.STW_MM = left(? /*req_dt*/ , 6) AND A.COM_AGSEC = ? /*com_agsec*/ AND A.STW_DT = ? /*req_dt*/ GROUP BY A.STW_DT ) AA 
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [selectAsCdtChangeYn:143] - ==> Parameters: 20210623(String), YA540(String), C16YA(String), C02I(String), C16YA(String), YA540(String), C16YA(String), YA540(String), C02I(String), T60I02(String), C16YA(String), YA540(String), 20210623(String), C02I(String), 20210623(String)
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn
+	FROM (
+
+		SELECT A.STW_DT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT
+		  FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN (
+				SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT
+				  FROM TC_RESMST A with (nolock),
+					   TA_RPTREQ R with (nolock)
+				 WHERE A.REM_DT    LIKE left('20210623' /*req_dt*/ , 6) +'%'
+				   AND A.STI_CD    = 'YA540' /*sti_cd*/ 
+				   AND A.COM_SCD   = 'C16YA' /*com_scd*/ 
+				   AND A.COM_AGSEC = 'C02I' /*com_agsec*/ 
+				   AND A.COM_SSEC = 'C18A'	/*AS*/
+				   AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO
+				   AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ
+				 GROUP BY A.REM_DT, A.REM_FTM_2
+			   ) C ON A.STW_DT = C.REM_DT
+		      ,(
+				SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA
+					FROM
+						( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO
+								,X.PLM_TM
+								,X.STI_QTYCAPA
+							FROM
+									( SELECT PLM_TM
+											,STI_QTYCAPA
+										FROM TC_TIMECAPA with (nolock)
+										WHERE COM_SCD = 'C16YA' /*com_scd*/ 
+										AND STI_CD = 'YA540' /*sti_cd*/ 
+									) X
+						)Y
+		       ) B,
+			   (SELECT 'X' AS YN
+				FROM TC_BRANDITM with (nolock)
+				WHERE COM_SCD = 'C16YA' /*com_scd*/ 
+				AND   STI_CD = 'YA540' /*sti_cd*/ 
+				AND   COM_AGSEC = 'C02I' /*com_agsec*/ 
+				AND   COM_BRAND =  CAST('T60I02' /*com_brand*/  AS VARCHAR) ) D
+		 WHERE A.COM_SCD = 'C16YA' /*com_scd*/ 
+		   AND A.STI_CD = 'YA540' /*sti_cd*/ 
+		   AND A.STW_MM = left('20210623' /*req_dt*/ , 6)
+		   AND A.COM_AGSEC = 'C02I' /*com_agsec*/ 
+		   AND A.STW_DT = '20210623' /*req_dt*/ 
+	     GROUP BY A.STW_DT
+	) AA
+ {executed in 8 msec}
+DEBUG 21-06-11 15:34:34[http-nio-8082-exec-9] [selectAsCdtChangeYn:143] - <==      Total: 0
+INFO  21-06-11 15:54:54[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-11 15:54:56[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-11 15:54:56[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-11 15:54:56[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-11 15:56:11[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 29576 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-11 15:56:11[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-11 15:56:13[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-11 15:56:13[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-11 15:56:13[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-11 15:56:13[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-11 15:56:13[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-11 15:56:14[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-11 15:56:14[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 2109 ms
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-11 15:56:15[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@795f8317, org.springframework.security.web.context.SecurityContextPersistenceFilter@41a374be, org.springframework.security.web.header.HeaderWriterFilter@1d61a348, org.springframework.security.web.authentication.logout.LogoutFilter@3481ff98, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77c10a5f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8cc8cdb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@436bd4df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@633fd91, org.springframework.security.web.session.SessionManagementFilter@d2291de, org.springframework.security.web.access.ExceptionTranslationFilter@177c41d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a500561]
+INFO  21-06-11 15:56:15[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-11 15:56:15[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-11 15:56:15[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-11 15:56:16[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-11 15:56:16[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-11 15:56:16[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-11 15:56:16[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-11 15:56:16[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-11 15:56:16[main] [ChatBotApplication:61] - Started ChatBotApplication in 5.122 seconds (JVM running for 8.572)
+INFO  21-06-11 15:56:34[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-11 15:56:34[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-11 15:56:34[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 15 ms
+INFO  21-06-11 15:57:12[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-11 15:57:15[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-11 15:57:15[http-nio-8082-exec-1] [selectComBrand:143] - ==>  Preparing: SELECT TOO.COM_BRD AS DATA1 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-11 15:57:15[http-nio-8082-exec-1] [selectComBrand:143] - ==> Parameters: I20210527034400(String)
+DEBUG 21-06-11 15:57:15[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		TOO.COM_BRD AS DATA1
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210527034400' /*key_no*/
+ {executed in 10 msec}
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [selectComBrand:143] - <==      Total: 1
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [selectOrderDetailSearchListIloom:143] - ==>  Preparing: SELECT TOO.ORM_NO AS KEY_NO, dbo.FN_GET_REALORM_NAME (TOO.ORM_NM) AS ORM_NM, ISNULL(( SELECT TTC.CTM_CELNO FROM TT_CUSTOM TTC WITH (NOLOCK) WHERE TTC.CTM_CD = TOO.ORM_PURCST ), '미등록') AS CTM_HP, ISNULL(TOO.ORM_HDPHONE, '') AS ORM_HDPHONE, TOO.ORM_GADDR AS ORM_GADDR, (CASE TOO.ORM_CRYN WHEN 'Y' THEN ( CASE WHEN ( SELECT COUNT(*) FROM TC_PLANMST TCP WITH (NOLOCK) WHERE TCP.ORM_NO = TOO.ORM_NO AND TCP.PLM_CDT = TOO.ORM_CDT AND ( TCP.COM_RMFG = 'C13Y' OR TCP.COM_RMFG = 'C13N' )) > 0 THEN '배송완료' ELSE ( CASE WHEN (SELECT COUNT(*) FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) WHERE ORM_NO = TOO.ORM_NO) > 0 THEN '배송중' ELSE ( CASE WHEN ( SELECT COUNT(*) FROM TR_SCHEDULE TRS WITH (NOLOCK) WHERE TRS.ORM_NO = TOO.ORM_NO AND TRS.SCH_REQDT = TOO.ORM_CDT ) > 0 THEN '배송준비중' ELSE ( CASE WHEN ( SELECT COUNT(*) FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.REM_DT = TOO.ORM_CDT AND TCR.COM_SSEC = 'C18C' AND TCR.SCHDIV_YN = 'Y' AND TCR.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송준비중' ELSE '상품준비중' END ) END ) END ) END ) ELSE ( CASE WHEN ( SELECT DATEDIFF(DAY, TOO.ORM_CDT, CONVERT(CHAR(8), GETDATE(), 112)) ) >= 6 THEN '배송완료' ELSE ( CASE WHEN ( SELECT COUNT(*) FROM TR_TBINVOICE TRB WITH (NOLOCK) WHERE TRB.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송중' ELSE '상품준비중' END ) END ) END ) AS COM_SPROG, TOO.ORM_CDT AS REM_DT, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS RPT_DT, ISNULL((CASE TOO.ORM_CRYN WHEN 'Y' THEN (SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = (SELECT TCR.REM_FTM FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.REM_DT = TOO.ORM_CDT AND TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO ) ) ELSE '' END ), '') AS REM_FTM, (CASE TOO.ORM_ATTR WHEN 'O1009' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정') FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK) WHERE TRS.ORM_NO = TOO.ORM_NO AND TRS.SCH_TRNO = TRPD.SCH_TRNO AND TRPD.PMS_NO = TRPM.PMS_NO ) WHEN 'O1010' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정') FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK) WHERE TRS.ORM_NO = TOO.ORM_NO AND TRS.SCH_TRNO = TRPD.SCH_TRNO AND TRPD.PMS_NO = TRPM.PMS_NO ) WHEN 'O1001' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정') FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK) WHERE TRS.ORM_NO = TOO.ORM_NO AND TRS.SCH_TRNO = TRPD.SCH_TRNO AND TRPD.PMS_NO = TRPM.PMS_NO ) ELSE '' END ) AS TAKBAE_VND, (CASE TOO.COM_BRD WHEN 'T60I01' THEN ISNULL(( SELECT TTS.SET_NM FROM TT_SETMST TTS WITH (NOLOCK) WHERE TTS.SET_CD = ( SELECT TOP 1 TOOD.SET_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) AND TTS.COL_CD = ( SELECT TOP 1 TOOD.COL_SCD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) ), ( SELECT TTI.ITM_NM FROM TT_ITMMST TTI WITH (NOLOCK) WHERE TTI.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) AND TTI.COL_CD = ( SELECT TOP 1 TOOD.COL_SCD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) )) WHEN 'T60I02' THEN ISNULL ((SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = ISNULL(( SELECT ITM.ITM_CAT3 FROM TT_ITMMST ITM WITH (NOLOCK) WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) AND ITM.COL_CD = ( SELECT TOP 1 TOOD.COL_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) ), '') ), '데스커' ) WHEN 'T60I03' THEN ISNULL(( SELECT ITM.ITM_NM FROM TT_ITMMST ITM WITH (NOLOCK) WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) AND ITM.COL_CD = ( SELECT TOP 1 TOOD.COL_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ )), '슬로우') WHEN 'T60P01' THEN ISNULL(( SELECT ITM.ITM_NM FROM TT_ITMMST ITM WITH (NOLOCK) WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) AND ITM.COL_CD = ( SELECT TOP 1 TOOD.COL_CD FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ORD_QTY <> 0 ORDER BY TOOD.ORD_SSEQ ) ), '시디즈') ELSE '' END ) + ' 외 ' AS ITM_NM, (CASE TOO.ORM_ATTR WHEN 'O1001' THEN '택배' WHEN 'O1009' THEN '택배' WHEN 'O1010' THEN '택배' WHEN 'O1007' THEN '방문 전달' ELSE '방문 시공' END ) AS DELIVERY_TYPE, ISNULL((SELECT TCSM.STI_NM FROM TC_STINF TCSM WITH (NOLOCK) WHERE TCSM.STI_CD = ( SELECT TCR.STI_CD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT ) AND TCSM.COM_SCD = ( SELECT TCR.COM_SCD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT ) ), '') AS STI_NM, ISNULL(( SELECT MAX(TRB.INVOICENO) FROM TR_TBINVOICE TRB WHERE TRB.ORM_NO = TOO.ORM_NO ), '운송장번호 생성 전' ) AS INVOICENO, (SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT ) AS AGT_NM, ISNULL(TOO.SHP_NO, '') AS SHP_NO, (CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') WHEN '4' THEN 'Y' ELSE 'N' END ) AS ONLINE_YN, TOO.AGT_CD AS AGT_CD, ( SELECT TSC.CEP_NM FROM TS_CEMPLOYEE TSC WITH (NOLOCK) WHERE TSC.CEP_CD = TOO.ORM_AGTEMP ) AS CEP_NM, TOO.BDONG AS ORG_BDONGCD, (CASE TOO.COM_BRD WHEN 'T60I01' THEN (SELECT COUNT (TOOD.SET_CD + TOOD.COL_SCD) FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO ) WHEN 'T60I02' THEN (SELECT COUNT(DISTINCT TTI.ITM_CAT3) FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ITM_CD = TTI.ITM_CD AND TOOD.COL_CD = TTI.COL_CD ) WHEN 'T60I03' THEN (SELECT COUNT (TOOD.ITM_CD + TOOD.COL_CD) FROM TO_ORDDET TOOD WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO ) WHEN 'T60P01' THEN (SELECT COUNT(DISTINCT TTI.COM_SERIES) FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK) WHERE TOOD.ORM_NO = TOO.ORM_NO AND TOOD.ITM_CD = TTI.ITM_CD AND TOOD.COL_CD = TTI.COL_CD ) ELSE '' END ) AS ORDER_QTY, (SELECT ISNULL(TTV.VND_TELNO, '미등록') FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.AGT_CD ) AS VND_TELNO, TOO.CMP_CD AS CMP_CD FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ AND NOT EXISTS ( SELECT TOD.ORM_NO FROM TO_ORDDET TOD WITH (NOLOCK) WHERE TOD.ORM_NO = TOO.ORM_NO AND TOD.SET_CD = 'ZERO_I') 
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [selectOrderDetailSearchListIloom:143] - ==> Parameters: I20210527034400(String)
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+	TOO.ORM_NO AS KEY_NO,
+	dbo.FN_GET_REALORM_NAME (TOO.ORM_NM) AS ORM_NM,
+	ISNULL(( SELECT TTC.CTM_CELNO FROM TT_CUSTOM TTC WITH (NOLOCK) WHERE TTC.CTM_CD = TOO.ORM_PURCST ), '미등록') AS CTM_HP,
+	ISNULL(TOO.ORM_HDPHONE, '') AS ORM_HDPHONE,
+	TOO.ORM_GADDR AS ORM_GADDR,
+	(CASE TOO.ORM_CRYN WHEN 'Y' THEN ( CASE WHEN ( SELECT COUNT(*) 
+	                                                 FROM TC_PLANMST TCP WITH (NOLOCK)
+													WHERE TCP.ORM_NO = TOO.ORM_NO
+													 AND TCP.PLM_CDT = TOO.ORM_CDT
+													 AND ( TCP.COM_RMFG = 'C13Y' OR TCP.COM_RMFG = 'C13N' )) > 0 THEN '배송완료'
+											ELSE ( CASE WHEN (SELECT COUNT(*) 
+												                FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) 
+												               WHERE ORM_NO = TOO.ORM_NO) > 0 THEN '배송중'
+													    ELSE ( CASE WHEN ( SELECT COUNT(*) 
+																			 FROM TR_SCHEDULE TRS WITH (NOLOCK) 
+																		    WHERE TRS.ORM_NO = TOO.ORM_NO 
+																			  AND TRS.SCH_REQDT = TOO.ORM_CDT ) > 0 THEN '배송준비중'
+																	ELSE ( CASE WHEN ( SELECT COUNT(*)
+																	                     FROM TC_RESMST TCR WITH (NOLOCK)
+																			            WHERE TCR.REM_DT = TOO.ORM_CDT
+																			              AND TCR.COM_SSEC = 'C18C'
+																			              AND TCR.SCHDIV_YN = 'Y'
+																			              AND TCR.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송준비중'
+																			   ELSE  '상품준비중' END ) END 
+														     ) END 															   
+										)	END ) 
+
+						ELSE ( CASE WHEN ( SELECT DATEDIFF(DAY, TOO.ORM_CDT, CONVERT(CHAR(8), GETDATE(), 112)) ) >= 6 THEN '배송완료'
+									ELSE ( CASE WHEN ( SELECT COUNT(*) 
+									                     FROM TR_TBINVOICE TRB WITH (NOLOCK) 
+													    WHERE TRB.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송중'
+										   ELSE 
+												'상품준비중'
+										   END )
+							   END	)
+		END ) AS COM_SPROG,
+	TOO.ORM_CDT AS REM_DT,
+	CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS RPT_DT,
+	ISNULL((CASE TOO.ORM_CRYN WHEN 'Y' THEN (SELECT TTC.CCD_NM 
+	                                    FROM TT_COMCD TTC WITH (NOLOCK) 
+								       WHERE TTC.CCD_CD = (SELECT TCR.REM_FTM 
+									                         FROM TC_RESMST TCR WITH (NOLOCK) 
+															WHERE TCR.REM_DT = TOO.ORM_CDT 
+															  AND TCR.COM_SSEC = 'C18C' 
+															  AND TCR.ORM_NO = TOO.ORM_NO )  ) 
+					   ELSE '' END ), '') AS REM_FTM,
+	(CASE TOO.ORM_ATTR WHEN 'O1009' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )
+					   WHEN 'O1010' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO ) 
+					   WHEN 'O1001' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )	
+					   ELSE '' END ) AS TAKBAE_VND,
+	 (CASE TOO.COM_BRD WHEN 'T60I01' THEN ISNULL(( SELECT TTS.SET_NM 
+	                                                 FROM TT_SETMST TTS WITH (NOLOCK)
+										            WHERE TTS.SET_CD = ( SELECT TOP 1 TOOD.SET_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+											          AND TTS.COL_CD =  ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ ) ), 
+													 (
+														SELECT 
+																TTI.ITM_NM
+														  FROM TT_ITMMST TTI WITH (NOLOCK)
+														 WHERE TTI.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+													       AND TTI.COL_CD = ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ )										 
+													 ))
+	                   WHEN 'T60I02' THEN ISNULL ((SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = ISNULL(( SELECT ITM.ITM_CAT3 
+																														 FROM TT_ITMMST ITM WITH (NOLOCK)
+																														WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+																																			   FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			  WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				AND TOOD.ORD_QTY <> 0
+												 																						   ORDER BY TOOD.ORD_SSEQ )
+																														  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																																				FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			   WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				 AND TOOD.ORD_QTY <> 0
+												 																							ORDER BY TOOD.ORD_SSEQ ) ), '') ), '데스커' )
+	                   WHEN 'T60I03' THEN ISNULL(( SELECT ITM.ITM_NM 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ )), '슬로우')
+	                   WHEN 'T60P01' THEN ISNULL(( SELECT ITM.ITM_NM 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ ) ), '시디즈')
+					   ELSE '' END ) + ' 외 ' AS ITM_NM,
+	(CASE TOO.ORM_ATTR WHEN 'O1001' THEN '택배'   
+					   WHEN 'O1009' THEN '택배' 
+					   WHEN 'O1010' THEN '택배'    
+					   WHEN 'O1007' THEN '방문 전달'    
+					   ELSE '방문 시공' END ) AS DELIVERY_TYPE,
+	ISNULL((SELECT TCSM.STI_NM 
+	   FROM TC_STINF TCSM WITH (NOLOCK) 
+	  WHERE TCSM.STI_CD = ( SELECT TCR.STI_CD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT ) 
+	    AND TCSM.COM_SCD = ( SELECT TCR.COM_SCD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT )
+	), '')  AS STI_NM,
+	ISNULL(( SELECT MAX(TRB.INVOICENO) FROM TR_TBINVOICE TRB WHERE TRB.ORM_NO = TOO.ORM_NO ), '운송장번호 생성 전' ) AS INVOICENO,
+	(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT ) AS AGT_NM,
+	ISNULL(TOO.SHP_NO, '') AS SHP_NO,
+	(CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') WHEN '4' THEN 'Y' ELSE 'N' END ) AS ONLINE_YN,
+	TOO.AGT_CD AS AGT_CD,
+	( SELECT TSC.CEP_NM FROM TS_CEMPLOYEE TSC WITH (NOLOCK) WHERE TSC.CEP_CD = TOO.ORM_AGTEMP ) AS CEP_NM,
+	TOO.BDONG AS ORG_BDONGCD,
+	(CASE TOO.COM_BRD WHEN 'T60I01' THEN (SELECT COUNT (TOOD.SET_CD + TOOD.COL_SCD)
+	                                        FROM TO_ORDDET TOOD WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO )
+					  WHEN 'T60I02' THEN (SELECT COUNT(DISTINCT TTI.ITM_CAT3)
+					                        FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO
+										     AND TOOD.ITM_CD = TTI.ITM_CD
+											 AND TOOD.COL_CD = TTI.COL_CD )
+					  WHEN 'T60I03' THEN (SELECT COUNT (TOOD.ITM_CD + TOOD.COL_CD)
+	                                        FROM TO_ORDDET TOOD WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO )
+					  WHEN 'T60P01' THEN (SELECT COUNT(DISTINCT TTI.COM_SERIES)
+					                        FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO
+										     AND TOOD.ITM_CD = TTI.ITM_CD
+											 AND TOOD.COL_CD = TTI.COL_CD )
+					  ELSE '' END ) AS ORDER_QTY,
+		(SELECT ISNULL(TTV.VND_TELNO, '미등록') FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.AGT_CD ) AS VND_TELNO,
+		TOO.CMP_CD AS CMP_CD
+  FROM TO_ORDMAS TOO WITH (NOLOCK)
+ WHERE TOO.ORM_NO = 'I20210527034400' /*key_no*/ 
+   AND NOT EXISTS ( SELECT TOD.ORM_NO FROM TO_ORDDET TOD WITH (NOLOCK) WHERE TOD.ORM_NO = TOO.ORM_NO AND TOD.SET_CD = 'ZERO_I')
+ {executed in 249 msec}
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [selectOrderDetailSearchListIloom:143] - <==      Total: 1
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [insertApicallHist:143] - ==>  Preparing: INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT ) VALUES ('Y25001' , ? /*call_function*/ , ? /*function_name*/ , ? /*client_ip*/ , 'CHATBOT',GETDATE(), '' ) 
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [insertApicallHist:143] - ==> Parameters: erp_searchOrderDetailInfo(String), 챗봇 오더상세정보 조회(String), 0:0:0:0:0:0:0:1(String)
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT )
+						     VALUES ('Y25001'    , 'erp_searchOrderDetailInfo' /*call_function*/ , '챗봇 오더상세정보 조회' /*function_name*/ , '0:0:0:0:0:0:0:1' /*client_ip*/ , 'CHATBOT',GETDATE(), '' )
+ {executed in 3 msec}
+DEBUG 21-06-11 15:57:16[http-nio-8082-exec-1] [insertApicallHist:143] - <==    Updates: 1
+INFO  21-06-11 16:15:17[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-11 16:15:20[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-11 16:15:20[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-11 16:15:20[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.

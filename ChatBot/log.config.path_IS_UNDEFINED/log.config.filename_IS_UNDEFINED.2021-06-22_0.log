@@ -1,0 +1,241 @@
+INFO  21-06-22 13:52:52[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 30948 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-22 13:52:52[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-22 13:52:53[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-22 13:52:53[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-22 13:52:53[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 13:52:53[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-22 13:52:53[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-22 13:52:53[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-22 13:52:53[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1496 ms
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-22 13:52:54[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49d30c6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7da31a40, org.springframework.security.web.header.HeaderWriterFilter@403c3a01, org.springframework.security.web.authentication.logout.LogoutFilter@2b5c4f17, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@29b40b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b5a1d85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bfb583b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1115433e, org.springframework.security.web.session.SessionManagementFilter@28237492, org.springframework.security.web.access.ExceptionTranslationFilter@633cc6b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5626d18c]
+INFO  21-06-22 13:52:54[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-22 13:52:54[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-22 13:52:54[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-22 13:52:54[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 13:52:54[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-22 13:52:54[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-22 13:52:54[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-22 13:52:54[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-22 13:52:55[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.234 seconds (JVM running for 4.831)
+INFO  21-06-22 14:06:28[http-nio-8082-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-22 14:06:28[http-nio-8082-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-22 14:06:28[http-nio-8082-exec-2] [DispatcherServlet:547] - Completed initialization in 7 ms
+INFO  21-06-22 14:07:02[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-22 14:07:03[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-22 14:07:14[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 27952 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-22 14:07:14[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-22 14:07:15[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-22 14:07:16[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-22 14:07:16[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 14:07:16[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-22 14:07:16[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-22 14:07:16[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-22 14:07:16[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1439 ms
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-22 14:07:17[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e7b65d7, org.springframework.security.web.context.SecurityContextPersistenceFilter@28f4f300, org.springframework.security.web.header.HeaderWriterFilter@6e4599c0, org.springframework.security.web.authentication.logout.LogoutFilter@161aa04a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@470d183, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ca8fcf3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78a515e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c854752, org.springframework.security.web.session.SessionManagementFilter@3d1f558a, org.springframework.security.web.access.ExceptionTranslationFilter@42a0501e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50448409]
+INFO  21-06-22 14:07:17[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-22 14:07:17[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-22 14:07:17[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-22 14:07:17[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 14:07:17[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-22 14:07:17[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-22 14:07:17[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-22 14:07:17[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-22 14:07:18[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.473 seconds (JVM running for 5.639)
+INFO  21-06-22 14:08:57[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-22 14:08:57[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-22 14:08:57[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 6 ms
+INFO  21-06-22 14:09:26[http-nio-8082-exec-9] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-22 14:09:28[http-nio-8082-exec-9] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-06-22 14:10:23[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-22 14:10:24[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-22 14:10:24[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-22 14:10:24[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-22 14:10:30[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 29880 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-22 14:10:30[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-22 14:10:31[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-22 14:10:31[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-22 14:10:31[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 14:10:31[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-22 14:10:31[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-22 14:10:31[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-22 14:10:31[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1152 ms
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-22 14:10:32[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7165d530, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d247660, org.springframework.security.web.header.HeaderWriterFilter@45f756e6, org.springframework.security.web.authentication.logout.LogoutFilter@ea52184, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@361abd01, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d30c6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c7350b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12f49ca8, org.springframework.security.web.session.SessionManagementFilter@3003827c, org.springframework.security.web.access.ExceptionTranslationFilter@2d55e826, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73971965]
+INFO  21-06-22 14:10:32[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-22 14:10:32[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-22 14:10:32[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-22 14:10:32[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 14:10:32[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-22 14:10:32[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-22 14:10:32[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-22 14:10:32[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-22 14:10:32[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.873 seconds (JVM running for 4.589)
+INFO  21-06-22 14:10:35[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-22 14:10:35[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-22 14:10:35[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 5 ms
+INFO  21-06-22 14:10:47[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-22 14:10:49[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-06-22 17:31:28[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-22 17:31:30[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-22 17:31:30[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-22 17:31:30[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-22 17:33:18[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 25364 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-22 17:33:18[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-22 17:33:19[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-22 17:33:19[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-22 17:33:19[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 17:33:19[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-22 17:33:19[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-22 17:33:19[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-22 17:33:19[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1369 ms
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-22 17:33:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c386958, org.springframework.security.web.context.SecurityContextPersistenceFilter@44fff386, org.springframework.security.web.header.HeaderWriterFilter@41a374be, org.springframework.security.web.authentication.logout.LogoutFilter@7d70638, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@633fd91, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7301eebe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a901445, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@157ec23b, org.springframework.security.web.session.SessionManagementFilter@8cc8cdb, org.springframework.security.web.access.ExceptionTranslationFilter@d2291de, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3bec5821]
+INFO  21-06-22 17:33:20[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-22 17:33:20[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-22 17:33:20[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-22 17:33:20[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 17:33:20[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-22 17:33:20[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-22 17:33:20[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-22 17:33:20[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-22 17:33:20[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.352 seconds (JVM running for 5.797)
+INFO  21-06-22 17:33:23[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-22 17:33:23[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-22 17:33:23[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 8 ms
+INFO  21-06-22 17:33:44[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-22 17:33:46[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-06-22 17:38:30[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-22 17:38:31[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-22 17:38:31[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-22 17:38:31[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-22 17:38:38[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 13772 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-22 17:38:38[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-22 17:38:39[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-22 17:38:39[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-22 17:38:39[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 17:38:39[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-22 17:38:39[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-22 17:38:39[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-22 17:38:39[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1291 ms
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-22 17:38:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2152ab30, org.springframework.security.web.context.SecurityContextPersistenceFilter@3119cf6f, org.springframework.security.web.header.HeaderWriterFilter@4a901445, org.springframework.security.web.authentication.logout.LogoutFilter@33feb805, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@619f2afc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d408060, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fbc1bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3902bd2c, org.springframework.security.web.session.SessionManagementFilter@2b0b7e5a, org.springframework.security.web.access.ExceptionTranslationFilter@149b0577, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@526a9908]
+INFO  21-06-22 17:38:40[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-22 17:38:40[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-22 17:38:40[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-22 17:38:41[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 17:38:41[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-22 17:38:41[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-22 17:38:41[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-22 17:38:41[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-22 17:38:41[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.967 seconds (JVM running for 4.893)
+INFO  21-06-22 17:38:46[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-22 17:38:46[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-22 17:38:46[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 4 ms
+INFO  21-06-22 17:39:10[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-22 17:39:12[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-06-22 17:42:13[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-22 17:42:15[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-22 17:42:15[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-22 17:42:15[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-22 17:42:25[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 19892 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-22 17:42:25[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-22 17:42:26[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-22 17:42:27[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-22 17:42:27[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 17:42:27[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-22 17:42:27[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-22 17:42:27[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-22 17:42:27[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1452 ms
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-22 17:42:28[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@157ec23b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fc713c9, org.springframework.security.web.header.HeaderWriterFilter@11f9535b, org.springframework.security.web.authentication.logout.LogoutFilter@732f6050, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@355c94be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76b47204, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67f77f6e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44d64d4e, org.springframework.security.web.session.SessionManagementFilter@1e236278, org.springframework.security.web.access.ExceptionTranslationFilter@51c8f62c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4086d8fb]
+INFO  21-06-22 17:42:28[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-22 17:42:28[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-22 17:42:28[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-22 17:42:29[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-22 17:42:29[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-22 17:42:29[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-22 17:42:29[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-22 17:42:29[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-22 17:42:29[main] [ChatBotApplication:61] - Started ChatBotApplication in 4.325 seconds (JVM running for 7.056)
+INFO  21-06-22 17:42:32[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-22 17:42:32[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-22 17:42:32[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 6 ms
+INFO  21-06-22 17:42:47[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-22 17:42:48[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.

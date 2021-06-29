@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fursys.chatbot.mapper.ChatBotMapper">
+
+ 
+<select id="selectOrderSearchList" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchVo">        
+<![CDATA[ 
+
+	SELECT
+		DISTINCT 
+		AA.KEY_NO AS KEY_NO,
+		AA.ORM_NM AS ORM_NM,
+		AA.ORM_ORDDT AS ORM_ORDDT,
+		AA.ORM_CDT AS ORM_CDT,
+		AA.ORM_GADDR AS ORM_GADDR,
+		AA.ORDER_TYPE AS ORDER_TYPE,
+		AA.AGT_NM AS AGT_NM	
+	  FROM 
+		(
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK)
+		 WHERE TOO.VND_CD = #{vnd_cd}
+		  AND TOO.COM_BRD = #{com_brand}
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN #{fdt} AND #{tdt}
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND ( TOO.ORM_HDPHONE = REPLACE(#{orm_hdphone}, '-', '') or TOO.ORM_HDPHONE = #{orm_hdphone} )
+		  AND TOO.AGT_CD <> '202060'
+		  AND TOO.CMP_CD <> 'T02IP4'
+		  
+	    UNION ALL
+		  
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customl8)
+		 WHERE TOO.VND_CD = #{vnd_cd}
+		  AND TOO.COM_BRD = #{com_brand}
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN #{fdt} AND #{tdt}
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND ( TTC.CTM_CELNO = REPLACE(#{orm_hdphone}, '-', '') or TTC.CTM_CELNO = #{orm_hdphone} )
+		  AND ( TTC.CTM_TELNO IS NULL OR TTC.CTM_TELNO > '')
+		  AND TOO.AGT_CD <> '202060'
+		  AND TOO.ORM_PURCST = TTC.CTM_CD
+		  AND TOO.CMP_CD <> 'T02IP4'
+
+	    UNION ALL
+		  
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			DBO.FN_GET_REALORM_NAME(TOO.ORM_NM) AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR + ' ' + ISNULL(TOO.ADDR_DTL, '') AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customI9)
+		 WHERE TOO.VND_CD = #{vnd_cd}
+		  AND TOO.COM_BRD = #{com_brand}
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN #{fdt} AND #{tdt}
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND TTC.CTM_CI = #{ctm_ci}
+		  AND TOO.AGT_CD <> '202060'
+		  AND TOO.ORM_PURCST = TTC.CTM_CD
+		  AND TOO.CMP_CD <> 'T02IP4'
+		  
+		) AA
+	  ORDER BY AA.ORM_ORDDT DESC
+]]>
+</select>
+
+<select id="selectOrderSearchList_new" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchVo">        
+<![CDATA[ 
+
+	SELECT 
+		DISTINCT 
+		AA.KEY_NO AS KEY_NO,
+		AA.ORM_NM AS ORM_NM,
+		AA.ORM_ORDDT AS ORM_ORDDT,
+		AA.ORM_CDT AS ORM_CDT,
+		AA.ORM_GADDR AS ORM_GADDR,
+		AA.ORDER_TYPE AS ORDER_TYPE,
+		AA.AGT_NM AS AGT_NM
+	FROM (
+	
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			TOO.ORM_NM AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK)
+		 WHERE TOO.VND_CD = 'T01I'
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND ( TOO.ORM_HDPHONE = REPLACE('010-0001-0002', '-', '') or TOO.ORM_HDPHONE = '010-0001-0002' )
+		  AND TOO.COM_BRD = 'T60I01'
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN '20210201' AND '20210331'
+		  AND TOO.ORM_NM NOT LIKE '(판촉물택배)' + '%'
+		  AND TOO.ORM_NM NOT LIKE '%' + '재수주' + '%'
+		  AND TOO.ORM_NM NOT LIKE '%' + '회수시공건' + '%'
+		  AND TOO.ORM_NM NOT LIKE '%' + '매출외출고' + '%'
+		  
+		UNION ALL
+	
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			TOO.ORM_NM AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK)
+		 WHERE TOO.VND_CD = 'T01I'
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND TOO.COM_BRD = 'T60I01'
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN '20210201' AND '20210331'	
+		  AND TOO.ORM_PURCST = TTC.CTM_CD
+		  AND ( TTC.CTM_CELNO = REPLACE('010-0001-0002', '-', '') or TTC.CTM_CELNO = '010-0001-0002' )
+		  AND TOO.ORM_NM NOT LIKE '(판촉물택배)' + '%'
+	
+	UNION ALL
+	
+		SELECT
+			TOO.ORM_NO AS KEY_NO,
+			TOO.ORM_NM AS ORM_NM,
+			CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS ORM_ORDDT,
+			TOO.ORM_CDT AS ORM_CDT,
+			TOO.ORM_GADDR AS ORM_GADDR,
+			'ORDER' AS ORDER_TYPE,
+			(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT) AS AGT_NM
+		  FROM TO_ORDMAS TOO WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK)
+		 WHERE TOO.VND_CD = 'T01I'
+		  AND TOO.ORM_STAT <> 'O08003'
+		  AND TOO.COM_BRD = 'T60I01'
+		  AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN '20210201' AND '20210331'	
+		  AND TOO.ORM_PURCST = TTC.CTM_CD
+		  AND TTC.CTM_CI = 'l3QVhP5TX1tOe57U0SVgtH5Z70mtSs42g+22fjNvnFiioIEKfY4FUDEfNv7K2Q4tVytOLB0PxG/euwiOj7L5+g=='
+		  AND TTC.CTM_INTG = 'Y'
+		  AND TTC.CTM_USE = 'Y'
+		  AND TOO.ORM_NM NOT LIKE '(판촉물택배)' + '%'
+	
+	) AA
+]]>
+</select>
+
+<select id="selectAsSearchList" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchVo">        
+<![CDATA[ 
+
+
+SELECT
+	DISTINCT
+	AA.KEY_NO AS KEY_NO,
+	AA.ORM_NM AS ORM_NM,
+	AA.ORM_ORDDT AS ORM_ORDDT,
+	AA.ORM_CDT AS ORM_CDT,
+	AA.ORM_GADDR AS ORM_GADDR,
+	AA.ORDER_TYPE AS ORDER_TYPE,
+	AA.AGT_NM AS AGT_NM
+  FROM
+ (
+	SELECT
+		TAR.RPT_NO + TAR.RPT_SEQ AS KEY_NO,
+		TAR.CTM_NM AS ORM_NM,
+		ISNULL(TAR.RPT_DT, '') AS ORM_ORDDT,
+		ISNULL(TAR.RPT_ENDDT, '') AS ORM_CDT,
+		TAR.CTM_ADDR + ' ' + ISNULL(TAR.CTM_ADDR2, '') AS ORM_GADDR,
+		'AS' AS ORDER_TYPE,
+		(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TAR.VND_RPTCD) AS AGT_NM
+	  FROM TA_RPTREQ TAR WITH (NOLOCK)
+	 WHERE TAR.RPT_DT BETWEEN #{fdt} AND #{tdt}
+	   AND TAR.COM_AGSEC = #{com_agsec}
+	   AND TAR.COM_BRAND = #{com_brand}
+	   AND REPLACE(TAR.CTM_HP, '-', '') = REPLACE(#{orm_hdphone}, '-', '')  
+	   
+	UNION ALL
+	   
+	SELECT
+		TAR.RPT_NO + TAR.RPT_SEQ AS KEY_NO,
+		TAR.CTM_NM AS ORM_NM,
+		ISNULL(TAR.RPT_DT, '') AS ORM_ORDDT,
+		ISNULL(TAR.RPT_ENDDT, '') AS ORM_CDT,
+		TAR.CTM_ADDR + ' ' + ISNULL(TAR.CTM_ADDR2, '') AS ORM_GADDR,
+		'AS' AS ORDER_TYPE,
+		(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TAR.VND_RPTCD) AS AGT_NM
+	  FROM TA_RPTREQ TAR WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customl8)
+	 WHERE TAR.RPT_DT BETWEEN #{fdt} AND #{tdt}
+	   AND TAR.COM_AGSEC = #{com_agsec}
+	   AND TAR.COM_BRAND = #{com_brand}
+	   AND TAR.CTM_CD = TTC.CTM_CD
+	   AND ( TTC.CTM_CELNO = REPLACE(#{orm_hdphone}, '-', '') or TTC.CTM_CELNO = #{orm_hdphone} )
+	   
+	UNION ALL
+	   
+	SELECT
+		TAR.RPT_NO + TAR.RPT_SEQ AS KEY_NO,
+		TAR.CTM_NM AS ORM_NM,
+		ISNULL(TAR.RPT_DT, '') AS ORM_ORDDT,
+		ISNULL(TAR.RPT_ENDDT, '') AS ORM_CDT,
+		TAR.CTM_ADDR + ' ' + ISNULL(TAR.CTM_ADDR2, '') AS ORM_GADDR,
+		'AS' AS ORDER_TYPE,
+		(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH(NOLOCK) WHERE TTV.VND_CD = TAR.VND_RPTCD) AS AGT_NM
+	  FROM TA_RPTREQ TAR WITH (NOLOCK), TT_CUSTOM TTC WITH (NOLOCK, index = tt_customI9)
+	 WHERE TAR.RPT_DT BETWEEN #{fdt} AND #{tdt}
+	   AND TAR.COM_AGSEC = #{com_agsec}
+	   AND TAR.COM_BRAND = #{com_brand}
+	   AND TAR.CTM_CD = TTC.CTM_CD
+	   AND TTC.CTM_CI = #{ctm_ci} 	   
+	   	   
+  ) AA 
+  ORDER BY AA.ORM_ORDDT DESC
+]]>
+</select>
+
+<select id="selectAsDetailSearchList" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchDetailVo">        
+<![CDATA[ 
+	SELECT
+		TCR.ORM_NO AS KEY_NO,
+		( SELECT TAR.CTM_NM 
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) AS CTM_NM,
+		( SELECT TAR.CTM_HP
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) AS CTM_HP,
+		( SELECT TAR.CTM_HP
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) AS ORM_HDPHONE,
+		( SELECT TAR.CTM_ADDR
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) AS ORM_GADDR,
+		'AS조치품' AS ITM_NM,
+		'AS조치' AS DELIVERY_TYPE,
+		(SELECT STI_NM FROM TC_STINF WHERE STI_CD = TCR.STI_CD AND COM_SCD = TCR.COM_SCD ) AS STI_NM,
+		(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TCR.AGT_CD ) AS AGT_NM,
+		(CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) 
+									  WHERE TTC.CCD_CD = (SELECT COM_MNGEST FROM TT_VNDCOP WITH (NOLOCK) WHERE COM_CMP = (CASE TCR.COM_AGSEC WHEN 'C02I' THEN 'T01I' WHEN 'C02P' THEN 'T01P' WHEN 'C02F' THEN 'T01F' ELSE '' END ) AND VND_CD = TCR.AGT_CD )  ), '1') WHEN '4' THEN 'Y' ELSE 'N' END ) AS ONLINE_YN,
+		( SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK)WHERE TTC.CCD_CD = TCR.REM_FTM ) AS REM_FTM,
+		( CASE ( SELECT TAR.COM_SPROG 
+		         FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		        WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+		          AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) 
+			 WHEN 'A17001' THEN '접수'
+			 WHEN 'A17002' THEN '접수'
+			 WHEN 'A17003' THEN '접수'
+			 WHEN 'A17004' THEN '준비중'
+			 WHEN 'A17005' THEN '준비중'
+			 WHEN 'A17006' THEN '준비중'
+			 WHEN 'A17007' THEN '일정확정'
+			 WHEN 'A17008' THEN ( CASE (SELECT TOP 1 COM_RDSEC FROM TA_PLANDTL WITH (NOLOCK) WHERE PLM_NO = TCR.PLM_NO AND COM_PLDSEC IN ('A6800')) WHEN 'C13Y' THEN '완료' WHEN 'C13N' THEN '완료' ELSE '일정확정' END )
+			 WHEN 'A17009' THEN '완료'
+			 WHEN 'A17010' THEN '완료'
+			 ELSE '' END )		 AS COM_SPROG,
+		TCR.REM_DT AS REM_DT,
+		( SELECT TAR.RPT_DT 
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) AS RPT_DT,
+		( SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK)WHERE TTC.CCD_CD = TCR.REM_FTM ) AS REM_FTM,
+		'' AS TAKBAE_VND,
+		'' AS CHANGE_AVAILABLE_YN,
+		ISNULL(( SELECT TAR.RPT_USRNM 
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ), '미지정') AS RPT_USRNM,
+		TCR.AGT_CD AS AGT_CD,
+		'' AS CEP_NM,
+		TCR.TOWN_CD AS ORG_BDONGCD,
+		( SELECT TAR.COM_SPROG 
+			FROM TA_RPTREQ TAR WITH (NOLOCK) 
+		   WHERE TAR.RPT_NO = SUBSTRING(TCR.ORM_NO, 1, 13) 
+			 AND TAR.RPT_SEQ = SUBSTRING(TCR.ORM_NO, 14, 15) ) AS COM_SPROG_CD
+	  FROM TC_RESMST TCR WITH (NOLOCK)
+	 WHERE TCR.COM_SSEC = 'C18A'
+	   AND TCR.ORM_NO = #{key_no}
+
+]]>
+</select>
+
+<select id="selectOrderDetailSearchList" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchDetailVo">        
+<![CDATA[ 
+SELECT
+	TOO.ORM_NO AS KEY_NO,
+	dbo.FN_GET_REALORM_NAME (TOO.ORM_NM) AS ORM_NM,
+	ISNULL(( SELECT TTC.CTM_CELNO FROM TT_CUSTOM TTC WITH (NOLOCK) WHERE TTC.CTM_CD = TOO.ORM_PURCST ), '미등록') AS CTM_HP,
+	ISNULL(TOO.ORM_HDPHONE, '') AS ORM_HDPHONE,
+	TOO.ORM_GADDR AS ORM_GADDR,
+	(CASE TOO.ORM_CRYN WHEN 'Y' THEN ( CASE WHEN ( SELECT COUNT(*) 
+	                                                 FROM TC_PLANMST TCP WITH (NOLOCK)
+													WHERE TCP.ORM_NO = TOO.ORM_NO
+													 AND TCP.PLM_CDT = TOO.ORM_CDT
+													 AND ( TCP.COM_RMFG = 'C13Y' OR TCP.COM_RMFG = 'C13N' )) > 0 THEN '배송완료'
+											ELSE ( CASE WHEN (SELECT COUNT(*) 
+												                FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) 
+												               WHERE ORM_NO = TOO.ORM_NO) > 0 THEN '배송중'
+													    ELSE ( CASE WHEN ( SELECT COUNT(*) 
+																			 FROM TR_SCHEDULE TRS WITH (NOLOCK) 
+																		    WHERE TRS.ORM_NO = TOO.ORM_NO 
+																			  AND TRS.SCH_REQDT = TOO.ORM_CDT ) > 0 THEN '배송준비중'
+																	ELSE ( CASE WHEN ( SELECT COUNT(*)
+																	                     FROM TC_RESMST TCR WITH (NOLOCK)
+																			            WHERE TCR.REM_DT = TOO.ORM_CDT
+																			              AND TCR.COM_SSEC = 'C18C'
+																			              AND TCR.SCHDIV_YN = 'Y'
+																			              AND TCR.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송준비중'
+																			   ELSE  '상품준비중' END ) END 
+														     ) END 															   
+										)	END ) 
+
+						ELSE ( CASE WHEN ( SELECT DATEDIFF(DAY, TOO.ORM_CDT, CONVERT(CHAR(8), GETDATE(), 112)) ) >= 2 THEN '배송완료'
+									ELSE ( CASE WHEN ( SELECT COUNT(*) 
+									                     FROM TR_TBINVOICE TRB WITH (NOLOCK) 
+													    WHERE TRB.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송중'
+										   ELSE ( CASE WHEN (SELECT COUNT(*)
+										                      FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) 
+															 WHERE ORM_NO = TOO.ORM_NO ) > 0 THEN '배송준비중'
+													   ELSE '상품준비중' 
+										   END
+												 )
+									END )
+						END	)
+		END ) AS COM_SPROG,
+	TOO.ORM_CDT AS REM_DT,
+	CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS RPT_DT,
+	ISNULL((CASE TOO.ORM_CRYN WHEN 'Y' THEN (SELECT TTC.CCD_NM 
+	                                    FROM TT_COMCD TTC WITH (NOLOCK) 
+								       WHERE TTC.CCD_CD = (SELECT TCR.REM_FTM 
+									                         FROM TC_RESMST TCR WITH (NOLOCK) 
+															WHERE TCR.REM_DT = TOO.ORM_CDT 
+															  AND TCR.COM_SSEC = 'C18C' 
+															  AND TCR.ORM_NO = TOO.ORM_NO )  ) 
+					   ELSE '' END ), '') AS REM_FTM,
+	(CASE TOO.ORM_ATTR WHEN 'O1009' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )
+					   WHEN 'O1010' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO ) 
+					   WHEN 'O1001' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )	
+					   ELSE '' END ) AS TAKBAE_VND,
+	 '' AS CHANGE_AVAILABLE_YN,
+	 (CASE TOO.COM_BRD WHEN 'T60I01' THEN ISNULL(( SELECT TTS.SET_NM 
+	                                                 FROM TT_SETMST TTS WITH (NOLOCK)
+										            WHERE TTS.SET_CD = ( SELECT TOP 1 TOOD.SET_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+											          AND TTS.COL_CD =  ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ ) ), '일룸')
+	                   WHEN 'T60I02' THEN ISNULL ((SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = ISNULL(( SELECT ITM.ITM_CAT3 
+																														 FROM TT_ITMMST ITM WITH (NOLOCK)
+																														WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+																																			   FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			  WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				AND TOOD.ORD_QTY <> 0
+												 																						   ORDER BY TOOD.ORD_SSEQ )
+																														  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																																				FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			   WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				 AND TOOD.ORD_QTY <> 0
+												 																							ORDER BY TOOD.ORD_SSEQ ) ), '') ), '데스커' )
+	                   WHEN 'T60I03' THEN ISNULL(( SELECT TTS.SET_NM 
+	                                                 FROM TT_SETMST TTS WITH (NOLOCK)
+										            WHERE TTS.SET_CD = ( SELECT TOP 1 TOOD.SET_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+											          AND TTS.COL_CD =  ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ ) ), '슬로우')
+	                   WHEN 'T60P01' THEN ( SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE CCD_CD =  ISNULL(( SELECT ITM.COM_SERIES 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ ) ), '시디즈'))
+					   ELSE '' END ) + ' 외 ' AS ITM_NM,
+	(CASE TOO.ORM_ATTR WHEN 'O1001' THEN '택배'   
+					   WHEN 'O1009' THEN '택배' 
+					   WHEN 'O1010' THEN '택배'    
+					   WHEN 'O1007' THEN '방문 전달'    
+					   ELSE '방문 시공' END ) AS DELIVERY_TYPE,
+	ISNULL((SELECT TCSM.STI_NM 
+	   FROM TC_STINF TCSM WITH (NOLOCK) 
+	  WHERE TCSM.STI_CD = ( SELECT TCR.STI_CD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT ) 
+	    AND TCSM.COM_SCD = ( SELECT TCR.COM_SCD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT )
+	), '')  AS STI_NM,
+	ISNULL(( SELECT MAX(TRB.INVOICENO) FROM TR_TBINVOICE TRB WHERE TRB.ORM_NO = TOO.ORM_NO ), '운송장번호 생성 전' ) AS INVOICENO,
+	ISNULL((SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT ) ,'') AS AGT_NM,
+	ISNULL(TOO.SHP_NO, '') AS SHP_NO,
+	(CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') WHEN '4' THEN 'Y' ELSE 'N' END ) AS ONLINE_YN,
+	TOO.AGT_CD AS AGT_CD,
+	( SELECT TSC.CEP_NM FROM TS_CEMPLOYEE TSC WITH (NOLOCK) WHERE TSC.CEP_CD = TOO.ORM_AGTEMP ) AS CEP_NM,
+	TOO.BDONG AS ORG_BDONGCD,
+	(CASE TOO.COM_BRD WHEN 'T60I01' THEN (SELECT COUNT (TOOD.SET_CD + TOOD.COL_SCD)
+	                                        FROM TO_ORDDET TOOD WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO )
+					  WHEN 'T60I02' THEN (SELECT COUNT(DISTINCT TTI.ITM_CAT3)
+					                        FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO
+										     AND TOOD.ITM_CD = TTI.ITM_CD
+											 AND TOOD.COL_CD = TTI.COL_CD )
+					  WHEN 'T60I03' THEN (SELECT COUNT (TOOD.ITM_CD + TOOD.COL_CD)
+	                                        FROM TO_ORDDET TOOD WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO )
+					  WHEN 'T60P01' THEN (SELECT COUNT(DISTINCT TTI.COM_SERIES)
+					                        FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO
+										     AND TOOD.ITM_CD = TTI.ITM_CD
+											 AND TOOD.COL_CD = TTI.COL_CD )
+					  ELSE '' END ) AS ORDER_QTY,
+	(SELECT ISNULL(TTV.VND_TELNO, '미등록') FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.AGT_CD ) AS VND_TELNO,
+	TOO.CMP_CD AS CMP_CD
+  FROM TO_ORDMAS TOO WITH (NOLOCK)
+ WHERE TOO.ORM_NO = #{key_no}
+   AND TOO.CMP_CD <> 'T02IP4'
+]]>
+</select>
+
+<select id="selectOrderDetailSearchList_backup" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchDetailVo">        
+<![CDATA[ 
+SELECT
+	TOO.ORM_NO AS KEY_NO,
+	dbo.FN_GET_REALORM_NAME (TOO.ORM_NM) AS ORM_NM,
+	ISNULL(( SELECT TTC.CTM_CELNO FROM TT_CUSTOM TTC WITH (NOLOCK) WHERE TTC.CTM_CD = TOO.ORM_PURCST ), '미등록') AS CTM_HP,
+	ISNULL(TOO.ORM_HDPHONE, '') AS ORM_HDPHONE,
+	TOO.ORM_GADDR AS ORM_GADDR,
+	(CASE TOO.ORM_CRYN WHEN 'Y' THEN ( CASE WHEN ( SELECT COUNT(*)
+	                                                 FROM TC_RESMST TCR WITH (NOLOCK)
+										            WHERE TCR.COM_RFG = 'C142'
+												      AND TCR.ORM_NO = TOO.ORM_NO 
+													  AND TCR.REM_DT = TOO.ORM_CDT
+													  AND TCR.COM_SSEC = 'C18C' ) > 0 THEN ( CASE WHEN ISNULL((SELECT COUNT(*) 
+																												 FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) 
+																												WHERE ORM_NO = TOO.ORM_NO), 0) <1 THEN '배송준비중' 
+																								  ELSE '배송중' END) 
+								ELSE '배송준비중' END )
+					   ELSE ( CASE WHEN (SELECT COUNT(*) 
+					                       FROM TR_SCHEDULE TRS WITH (NOLOCK) 
+										  WHERE TRS.ORM_NO = TOO.ORM_NO AND TRS.SCH_REQDT = TOO.ORM_CDT )< 1 THEN '배송준비중'
+								   ELSE ( CASE WHEN ISNULL((SELECT COUNT(*) 
+												              FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) 
+													         WHERE ORM_NO = TOO.ORM_NO), 0) <1 THEN '배송준비중' 
+												ELSE '배송중' END )
+								   END )
+					   END ) AS COM_SPROG,
+	TOO.ORM_CDT AS REM_DT,
+	CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS RPT_DT,
+	(CASE TOO.ORM_CRYN WHEN 'Y' THEN (SELECT TTC.CCD_NM 
+	                                    FROM TT_COMCD TTC WITH (NOLOCK) 
+								       WHERE TTC.CCD_CD = (SELECT TCR.REM_FTM 
+									                         FROM TC_RESMST TCR WITH (NOLOCK) 
+															WHERE TCR.REM_DT = TOO.ORM_CDT 
+															  AND TCR.COM_SSEC = 'C18C' 
+															  AND TCR.ORM_NO = TOO.ORM_NO )  ) 
+					   ELSE '' END ) AS REM_FTM,
+	(CASE TOO.ORM_ATTR WHEN 'O1009' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )
+					   WHEN 'O1010' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO ) 
+					   WHEN 'O1001' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )	
+					   ELSE '' END ) AS TAKBAE_VND,
+	 '' AS CHANGE_AVAILABLE_YN,
+	 (CASE TOO.COM_BRD WHEN 'T60I01' THEN ISNULL(( SELECT TTS.SET_NM 
+	                                                 FROM TT_SETMST TTS WITH (NOLOCK)
+										            WHERE TTS.SET_CD = ( SELECT TOP 1 TOOD.SET_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+											          AND TTS.COL_CD =  ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ ) ), '일룸')
+	                   WHEN 'T60I02' THEN ISNULL ((SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = ISNULL(( SELECT ITM.ITM_CAT3 
+																														 FROM TT_ITMMST ITM WITH (NOLOCK)
+																														WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+																																			   FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			  WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				AND TOOD.ORD_QTY <> 0
+												 																						   ORDER BY TOOD.ORD_SSEQ )
+																														  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																																				FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			   WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				 AND TOOD.ORD_QTY <> 0
+												 																							ORDER BY TOOD.ORD_SSEQ ) ), '') ), '데스커' )
+	                   WHEN 'T60I03' THEN ISNULL(( SELECT ITM.ITM_NM 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ )), '슬로우')
+	                   WHEN 'T60P01' THEN ISNULL(( SELECT ITM.ITM_NM 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ ) ), '시디즈')
+					   ELSE '' END ) + ' 외 ' AS ITM_NM,
+	(CASE TOO.ORM_ATTR WHEN 'O1001' THEN '택배'   
+					   WHEN 'O1009' THEN '택배' 
+					   WHEN 'O1010' THEN '택배'    
+					   WHEN 'O1007' THEN '방문 전달'    
+					   ELSE '방문 시공' END ) AS DELIVERY_TYPE,
+	(SELECT TCSM.STI_NM 
+	   FROM TC_STINF TCSM WITH (NOLOCK) 
+	  WHERE TCSM.STI_CD = ( SELECT TCR.STI_CD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT ) 
+	    AND TCSM.COM_SCD = ( SELECT TCR.COM_SCD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT )
+	)  AS STI_NM,
+	ISNULL(( SELECT MAX(TRB.INVOICENO) FROM TR_TBINVOICE TRB WHERE TRB.ORM_NO = TOO.ORM_NO ), '운송장번호 생성 전' ) AS INVOICENO,
+	(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT ) AS AGT_NM
+  FROM TO_ORDMAS TOO WITH (NOLOCK)
+ WHERE TOO.ORM_NO = #{key_no}
+   AND TOO.CMP_CD <> 'T02IP4'
+]]>
+</select>
+
+<select id="selectOrderDetailSearchListIloom" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPOrderSearchDetailVo">        
+<![CDATA[ 
+SELECT
+	TOO.ORM_NO AS KEY_NO,
+	dbo.FN_GET_REALORM_NAME (TOO.ORM_NM) AS ORM_NM,
+	ISNULL(( SELECT TTC.CTM_CELNO FROM TT_CUSTOM TTC WITH (NOLOCK) WHERE TTC.CTM_CD = TOO.ORM_PURCST ), '미등록') AS CTM_HP,
+	ISNULL(TOO.ORM_HDPHONE, '') AS ORM_HDPHONE,
+	TOO.ORM_GADDR AS ORM_GADDR,
+	(CASE TOO.ORM_CRYN WHEN 'Y' THEN ( CASE WHEN ( SELECT COUNT(*) 
+	                                                 FROM TC_PLANMST TCP WITH (NOLOCK)
+													WHERE TCP.ORM_NO = TOO.ORM_NO
+													 AND TCP.PLM_CDT = TOO.ORM_CDT
+													 AND ( TCP.COM_RMFG = 'C13Y' OR TCP.COM_RMFG = 'C13N' )) > 0 THEN '배송완료'
+											ELSE ( CASE WHEN (SELECT COUNT(*) 
+												                FROM TW_SALRSL WITH(INDEX=IDX_TW_SALRSL_N18, NOLOCK) 
+												               WHERE ORM_NO = TOO.ORM_NO) > 0 THEN '배송중'
+													    ELSE ( CASE WHEN ( SELECT COUNT(*) 
+																			 FROM TR_SCHEDULE TRS WITH (NOLOCK) 
+																		    WHERE TRS.ORM_NO = TOO.ORM_NO 
+																			  AND TRS.SCH_REQDT = TOO.ORM_CDT ) > 0 THEN '배송준비중'
+																	ELSE ( CASE WHEN ( SELECT COUNT(*)
+																	                     FROM TC_RESMST TCR WITH (NOLOCK)
+																			            WHERE TCR.REM_DT = TOO.ORM_CDT
+																			              AND TCR.COM_SSEC = 'C18C'
+																			              AND TCR.SCHDIV_YN = 'Y'
+																			              AND TCR.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송준비중'
+																			   ELSE  '상품준비중' END ) END 
+														     ) END 															   
+										)	END ) 
+
+						ELSE ( CASE WHEN ( SELECT DATEDIFF(DAY, TOO.ORM_CDT, CONVERT(CHAR(8), GETDATE(), 112)) ) >= 6 THEN '배송완료'
+									ELSE ( CASE WHEN ( SELECT COUNT(*) 
+									                     FROM TR_TBINVOICE TRB WITH (NOLOCK) 
+													    WHERE TRB.ORM_NO = TOO.ORM_NO ) > 0 THEN '배송중'
+										   ELSE 
+												'상품준비중'
+										   END )
+							   END	)
+		END ) AS COM_SPROG,
+	TOO.ORM_CDT AS REM_DT,
+	CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS RPT_DT,
+	ISNULL((CASE TOO.ORM_CRYN WHEN 'Y' THEN (SELECT TTC.CCD_NM 
+	                                    FROM TT_COMCD TTC WITH (NOLOCK) 
+								       WHERE TTC.CCD_CD = (SELECT TCR.REM_FTM 
+									                         FROM TC_RESMST TCR WITH (NOLOCK) 
+															WHERE TCR.REM_DT = TOO.ORM_CDT 
+															  AND TCR.COM_SSEC = 'C18C' 
+															  AND TCR.ORM_NO = TOO.ORM_NO )  ) 
+					   ELSE '' END ), '') AS REM_FTM,
+	(CASE TOO.ORM_ATTR WHEN 'O1009' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )
+					   WHEN 'O1010' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO ) 
+					   WHEN 'O1001' THEN ( SELECT ISNULL(( SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = MAX(TRPM.VND_CD) ), '미지정')
+										     FROM TR_SCHEDULE TRS WITH (NOLOCK), TR_PLANDTL TRPD WITH (NOLOCK), TR_PLANMST TRPM WITH (NOLOCK)
+										    WHERE TRS.ORM_NO = TOO.ORM_NO
+										      AND TRS.SCH_TRNO = TRPD.SCH_TRNO
+										      AND TRPD.PMS_NO = TRPM.PMS_NO )	
+					   ELSE '' END ) AS TAKBAE_VND,
+	 (CASE TOO.COM_BRD WHEN 'T60I01' THEN ISNULL(( SELECT TTS.SET_NM 
+	                                                 FROM TT_SETMST TTS WITH (NOLOCK)
+										            WHERE TTS.SET_CD = ( SELECT TOP 1 TOOD.SET_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+											          AND TTS.COL_CD =  ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ ) ), 
+													 (
+														SELECT 
+																TTI.ITM_NM
+														  FROM TT_ITMMST TTI WITH (NOLOCK)
+														 WHERE TTI.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+																           FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																            AND TOOD.ORD_QTY <> 0
+												 			           ORDER BY TOOD.ORD_SSEQ )
+													       AND TTI.COL_CD = ( SELECT TOP 1 TOOD.COL_SCD
+																            FROM TO_ORDDET TOOD WITH (NOLOCK)
+																           WHERE TOOD.ORM_NO = TOO.ORM_NO
+																             AND TOOD.ORD_QTY <> 0
+												 			            ORDER BY TOOD.ORD_SSEQ )										 
+													 ))
+	                   WHEN 'T60I02' THEN ISNULL ((SELECT TTC.CCD_NM FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = ISNULL(( SELECT ITM.ITM_CAT3 
+																														 FROM TT_ITMMST ITM WITH (NOLOCK)
+																														WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+																																			   FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			  WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				AND TOOD.ORD_QTY <> 0
+												 																						   ORDER BY TOOD.ORD_SSEQ )
+																														  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																																				FROM TO_ORDDET TOOD WITH (NOLOCK)
+																																			   WHERE TOOD.ORM_NO = TOO.ORM_NO
+																																				 AND TOOD.ORD_QTY <> 0
+												 																							ORDER BY TOOD.ORD_SSEQ ) ), '') ), '데스커' )
+	                   WHEN 'T60I03' THEN ISNULL(( SELECT ITM.ITM_NM 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ )), '슬로우')
+	                   WHEN 'T60P01' THEN ISNULL(( SELECT ITM.ITM_NM 
+												     FROM TT_ITMMST ITM WITH (NOLOCK)
+											        WHERE ITM.ITM_CD = ( SELECT TOP 1 TOOD.ITM_CD
+													                       FROM TO_ORDDET TOOD WITH (NOLOCK)
+																          WHERE TOOD.ORM_NO = TOO.ORM_NO
+																		    AND TOOD.ORD_QTY <> 0
+												 			             ORDER BY TOOD.ORD_SSEQ )
+													  AND ITM.COL_CD =  ( SELECT TOP 1 TOOD.COL_CD
+																		    FROM TO_ORDDET TOOD WITH (NOLOCK)
+																	       WHERE TOOD.ORM_NO = TOO.ORM_NO
+																			 AND TOOD.ORD_QTY <> 0
+												 						 ORDER BY TOOD.ORD_SSEQ ) ), '시디즈')
+					   ELSE '' END ) + ' 외 ' AS ITM_NM,
+	(CASE TOO.ORM_ATTR WHEN 'O1001' THEN '택배'   
+					   WHEN 'O1009' THEN '택배' 
+					   WHEN 'O1010' THEN '택배'    
+					   WHEN 'O1007' THEN '방문 전달'    
+					   ELSE '방문 시공' END ) AS DELIVERY_TYPE,
+	ISNULL((SELECT TCSM.STI_NM 
+	   FROM TC_STINF TCSM WITH (NOLOCK) 
+	  WHERE TCSM.STI_CD = ( SELECT TCR.STI_CD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT ) 
+	    AND TCSM.COM_SCD = ( SELECT TCR.COM_SCD FROM TC_RESMST TCR WITH (NOLOCK) WHERE TCR.COM_SSEC = 'C18C' AND TCR.ORM_NO = TOO.ORM_NO AND TCR.REM_DT = TOO.ORM_CDT )
+	), '')  AS STI_NM,
+	ISNULL(( SELECT MAX(TRB.INVOICENO) FROM TR_TBINVOICE TRB WHERE TRB.ORM_NO = TOO.ORM_NO ), '운송장번호 생성 전' ) AS INVOICENO,
+	(SELECT TTV.VND_NM FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.ORM_REBAGT ) AS AGT_NM,
+	ISNULL(TOO.SHP_NO, '') AS SHP_NO,
+	(CASE ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') WHEN '4' THEN 'Y' ELSE 'N' END ) AS ONLINE_YN,
+	TOO.AGT_CD AS AGT_CD,
+	( SELECT TSC.CEP_NM FROM TS_CEMPLOYEE TSC WITH (NOLOCK) WHERE TSC.CEP_CD = TOO.ORM_AGTEMP ) AS CEP_NM,
+	TOO.BDONG AS ORG_BDONGCD,
+	(CASE TOO.COM_BRD WHEN 'T60I01' THEN (SELECT COUNT (TOOD.SET_CD + TOOD.COL_SCD)
+	                                        FROM TO_ORDDET TOOD WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO )
+					  WHEN 'T60I02' THEN (SELECT COUNT(DISTINCT TTI.ITM_CAT3)
+					                        FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO
+										     AND TOOD.ITM_CD = TTI.ITM_CD
+											 AND TOOD.COL_CD = TTI.COL_CD )
+					  WHEN 'T60I03' THEN (SELECT COUNT (TOOD.ITM_CD + TOOD.COL_CD)
+	                                        FROM TO_ORDDET TOOD WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO )
+					  WHEN 'T60P01' THEN (SELECT COUNT(DISTINCT TTI.COM_SERIES)
+					                        FROM TO_ORDDET TOOD WITH (NOLOCK), TT_ITMMST TTI WITH (NOLOCK)
+										   WHERE TOOD.ORM_NO = TOO.ORM_NO
+										     AND TOOD.ITM_CD = TTI.ITM_CD
+											 AND TOOD.COL_CD = TTI.COL_CD )
+					  ELSE '' END ) AS ORDER_QTY,
+		(SELECT ISNULL(TTV.VND_TELNO, '미등록') FROM TT_VENDOR TTV WITH (NOLOCK) WHERE TTV.VND_CD = TOO.AGT_CD ) AS VND_TELNO,
+		TOO.CMP_CD AS CMP_CD
+  FROM TO_ORDMAS TOO WITH (NOLOCK)
+ WHERE TOO.ORM_NO = #{key_no}
+   AND NOT EXISTS ( SELECT TOD.ORM_NO FROM TO_ORDDET TOD WITH (NOLOCK) WHERE TOD.ORM_NO = TOO.ORM_NO AND TOD.SET_CD = 'ZERO_I')  
+]]>
+</select>
+
+<select id="selectComBrand" parameterType="HashMap" resultType="com.fursys.chatbot.vo.DataResult">
+<![CDATA[
+	
+	SELECT
+		TOO.COM_BRD AS DATA1
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = #{key_no}
+	
+]]>
+</select>
+
+<select id="selectVendorTelNo" parameterType="HashMap" resultType="com.fursys.chatbot.vo.erp.ERPVendorTelNoVo">        
+<![CDATA[ 
+	SELECT
+		ISNULL(TTV.VND_TELNO, '번호 미등록된 대리점') AS TEL_NO
+	  FROM TT_VENDOR TTV WITH (NOLOCK)
+	 WHERE TTV.VND_CD = #{agt_cd}
+]]>
+</select>
+
+<insert id="insertApicallHist" parameterType="HashMap">
+<![CDATA[
+	INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT )
+						     VALUES ('Y25001'    , #{call_function}, #{function_name}, #{client_ip}, 'CHATBOT',GETDATE(), '' )
+	
+]]>
+</insert> 
+</mapper>

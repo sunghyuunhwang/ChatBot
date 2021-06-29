@@ -1,0 +1,376 @@
+INFO  21-06-24 08:10:03[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 26500 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 08:10:03[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 08:10:04[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 08:10:04[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 08:10:04[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 08:10:04[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 08:10:04[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 08:10:05[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 08:10:05[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1239 ms
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-24 08:10:06[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@257ef9ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@3dc95b8b, org.springframework.security.web.header.HeaderWriterFilter@35c9a231, org.springframework.security.web.authentication.logout.LogoutFilter@37ad042b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@76a14c8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d1ff6b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fdca00a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59c70ceb, org.springframework.security.web.session.SessionManagementFilter@5626d18c, org.springframework.security.web.access.ExceptionTranslationFilter@7cca01a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6749fe50]
+INFO  21-06-24 08:10:06[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-24 08:10:06[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-24 08:10:06[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-24 08:10:06[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 08:10:06[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-24 08:10:06[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-24 08:10:06[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-24 08:10:06[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-24 08:10:06[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.213 seconds (JVM running for 4.871)
+INFO  21-06-24 08:17:57[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-24 08:17:57[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-24 08:17:57[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 5 ms
+INFO  21-06-24 08:18:06[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-24 08:18:07[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-24 08:18:24[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 3680 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 08:18:24[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 08:18:25[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 08:18:25[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 08:18:25[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 08:18:25[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 08:18:25[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 08:18:25[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 08:18:25[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1017 ms
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-24 08:18:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3003827c, org.springframework.security.web.context.SecurityContextPersistenceFilter@403c3a01, org.springframework.security.web.header.HeaderWriterFilter@6f798482, org.springframework.security.web.authentication.logout.LogoutFilter@7dffda8b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4d1ff6b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28237492, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c3e4b1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29b40b3, org.springframework.security.web.session.SessionManagementFilter@633cc6b5, org.springframework.security.web.access.ExceptionTranslationFilter@16a35bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cca01a8]
+INFO  21-06-24 08:18:26[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-24 08:18:26[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-24 08:18:26[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-24 08:18:26[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 08:18:26[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-24 08:18:26[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-24 08:18:26[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-24 08:18:26[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-24 08:18:26[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.508 seconds (JVM running for 3.922)
+INFO  21-06-24 08:19:10[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-24 08:19:10[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-24 08:19:10[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 5 ms
+INFO  21-06-24 08:19:32[http-nio-8082-exec-9] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-24 08:19:33[http-nio-8082-exec-9] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-06-24 09:41:15[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-24 09:41:17[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-24 09:41:17[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-24 09:41:17[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-24 09:41:23[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 27188 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 09:41:23[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 09:41:24[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 09:41:25[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 09:41:25[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 09:41:25[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 09:41:25[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 09:41:25[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 09:41:25[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1361 ms
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-24 09:41:26[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@673c4f6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@5634a861, org.springframework.security.web.header.HeaderWriterFilter@1c7350b0, org.springframework.security.web.authentication.logout.LogoutFilter@795f8317, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fb9a67f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37ad042b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c854752, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15c487a8, org.springframework.security.web.session.SessionManagementFilter@3bc4ef12, org.springframework.security.web.access.ExceptionTranslationFilter@1a3e8e24, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44be69aa]
+INFO  21-06-24 09:41:26[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-24 09:41:26[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-24 09:41:26[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-24 09:41:26[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 09:41:26[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-24 09:41:26[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-24 09:41:26[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-24 09:41:26[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-24 09:41:26[main] [ChatBotApplication:61] - Started ChatBotApplication in 3.53 seconds (JVM running for 5.325)
+INFO  21-06-24 09:41:28[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-24 09:41:28[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-24 09:41:28[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 3 ms
+INFO  21-06-24 09:41:40[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-24 09:41:42[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+WARN  21-06-24 09:42:10[http-nio-8082-exec-3] [DefaultHandlerExceptionResolver:199] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+WARN  21-06-24 09:42:23[http-nio-8082-exec-5] [DefaultHandlerExceptionResolver:199] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+INFO  21-06-24 09:43:25[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-24 09:43:26[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-24 09:43:26[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-24 09:43:26[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-24 09:43:38[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 29224 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 09:43:38[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 09:43:39[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 09:43:39[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 09:43:39[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 09:43:39[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 09:43:39[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 09:43:39[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 09:43:39[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1061 ms
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-24 09:43:40[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a500561, org.springframework.security.web.context.SecurityContextPersistenceFilter@69f0b0f4, org.springframework.security.web.header.HeaderWriterFilter@6abdec0e, org.springframework.security.web.authentication.logout.LogoutFilter@149b0577, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3e7b65d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f7efd0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41a374be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f608e21, org.springframework.security.web.session.SessionManagementFilter@2b5c4f17, org.springframework.security.web.access.ExceptionTranslationFilter@7dffda8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37ad042b]
+INFO  21-06-24 09:43:40[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-24 09:43:40[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-24 09:43:40[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-24 09:43:40[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 09:43:40[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-24 09:43:40[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-24 09:43:40[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-24 09:43:40[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-24 09:43:41[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.711 seconds (JVM running for 4.263)
+INFO  21-06-24 09:44:19[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-24 09:44:19[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-24 09:44:19[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 6 ms
+INFO  21-06-24 09:44:19[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-24 09:44:20[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-06-24 10:38:34[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-24 10:38:35[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-24 10:38:35[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-24 10:38:36[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-24 10:39:15[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 30292 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 10:39:15[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 10:39:17[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 10:39:17[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 10:39:17[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 10:39:17[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 10:39:17[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 10:39:17[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 10:39:17[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1962 ms
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-24 10:39:18[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52b3bf03, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e3e1014, org.springframework.security.web.header.HeaderWriterFilter@516462cc, org.springframework.security.web.authentication.logout.LogoutFilter@2db4ad1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@724b939e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47b11ec7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6342ff7f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cca01a8, org.springframework.security.web.session.SessionManagementFilter@2dfb885e, org.springframework.security.web.access.ExceptionTranslationFilter@4d3c6593, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@341b13a8]
+INFO  21-06-24 10:39:18[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-24 10:39:19[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-24 10:39:19[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-24 10:39:19[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 10:39:19[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-24 10:39:19[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-24 10:39:19[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-24 10:39:19[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-24 10:39:19[main] [ChatBotApplication:61] - Started ChatBotApplication in 4.385 seconds (JVM running for 7.318)
+INFO  21-06-24 11:43:15[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-24 11:43:15[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-24 11:43:15[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 7 ms
+INFO  21-06-24 11:43:48[http-nio-8082-exec-9] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-24 11:43:49[http-nio-8082-exec-9] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsInfo:143] - ==>  Preparing: SELECT TAP.STI_CD AS DATA1, TAP.COM_SCD AS DATA2, TAP.RPT_ENDDT AS DATA3 FROM TA_RPTREQ TAP WITH (NOLOCK) WHERE TAP.RPT_NO = SUBSTRING(? /*key_no*/ ,1,13) AND TAP.RPT_SEQ = SUBSTRING(? /*key_no*/ ,14,15) 
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsInfo:143] - ==> Parameters: I20210615017201(String), I20210615017201(String)
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsInfo:143] - <==      Total: 1
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsCdtChangeYn:143] - ==>  Preparing: SELECT ( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn FROM ( SELECT A.STW_DT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN ( SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT FROM TC_RESMST A with (nolock), TA_RPTREQ R with (nolock) WHERE A.REM_DT LIKE left(? /*req_dt*/ , 6) +'%' AND A.STI_CD = ? /*sti_cd*/ AND A.COM_SCD = ? /*com_scd*/ AND A.COM_AGSEC = ? /*com_agsec*/ AND A.COM_SSEC = 'C18A' /*AS*/ AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ GROUP BY A.REM_DT, A.REM_FTM_2 ) C ON A.STW_DT = C.REM_DT ,( SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA FROM ( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO ,X.PLM_TM ,X.STI_QTYCAPA FROM ( SELECT PLM_TM ,STI_QTYCAPA FROM TC_TIMECAPA with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ ) X )Y ) B, (SELECT 'X' AS YN FROM TC_BRANDITM with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ AND COM_AGSEC = ? /*com_agsec*/ AND COM_BRAND = CAST(? /*com_brand*/ AS VARCHAR) ) D WHERE A.COM_SCD = ? /*com_scd*/ AND A.STI_CD = ? /*sti_cd*/ AND A.STW_MM = left(? /*req_dt*/ , 6) AND A.COM_AGSEC = ? /*com_agsec*/ AND A.STW_DT = ? /*req_dt*/ GROUP BY A.STW_DT ) AA 
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsCdtChangeYn:143] - ==> Parameters: 20210624(String), YA593(String), C16YA(String), C02I(String), C16YA(String), YA593(String), C16YA(String), YA593(String), C02I(String), T60I02(String), C16YA(String), YA593(String), 20210624(String), C02I(String), 20210624(String)
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsCdtChangeYn:143] - <==      Total: 0
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsCdtChangeYn2:143] - ==>  Preparing: SELECT 'N' AS available_yn FROM DUAL 
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsCdtChangeYn2:143] - ==> Parameters: 
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [selectAsCdtChangeYn2:143] - <==      Total: 1
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [insertApicallHist:143] - ==>  Preparing: INSERT INTO TY_FUNCTIONUSE_HIST (SYSTEM_GUBUN, CALL_FUNCTION, FUNCTION_NAME, CALL_IP, FST_USR_CD, FST_SYS_DT, CALL_RESULT ) VALUES ('Y25001' , ? /*call_function*/ , ? /*function_name*/ , ? /*client_ip*/ , 'CHATBOT',GETDATE(), '' ) 
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [insertApicallHist:143] - ==> Parameters: erp_asCdtChangeAvailableYn(String), 챗봇 AS 날짜변경 가능여부 체크(String), 0:0:0:0:0:0:0:1(String)
+DEBUG 21-06-24 11:43:49[http-nio-8082-exec-9] [insertApicallHist:143] - <==    Updates: 1
+DEBUG 21-06-24 11:43:54[http-nio-8082-exec-10] [selectAsInfo:143] - ==>  Preparing: SELECT TAP.STI_CD AS DATA1, TAP.COM_SCD AS DATA2, TAP.RPT_ENDDT AS DATA3 FROM TA_RPTREQ TAP WITH (NOLOCK) WHERE TAP.RPT_NO = SUBSTRING(? /*key_no*/ ,1,13) AND TAP.RPT_SEQ = SUBSTRING(? /*key_no*/ ,14,15) 
+DEBUG 21-06-24 11:43:54[http-nio-8082-exec-10] [selectAsInfo:143] - ==> Parameters: I20210615017201(String), I20210615017201(String)
+DEBUG 21-06-24 11:43:54[http-nio-8082-exec-10] [selectAsInfo:143] - <==      Total: 1
+DEBUG 21-06-24 11:43:54[http-nio-8082-exec-10] [selectAsCdtChangeYn:143] - ==>  Preparing: SELECT ( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn FROM ( SELECT A.STW_DT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN ( SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT FROM TC_RESMST A with (nolock), TA_RPTREQ R with (nolock) WHERE A.REM_DT LIKE left(? /*req_dt*/ , 6) +'%' AND A.STI_CD = ? /*sti_cd*/ AND A.COM_SCD = ? /*com_scd*/ AND A.COM_AGSEC = ? /*com_agsec*/ AND A.COM_SSEC = 'C18A' /*AS*/ AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ GROUP BY A.REM_DT, A.REM_FTM_2 ) C ON A.STW_DT = C.REM_DT ,( SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA FROM ( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO ,X.PLM_TM ,X.STI_QTYCAPA FROM ( SELECT PLM_TM ,STI_QTYCAPA FROM TC_TIMECAPA with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ ) X )Y ) B, (SELECT 'X' AS YN FROM TC_BRANDITM with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ AND COM_AGSEC = ? /*com_agsec*/ AND COM_BRAND = CAST(? /*com_brand*/ AS VARCHAR) ) D WHERE A.COM_SCD = ? /*com_scd*/ AND A.STI_CD = ? /*sti_cd*/ AND A.STW_MM = left(? /*req_dt*/ , 6) AND A.COM_AGSEC = ? /*com_agsec*/ AND A.STW_DT = ? /*req_dt*/ GROUP BY A.STW_DT ) AA 
+DEBUG 21-06-24 11:43:54[http-nio-8082-exec-10] [selectAsCdtChangeYn:143] - ==> Parameters: 20210630(String), YA593(String), C16YA(String), C02I(String), C16YA(String), YA593(String), C16YA(String), YA593(String), C02I(String), T60I02(String), C16YA(String), YA593(String), 20210630(String), C02I(String), 20210630(String)
+DEBUG 21-06-24 11:43:54[http-nio-8082-exec-10] [selectAsCdtChangeYn:143] - <==      Total: 0
+INFO  21-06-24 11:44:32[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-24 11:44:33[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-24 11:44:33[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-24 11:44:33[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-24 11:44:39[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 25668 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 11:44:39[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 11:44:39[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 11:44:40[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 11:44:40[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 11:44:40[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 11:44:40[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 11:44:40[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 11:44:40[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1292 ms
+WARN  21-06-24 11:44:40[main] [AnnotationConfigServletWebServerApplicationContext:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [D:\development\workspace\ChatBot\bin\main\com\fursys\chatbot\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\development\workspace\ChatBot\bin\main\com\fursys\chatbot\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine suitable jdbc url
+INFO  21-06-24 11:44:40[main] [StandardService:173] - Stopping service [Tomcat]
+INFO  21-06-24 11:44:40[main] [ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ERROR 21-06-24 11:44:40[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine suitable jdbc url
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+INFO  21-06-24 11:44:56[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 20624 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-24 11:44:56[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-24 11:44:57[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-24 11:44:57[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-24 11:44:57[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 11:44:57[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-24 11:44:57[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-24 11:44:57[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-24 11:44:57[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1051 ms
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-24 11:44:58[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a334bac, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e4599c0, org.springframework.security.web.header.HeaderWriterFilter@2629d5dc, org.springframework.security.web.authentication.logout.LogoutFilter@7301eebe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43bdaa1b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d1f558a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6801b414, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@470d183, org.springframework.security.web.session.SessionManagementFilter@42a0501e, org.springframework.security.web.access.ExceptionTranslationFilter@6fc1020a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ed4a7e4]
+INFO  21-06-24 11:44:58[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-24 11:44:58[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-24 11:44:58[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-24 11:44:58[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-24 11:44:58[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-24 11:44:58[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-24 11:44:58[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-24 11:44:58[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-24 11:44:58[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.635 seconds (JVM running for 4.016)
+INFO  21-06-24 11:45:00[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-24 11:45:00[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-24 11:45:00[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 3 ms
+INFO  21-06-24 11:45:23[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-24 11:45:24[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [selectAsInfo:143] - ==>  Preparing: SELECT TAP.STI_CD AS DATA1, TAP.COM_SCD AS DATA2, TAP.RPT_ENDDT AS DATA3 FROM TA_RPTREQ TAP WITH (NOLOCK) WHERE TAP.RPT_NO = SUBSTRING(? /*key_no*/ ,1,13) AND TAP.RPT_SEQ = SUBSTRING(? /*key_no*/ ,14,15) 
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [selectAsInfo:143] - ==> Parameters: I20210615017201(String), I20210615017201(String)
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		TAP.STI_CD AS DATA1,
+		TAP.COM_SCD AS DATA2,
+		TAP.RPT_ENDDT AS DATA3
+	  FROM TA_RPTREQ TAP WITH (NOLOCK)
+	 WHERE TAP.RPT_NO = SUBSTRING('I20210615017201' /*key_no*/ ,1,13)
+	   AND TAP.RPT_SEQ = SUBSTRING('I20210615017201' /*key_no*/ ,14,15)
+ {executed in 8 msec}
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [selectAsInfo:143] - <==      Total: 1
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [selectAsCdtChangeYn:143] - ==>  Preparing: SELECT ( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn FROM ( SELECT A.STW_DT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN ( SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT FROM TC_RESMST A with (nolock), TA_RPTREQ R with (nolock) WHERE A.REM_DT LIKE left(? /*req_dt*/ , 6) +'%' AND A.STI_CD = ? /*sti_cd*/ AND A.COM_SCD = ? /*com_scd*/ AND A.COM_AGSEC = ? /*com_agsec*/ AND A.COM_SSEC = 'C18A' /*AS*/ AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ GROUP BY A.REM_DT, A.REM_FTM_2 ) C ON A.STW_DT = C.REM_DT ,( SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA ,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA FROM ( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO ,X.PLM_TM ,X.STI_QTYCAPA FROM ( SELECT PLM_TM ,STI_QTYCAPA FROM TC_TIMECAPA with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ ) X )Y ) B, (SELECT 'X' AS YN FROM TC_BRANDITM with (nolock) WHERE COM_SCD = ? /*com_scd*/ AND STI_CD = ? /*sti_cd*/ AND COM_AGSEC = ? /*com_agsec*/ AND COM_BRAND = CAST(? /*com_brand*/ AS VARCHAR) ) D WHERE A.COM_SCD = ? /*com_scd*/ AND A.STI_CD = ? /*sti_cd*/ AND A.STW_MM = left(? /*req_dt*/ , 6) AND A.COM_AGSEC = ? /*com_agsec*/ AND A.STW_DT = ? /*req_dt*/ GROUP BY A.STW_DT ) AA 
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [selectAsCdtChangeYn:143] - ==> Parameters: 20210630(String), YA593(String), C16YA(String), C02I(String), C16YA(String), YA593(String), C16YA(String), YA593(String), C02I(String), T60I02(String), C16YA(String), YA593(String), 20210630(String), C02I(String), 20210630(String)
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		( CASE WHEN (AA.A_QTYCAPA + AA.P_QTYCAPA + AA.E_QTYCAPA + AA.N_QTYCAPA) - (AA.A_USE_CNT + AA.P_USE_CNT + AA.E_USE_CNT + AA.N_USE_CNT + 1) > 0 THEN 'Y' ELSE 'N' END ) AS available_yn
+	FROM (
+
+		SELECT A.STW_DT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.A_QTYCAPA, 0) END) AS A_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4130' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS A_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.P_QTYCAPA, 0) END) AS P_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4131' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS P_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.E_QTYCAPA, 0) END) AS E_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4132' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS E_USE_CNT
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE ISNULL(B.N_QTYCAPA, 0) END) AS N_QTYCAPA
+			  ,MAX(CASE WHEN A.STW_AYN = '0' THEN 0 ELSE
+					CASE WHEN C.REM_FTM = 'C4133' THEN ISNULL(C.CNT, 0) ELSE 0 END END) AS N_USE_CNT
+		  FROM TC_STWORKDAY A with (nolock) LEFT OUTER JOIN (
+				SELECT A.REM_DT, A.REM_FTM_2 AS REM_FTM, COUNT(*) AS CNT
+				  FROM TC_RESMST A with (nolock),
+					   TA_RPTREQ R with (nolock)
+				 WHERE A.REM_DT    LIKE left('20210630' /*req_dt*/ , 6) +'%'
+				   AND A.STI_CD    = 'YA593' /*sti_cd*/ 
+				   AND A.COM_SCD   = 'C16YA' /*com_scd*/ 
+				   AND A.COM_AGSEC = 'C02I' /*com_agsec*/ 
+				   AND A.COM_SSEC = 'C18A'	/*AS*/
+				   AND SUBSTRING(A.ORM_NO,1,13) = R.RPT_NO
+				   AND SUBSTRING(A.ORM_NO,14,15) = R.RPT_SEQ
+				 GROUP BY A.REM_DT, A.REM_FTM_2
+			   ) C ON A.STW_DT = C.REM_DT
+		      ,(
+				SELECT MAX(CASE WHEN PLM_TM = 'C4130' THEN STI_QTYCAPA ELSE 0 END) AS A_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4131' THEN STI_QTYCAPA ELSE 0 END) AS P_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4132' THEN STI_QTYCAPA ELSE 0 END) AS E_QTYCAPA
+						,MAX(CASE WHEN PLM_TM = 'C4133' THEN STI_QTYCAPA ELSE 0 END) AS N_QTYCAPA
+					FROM
+						( SELECT ROW_NUMBER()OVER (ORDER BY X.PLM_TM) AS NO
+								,X.PLM_TM
+								,X.STI_QTYCAPA
+							FROM
+									( SELECT PLM_TM
+											,STI_QTYCAPA
+										FROM TC_TIMECAPA with (nolock)
+										WHERE COM_SCD = 'C16YA' /*com_scd*/ 
+										AND STI_CD = 'YA593' /*sti_cd*/ 
+									) X
+						)Y
+		       ) B,
+			   (SELECT 'X' AS YN
+				FROM TC_BRANDITM with (nolock)
+				WHERE COM_SCD = 'C16YA' /*com_scd*/ 
+				AND   STI_CD = 'YA593' /*sti_cd*/ 
+				AND   COM_AGSEC = 'C02I' /*com_agsec*/ 
+				AND   COM_BRAND =  CAST('T60I02' /*com_brand*/  AS VARCHAR) ) D
+		 WHERE A.COM_SCD = 'C16YA' /*com_scd*/ 
+		   AND A.STI_CD = 'YA593' /*sti_cd*/ 
+		   AND A.STW_MM = left('20210630' /*req_dt*/ , 6)
+		   AND A.COM_AGSEC = 'C02I' /*com_agsec*/ 
+		   AND A.STW_DT = '20210630' /*req_dt*/ 
+	     GROUP BY A.STW_DT
+	) AA
+ {executed in 8 msec}
+DEBUG 21-06-24 11:45:24[http-nio-8082-exec-1] [selectAsCdtChangeYn:143] - <==      Total: 0
+INFO  21-06-24 16:00:22[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-24 16:00:24[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-24 16:00:24[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-24 16:00:24[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.

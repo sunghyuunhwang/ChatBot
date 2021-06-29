@@ -1,0 +1,281 @@
+INFO  21-06-03 07:17:43[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 6424 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-03 07:17:43[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-03 07:17:44[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-03 07:17:45[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-03 07:17:45[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 07:17:45[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-03 07:17:45[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-03 07:17:45[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-03 07:17:45[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1344 ms
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-03 07:17:45[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55651434, org.springframework.security.web.context.SecurityContextPersistenceFilter@2513a118, org.springframework.security.web.header.HeaderWriterFilter@4462efe1, org.springframework.security.web.authentication.logout.LogoutFilter@78a515e4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a3e8e24, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73ae0257, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d1f558a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bc4ef12, org.springframework.security.web.session.SessionManagementFilter@2db4ad1, org.springframework.security.web.access.ExceptionTranslationFilter@54755dd9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@656f62dc]
+INFO  21-06-03 07:17:45[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-03 07:17:45[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-03 07:17:46[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-03 07:17:46[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 07:17:46[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-03 07:17:46[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-03 07:17:46[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-03 07:17:46[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-03 07:17:46[main] [ChatBotApplication:61] - Started ChatBotApplication in 2.896 seconds (JVM running for 4.513)
+INFO  21-06-03 12:21:30[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-03 12:21:32[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-03 12:21:43[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 28232 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-03 12:21:43[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-03 12:21:44[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-03 12:21:45[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-03 12:21:45[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 12:21:45[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-03 12:21:45[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-03 12:21:45[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-03 12:21:45[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1896 ms
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-03 12:21:46[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4db60246, org.springframework.security.web.context.SecurityContextPersistenceFilter@7be1ce6a, org.springframework.security.web.header.HeaderWriterFilter@5740ff5e, org.springframework.security.web.authentication.logout.LogoutFilter@5f14761c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@134ff8f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dc9da2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732f6050, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2152ab30, org.springframework.security.web.session.SessionManagementFilter@67f77f6e, org.springframework.security.web.access.ExceptionTranslationFilter@6848a051, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1dd74143]
+INFO  21-06-03 12:21:46[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-03 12:21:46[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-03 12:21:46[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-03 12:21:46[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 12:21:46[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-03 12:21:46[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-03 12:21:46[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-03 12:21:46[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-03 12:21:47[main] [ChatBotApplication:61] - Started ChatBotApplication in 4.292 seconds (JVM running for 7.214)
+INFO  21-06-03 12:22:14[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-03 12:22:14[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-03 12:22:14[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 12 ms
+INFO  21-06-03 12:23:37[http-nio-8082-exec-6] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-03 12:23:39[http-nio-8082-exec-6] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-03 12:23:39[http-nio-8082-exec-6] [selectPreviousChgreqYn:143] - ==>  Preparing: SELECT CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1 FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK) WHERE TCC.VND_CD = ? /*vnd_cd*/ AND TCC.COM_BRAND = ? /*com_brand*/ AND TCC.ORDER_TYPE = ? /*order_type*/ AND TCC.CHGREQ_STD = ? /*chgreq_std*/ AND TCC.REQORM_NO = ? /*key_no*/ AND TCC.REQPRC_STAT = 1 
+DEBUG 21-06-03 12:23:39[http-nio-8082-exec-6] [selectPreviousChgreqYn:143] - ==> Parameters: C02I(String), T60I03(String), ORDER(String), A96001(String), I20210513054900(String)
+DEBUG 21-06-03 12:23:40[http-nio-8082-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1
+	  FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK)
+	 WHERE TCC.VND_CD = 'C02I' /*vnd_cd*/ 
+	   AND TCC.COM_BRAND = 'T60I03' /*com_brand*/ 
+	   AND TCC.ORDER_TYPE = 'ORDER' /*order_type*/ 
+	   AND TCC.CHGREQ_STD = 'A96001' /*chgreq_std*/ 
+	   AND TCC.REQORM_NO = 'I20210513054900' /*key_no*/ 
+	   AND TCC.REQPRC_STAT = 1
+ {executed in 49 msec}
+DEBUG 21-06-03 12:23:40[http-nio-8082-exec-6] [selectPreviousChgreqYn:143] - <==      Total: 1
+DEBUG 21-06-03 12:25:59[http-nio-8082-exec-10] [selectPreviousChgreqYn:143] - ==>  Preparing: SELECT CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1 FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK) WHERE TCC.VND_CD = ? /*vnd_cd*/ AND TCC.COM_BRAND = ? /*com_brand*/ AND TCC.ORDER_TYPE = ? /*order_type*/ AND TCC.CHGREQ_STD = ? /*chgreq_std*/ AND TCC.REQORM_NO = ? /*key_no*/ AND TCC.REQPRC_STAT = 1 
+DEBUG 21-06-03 12:25:59[http-nio-8082-exec-10] [selectPreviousChgreqYn:143] - ==> Parameters: C02I(String), T60I02(String), ORDER(String), A96003(String), I20210521016900(String)
+DEBUG 21-06-03 12:25:59[http-nio-8082-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1
+	  FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK)
+	 WHERE TCC.VND_CD = 'C02I' /*vnd_cd*/ 
+	   AND TCC.COM_BRAND = 'T60I02' /*com_brand*/ 
+	   AND TCC.ORDER_TYPE = 'ORDER' /*order_type*/ 
+	   AND TCC.CHGREQ_STD = 'A96003' /*chgreq_std*/ 
+	   AND TCC.REQORM_NO = 'I20210521016900' /*key_no*/ 
+	   AND TCC.REQPRC_STAT = 1
+ {executed in 4 msec}
+DEBUG 21-06-03 12:25:59[http-nio-8082-exec-10] [selectPreviousChgreqYn:143] - <==      Total: 1
+DEBUG 21-06-03 12:30:52[http-nio-8082-exec-5] [selectPreviousChgreqYn:143] - ==>  Preparing: SELECT CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1 FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK) WHERE TCC.VND_CD = ? /*vnd_cd*/ AND TCC.COM_BRAND = ? /*com_brand*/ AND TCC.ORDER_TYPE = ? /*order_type*/ AND TCC.CHGREQ_STD = ? /*chgreq_std*/ AND TCC.REQORM_NO = ? /*key_no*/ AND TCC.REQPRC_STAT = 1 
+DEBUG 21-06-03 12:30:52[http-nio-8082-exec-5] [selectPreviousChgreqYn:143] - ==> Parameters: C02I(String), T60I02(String), ORDER(String), A96003(String), I20210521016900(String)
+DEBUG 21-06-03 12:30:52[http-nio-8082-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		CASE WHEN COUNT(*) > 0 THEN 'Y' ELSE 'N' END AS DATA1
+	  FROM TO_CHGREQ_CHATBOT TCC WITH (NOLOCK)
+	 WHERE TCC.VND_CD = 'C02I' /*vnd_cd*/ 
+	   AND TCC.COM_BRAND = 'T60I02' /*com_brand*/ 
+	   AND TCC.ORDER_TYPE = 'ORDER' /*order_type*/ 
+	   AND TCC.CHGREQ_STD = 'A96003' /*chgreq_std*/ 
+	   AND TCC.REQORM_NO = 'I20210521016900' /*key_no*/ 
+	   AND TCC.REQPRC_STAT = 1
+ {executed in 3 msec}
+DEBUG 21-06-03 12:30:52[http-nio-8082-exec-5] [selectPreviousChgreqYn:143] - <==      Total: 1
+INFO  21-06-03 13:44:48[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-03 13:44:50[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-03 13:44:50[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-03 13:44:50[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-03 13:47:16[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 25596 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-03 13:47:16[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-03 13:47:18[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-03 13:47:18[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-03 13:47:18[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 13:47:18[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-03 13:47:18[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-03 13:47:19[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-03 13:47:19[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 2337 ms
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-03 13:47:20[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c7350b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@765d55d5, org.springframework.security.web.header.HeaderWriterFilter@f1f7db2, org.springframework.security.web.authentication.logout.LogoutFilter@1d61a348, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@119b0892, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bfb583b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7dffda8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55651434, org.springframework.security.web.session.SessionManagementFilter@7c3e4b1a, org.springframework.security.web.access.ExceptionTranslationFilter@31e130bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d247660]
+INFO  21-06-03 13:47:20[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-03 13:47:20[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-03 13:47:20[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-03 13:47:20[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 13:47:20[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-03 13:47:20[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-03 13:47:20[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-03 13:47:20[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-03 13:47:21[main] [ChatBotApplication:61] - Started ChatBotApplication in 5.1 seconds (JVM running for 8.243)
+INFO  21-06-03 13:47:40[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-03 13:47:40[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-03 13:47:40[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 12 ms
+INFO  21-06-03 13:48:02[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-03 13:48:05[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [selectOnlineYn:143] - ==>  Preparing: SELECT ISNULL(TOO.SHP_NO, '') AS DATA1, ISNULL(TOO.BDONG, 'XXXX') AS DATA2, ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4, TOO.ORM_REBAGT AS DATA5, ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6, ISNULL(TOO.ORM_PURCST, '') AS DATA7 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [selectOnlineYn:143] - ==> Parameters: I20210528031100(String)
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.SHP_NO, '') AS DATA1,
+		ISNULL(TOO.BDONG, 'XXXX') AS DATA2,
+		ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3,
+		CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4,
+		TOO.ORM_REBAGT AS DATA5,
+		ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6,
+		ISNULL(TOO.ORM_PURCST, '') AS DATA7
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210528031100' /*key_no*/
+ {executed in 9 msec}
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [selectOnlineYn:143] - <==      Total: 1
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [selectOnlineSameOrderYn:143] - ==>  Preparing: SELECT ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_STAT <> 'O08003' AND TOO.SHP_NO = ? /*shp_no*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,GETDATE()),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,GETDATE()),112) 
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [selectOnlineSameOrderYn:143] - ==> Parameters: 2021052756526411(String)
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		 ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_STAT <> 'O08003'
+	   AND TOO.SHP_NO = '2021052756526411' /*shp_no*/ 
+       AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,GETDATE()),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,GETDATE()),112)
+ {executed in 10 msec}
+DEBUG 21-06-03 13:48:05[http-nio-8082-exec-1] [selectOnlineSameOrderYn:143] - <==      Total: 1
+DEBUG 21-06-03 13:51:10[http-nio-8082-exec-4] [selectOnlineYn:143] - ==>  Preparing: SELECT ISNULL(TOO.SHP_NO, '') AS DATA1, ISNULL(TOO.BDONG, 'XXXX') AS DATA2, ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4, TOO.ORM_REBAGT AS DATA5, ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6, ISNULL(TOO.ORM_PURCST, '') AS DATA7 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-03 13:51:10[http-nio-8082-exec-4] [selectOnlineYn:143] - ==> Parameters: I20210422011801(String)
+DEBUG 21-06-03 13:51:11[http-nio-8082-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.SHP_NO, '') AS DATA1,
+		ISNULL(TOO.BDONG, 'XXXX') AS DATA2,
+		ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3,
+		CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4,
+		TOO.ORM_REBAGT AS DATA5,
+		ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6,
+		ISNULL(TOO.ORM_PURCST, '') AS DATA7
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210422011801' /*key_no*/
+ {executed in 919 msec}
+DEBUG 21-06-03 13:51:11[http-nio-8082-exec-4] [selectOnlineYn:143] - <==      Total: 1
+DEBUG 21-06-03 13:51:11[http-nio-8082-exec-4] [selectOnlineSameOrderYn:143] - ==>  Preparing: SELECT ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_STAT <> 'O08003' AND TOO.SHP_NO = ? /*shp_no*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,GETDATE()),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,GETDATE()),112) 
+DEBUG 21-06-03 13:51:11[http-nio-8082-exec-4] [selectOnlineSameOrderYn:143] - ==> Parameters: 2021042193097741(String)
+DEBUG 21-06-03 13:51:11[http-nio-8082-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		 ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_STAT <> 'O08003'
+	   AND TOO.SHP_NO = '2021042193097741' /*shp_no*/ 
+       AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,GETDATE()),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,GETDATE()),112)
+ {executed in 18 msec}
+DEBUG 21-06-03 13:51:11[http-nio-8082-exec-4] [selectOnlineSameOrderYn:143] - <==      Total: 1
+INFO  21-06-03 13:54:45[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-03 13:54:48[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-03 13:54:48[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-03 13:54:48[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-06-03 13:54:57[main] [ChatBotApplication:55] - Starting ChatBotApplication on DESKTOP-Q2KV5DR with PID 30604 (D:\development\workspace\ChatBot\bin\main started by hwang in D:\development\workspace\ChatBot)
+INFO  21-06-03 13:54:57[main] [ChatBotApplication:651] - No active profile set, falling back to default profiles: default
+DEBUG 21-06-03 13:54:58[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-06-03 13:54:58[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8082 (http)
+INFO  21-06-03 13:54:58[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 13:54:58[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-06-03 13:54:58[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.36]
+INFO  21-06-03 13:54:59[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-06-03 13:54:59[main] [ServletWebServerApplicationContext:285] - Root WebApplicationContext: initialization completed in 1934 ms
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/css/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/js/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/img/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/images/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/lib/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/templates/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/ui'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/configuration/security'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/webjars/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/swagger/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: Ant [pattern='/_sign/**'], []
+INFO  21-06-03 13:55:00[main] [DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@355c94be, org.springframework.security.web.context.SecurityContextPersistenceFilter@8cc8cdb, org.springframework.security.web.header.HeaderWriterFilter@d2291de, org.springframework.security.web.authentication.logout.LogoutFilter@79518e00, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c781c42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44fff386, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@149b0577, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@97a145b, org.springframework.security.web.session.SessionManagementFilter@41a374be, org.springframework.security.web.access.ExceptionTranslationFilter@1d61a348, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6949e948]
+INFO  21-06-03 13:55:00[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-06-03 13:55:00[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-06-03 13:55:00[main] [TemplateMode:150] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+INFO  21-06-03 13:55:00[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8082"]
+INFO  21-06-03 13:55:00[main] [TomcatWebServer:220] - Tomcat started on port(s): 8082 (http) with context path ''
+INFO  21-06-03 13:55:00[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-06-03 13:55:00[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-06-03 13:55:00[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-06-03 13:55:01[main] [ChatBotApplication:61] - Started ChatBotApplication in 4.651 seconds (JVM running for 8.14)
+INFO  21-06-03 13:55:03[http-nio-8082-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-06-03 13:55:03[http-nio-8082-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-06-03 13:55:03[http-nio-8082-exec-1] [DispatcherServlet:547] - Completed initialization in 10 ms
+INFO  21-06-03 13:55:09[http-nio-8082-exec-1] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-06-03 13:55:12[http-nio-8082-exec-1] [HikariDataSource:123] - HikariPool-1 - Start completed.
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [selectOnlineYn:143] - ==>  Preparing: SELECT ISNULL(TOO.SHP_NO, '') AS DATA1, ISNULL(TOO.BDONG, 'XXXX') AS DATA2, ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3, CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4, TOO.ORM_REBAGT AS DATA5, ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6, ISNULL(TOO.ORM_PURCST, '') AS DATA7 FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_NO = ? /*key_no*/ 
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [selectOnlineYn:143] - ==> Parameters: I20210422011801(String)
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		ISNULL(TOO.SHP_NO, '') AS DATA1,
+		ISNULL(TOO.BDONG, 'XXXX') AS DATA2,
+		ISNULL(TOO.ORM_GPOST, 'XXXX') AS DATA3,
+		CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) AS DATA4,
+		TOO.ORM_REBAGT AS DATA5,
+		ISNULL((SELECT TTC.REF_1 FROM TT_COMCD TTC WITH (NOLOCK) WHERE TTC.CCD_CD = TOO.ORM_CMPCD ), '1') AS DATA6,
+		ISNULL(TOO.ORM_PURCST, '') AS DATA7
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_NO = 'I20210422011801' /*key_no*/
+ {executed in 10 msec}
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [selectOnlineYn:143] - <==      Total: 1
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [selectOnlineSameOrderYn:143] - ==>  Preparing: SELECT ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN FROM TO_ORDMAS TOO WITH (NOLOCK) WHERE TOO.ORM_STAT <> 'O08003' AND TOO.SHP_NO = ? /*shp_no*/ AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,? /*orm_orddt*/ ),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,? /*orm_orddt*/ ),112) 
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [selectOnlineSameOrderYn:143] - ==> Parameters: 2021042193097741(String), 20210422(String), 20210422(String)
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+		 ( CASE WHEN COUNT(*) > 1 THEN 'Y' ELSE 'N' END ) AS SAMEORDER_YN
+	  FROM TO_ORDMAS TOO WITH (NOLOCK)
+	 WHERE TOO.ORM_STAT <> 'O08003'
+	   AND TOO.SHP_NO = '2021042193097741' /*shp_no*/ 
+       AND CONVERT(CHAR(8), TOO.ORM_ORDDT, 112) BETWEEN CONVERT(CHAR(8),DATEADD(DAY,-7,'20210422' /*orm_orddt*/ ),112) AND CONVERT(CHAR(8),DATEADD(DAY, 7,'20210422' /*orm_orddt*/ ),112)
+ {executed in 14 msec}
+DEBUG 21-06-03 13:55:12[http-nio-8082-exec-1] [selectOnlineSameOrderYn:143] - <==      Total: 1
+INFO  21-06-03 15:54:43[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-06-03 15:54:45[RMI TCP Connection(2)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-06-03 15:54:45[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-06-03 15:54:45[RMI TCP Connection(2)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
