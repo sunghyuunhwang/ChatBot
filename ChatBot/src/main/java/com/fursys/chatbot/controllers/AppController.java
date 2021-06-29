@@ -68,7 +68,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @RestController
 @RequestMapping("/v1/api")
 public class AppController {
-	//ggggg
 	
 	@Autowired ChatBotMapper cChatBotMapper;	
 	@Autowired ChatBotChangeMapper cChatBotChangeMapper;
